@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -8,7 +9,7 @@
     <!-- This prevents Internet Explorer from entering 'quirks' mode -->
     <meta content='IE=edge' http-equiv='X-UA-Compatible'>
     <!-- Change the title to one for your own country -->
-    <title>2050 Pathways Calculator</title>
+    <title>Calculadora de Carbono Colombia 2050</title> 
     <!-- assets is a function definied in the Helper module in src/server.rb --> 
     <link href='/assets/<%= assets['application.css']%>' media='screen' rel='stylesheet' type='text/css' />
     <script src='/assets/<%= assets['application.js']%>' type='text/javascript'></script>
@@ -40,34 +41,36 @@
 
       <div id='name'>
         <!-- Change this to link to your country website -->
-        <a href='http://www.decc.gov.uk/2050'>The UK 2050 Calculator</a>
+        <a href='http://www.colombia2050.com'>Calculadora de Carbono Colombia 2050</a>
       </div>
 
       <div id='examples'>
-        <a class='newdropdown' data-dropdown='#savedpathway_choices' href='#'>Examples</a>
+        <a class='newdropdown' data-dropdown='#savedpathway_choices' href='#'>Ejemplos</a>
         <!-- the contents of this dropdown is defined in the #savedpathway_choices div below -->
       </div>
 
       <!-- To add or remove views from the web tool, alter the following section -->
       <div id='views'>
-        <a class='view' data-view='primary_energy_chart' href='#'>Energy</a>
-        <a class='view' data-view='electricity' href='#'>Electricity</a>
-        <a class='view' data-view='energy_security' href='#'>Security</a>
-        <a class='view' data-view='sankey' href='#'>Flows</a>
-        <a class='view' data-view='map' href='#'>Map</a>
-        <a class='view' data-view='story' href='#'>Story</a>
-        <a class='newdropdown' data-dropdown='#cost_choices' href='#' id='cost_choice'>Costs</a>
-        <a class='view' data-view='air_quality' href='#'>Air</a>
-        <a class='view' data-view='share' href='#'>Share</a>
+        <a class='view' data-view='primary_energy_chart' href='#'>Energia</a>
+        <a class='view' data-view='electricity' href='#'>Electricidad</a>
+       <!-- <a class='view' data-view='energy_security' href='#'>Seguridad</a> -->
+       <!-- <a class='view' data-view='sankey' href='#'>Flujos</a>-->
+       <!-- <a class='view' data-view='map' href='#'>Mapa</a>-->
+        <a class='view' data-view='story' href='#'>Historia</a>
+       <!-- <a class='newdropdown' data-dropdown='#cost_choices' href='#' id='cost_choice'>Costos</a> -->
+       <!--<a class='view' data-view='air_quality' href='#'>Aire</a>-->
+       <!-- Se crea una linea igual a la de calidad del aire ya que es la mas sencilla-->
+        <a class='view' data-view='air_quality2' href='#'>Aire2</a>
+        <a class='view' data-view='share' href='#'>Compartir</a>
         <!-- Change this to link to your own country website documentation -->
-        <a href='http://2050-calculator-tool-wiki.decc.gov.uk'>Docs</a>
+        <a href='http://'>Documentos</a>
       </div>
     </div>
 
     <div class='dropdown' id='cost_choices'>
-      <a class='view' data-view='costs_in_context' href='#'>In context</a>
-      <a class='view' data-view='costs_compared_overview' href='#'>Compared</a>
-      <a class='view' data-view='costs_sensitivity' href='#'>Sensitivity</a>
+      <a class='view' data-view='costs_in_context' href='#'>En contexto</a>
+      <a class='view' data-view='costs_compared_overview' href='#'>Comparados</a>
+      <a class='view' data-view='costs_sensitivity' href='#'>Sensibilidad</a>
     </div>
 
     <div class='dropdown' id='savedpathway_choices'>
@@ -76,11 +79,11 @@
         <a href='#' onclick="twentyfifty.switchPathway('<%= pathway[:code] %>');$('ul#savedpathway_choices').toggle()"><%= pathway[:name] %></a>
       <% end %>
       <!-- Change this to point to your local website -->
-      <a href='http://2050-calculator-tool-wiki.decc.gov.uk/pages/122'>More&hellip;</a>
+      <a href='http://www.colombia2050.com'>More&hellip;</a>
     </div>
     <!-- This appears while the tool is waiting for data from the server -->
     <div id='calculating'>
-      <span>Calculating</span>
+      <span>Calculando</span>
     </div>
     <!-- / The charts will be drawn in this block -->
     <div id='results'></div>
@@ -88,9 +91,11 @@
     <div id='classic_controls'>
       <!-- The left column -->
       <div id='demand'>
+
         <table>
           <!-- One row per choice -->
-          <% structure.choices[21..39].each do |choice| %>
+	 <p><b>Edificaciones</b></p> 
+          <% structure.choices[20..27].each do |choice| %>
             <tr class='<%= choice.incremental_or_alternative %>' id='r<%= choice.number %>'>
               <td class='name'>
                 <a href='/assets/onepage/<%= choice.doc %>' target='_new' data-choicenumber='<%= choice.number %>'>
@@ -111,11 +116,75 @@
             </tr>
           <% end %>
         </table>
+
+        <table>
+          <!-- One row per choice -->
+	 <p><b>Industria</b></p> 
+          <% structure.choices[26..27].each do |choice| %>
+            <tr class='<%= choice.incremental_or_alternative %>' id='r<%= choice.number %>'>
+              <td class='name'>
+                <a href='/assets/onepage/<%= choice.doc %>' target='_new' data-choicenumber='<%= choice.number %>'>
+                  <%= choice.name %>
+                </a>
+              </td>
+              <td class='help'>
+                <a title='Click for more detail on what choices <%= choice.levels.to_a.join(' ')%> mean.' href='/assets/onepage/<%= choice.doc %>' target='_new'>?</a>
+              </td>
+              <!-- One cell per level for that choice -->
+              <% choice.levels.each.with_index do |level,i| %>
+                <td class='choice'>
+                  <a href='#' data-choicenumber='<%= choice.number %>' data-choicelevel='<%= i+1 %>' id='c<%= choice.number %>l<%= i+1%>' title='<%= choice.descriptions[i] %>' class='choiceLink' >
+                    <%= level %>
+                </a>
+              </td>
+            <% end %>
+            </tr>
+          <% end %>
+        </table>
+
+<table>
+          <!-- One row per choice -->
+	 <p><b>Transporte</b></p> 
+          <% structure.choices[28..33].each do |choice| %>
+            <tr class='<%= choice.incremental_or_alternative %>' id='r<%= choice.number %>'>
+              <td class='name'>
+                <a href='/assets/onepage/<%= choice.doc %>' target='_new' data-choicenumber='<%= choice.number %>'>
+                  <%= choice.name %>
+                </a>
+              </td>
+              <td class='help'>
+                <a title='Click for more detail on what choices <%= choice.levels.to_a.join(' ')%> mean.' href='/assets/onepage/<%= choice.doc %>' target='_new'>?</a>
+              </td>
+              <!-- One cell per level for that choice -->
+              <% choice.levels.each.with_index do |level,i| %>
+                <td class='choice'>
+                  <a href='#' data-choicenumber='<%= choice.number %>' data-choicelevel='<%= i+1 %>' id='c<%= choice.number %>l<%= i+1%>' title='<%= choice.descriptions[i] %>' class='choiceLink' >
+                    <%= level %>
+                </a>
+              </td>
+            <% end %>
+            </tr>
+          <% end %>
+        </table>
+
+
+
+
+
+
+
+
+
+
+
       </div>
       <!-- The middle column -->
       <div id='supply'>
         <table>
-          <% structure.choices[0..20].each do |choice| %>
+          <!--Se incluyen segmentos con los subtitulos para la división de los sectores-->
+	 <p><b>Energía no renovable</b></p> 
+          <!--Originalmente va de 0 a 23 -->
+           <% structure.choices[0..0].each do |choice| %>
             <tr class='<%= choice.incremental_or_alternative %>' id='r<%= choice.number %>'>
               <td class='name'>
                 <a href='/assets/onepage/<%= choice.doc %>' target='_new' data-choicenumber='<%= choice.number %>'>
@@ -136,12 +205,150 @@
             </tr>
           <% end %>
         </table>
+
+
+   <table>
+          <!--Se incluyen segmentos con los subtitulos para la división de los sectores-->
+	 <p><b>Energía renovable </b></p> 
+          <!--Originalmente va de 0 a 23 -->
+           <% structure.choices[2..9].each do |choice| %>
+            <tr class='<%= choice.incremental_or_alternative %>' id='r<%= choice.number %>'>
+              <td class='name'>
+                <a href='/assets/onepage/<%= choice.doc %>' target='_new' data-choicenumber='<%= choice.number %>'>
+                  <%= choice.name %>
+                </a>
+              </td>
+              <td class='help'>
+                <a title='Click for more detail on what choices <%= choice.levels.to_a.join(' ')%> mean.' href='/assets/onepage/<%= choice.doc %>' target='_new'>?</a>
+              </td>
+              <!-- One cell per level for that choice -->
+              <% choice.levels.each.with_index do |level,i| %>
+                <td class='choice'>
+                  <a href='#' data-choicenumber='<%= choice.number %>' data-choicelevel='<%= i+1 %>' id='c<%= choice.number %>l<%= i+1%>' title='<%= choice.descriptions[i] %>' class='choiceLink' >
+                    <%= level %>
+                </a>
+              </td>
+            <% end %>
+            </tr>
+          <% end %>
+        </table>
+
+   <table>
+          <!--Se incluyen segmentos con los subtitulos para la división de los sectores-->
+	 <p><b>Energía en zonas no interconectadas</b></p> 
+          <!--Originalmente va de 0 a 23 -->
+           <% structure.choices[10..10].each do |choice| %>
+            <tr class='<%= choice.incremental_or_alternative %>' id='r<%= choice.number %>'>
+              <td class='name'>
+                <a href='/assets/onepage/<%= choice.doc %>' target='_new' data-choicenumber='<%= choice.number %>'>
+                  <%= choice.name %>
+                </a>
+              </td>
+              <td class='help'>
+                <a title='Click for more detail on what choices <%= choice.levels.to_a.join(' ')%> mean.' href='/assets/onepage/<%= choice.doc %>' target='_new'>?</a>
+              </td>
+              <!-- One cell per level for that choice -->
+              <% choice.levels.each.with_index do |level,i| %>
+                <td class='choice'>
+                  <a href='#' data-choicenumber='<%= choice.number %>' data-choicelevel='<%= i+1 %>' id='c<%= choice.number %>l<%= i+1%>' title='<%= choice.descriptions[i] %>' class='choiceLink' >
+                    <%= level %>
+                </a>
+              </td>
+            <% end %>
+            </tr>
+          <% end %>
+        </table>
+
+   <table>
+          <!--Se incluyen segmentos con los subtitulos para la división de los sectores-->
+	 <p><b>Biocombustibles</b></p> 
+          <!--Originalmente va de 0 a 23 -->
+           <% structure.choices[11..11].each do |choice| %>
+            <tr class='<%= choice.incremental_or_alternative %>' id='r<%= choice.number %>'>
+              <td class='name'>
+                <a href='/assets/onepage/<%= choice.doc %>' target='_new' data-choicenumber='<%= choice.number %>'>
+                  <%= choice.name %>
+                </a>
+              </td>
+              <td class='help'>
+                <a title='Click for more detail on what choices <%= choice.levels.to_a.join(' ')%> mean.' href='/assets/onepage/<%= choice.doc %>' target='_new'>?</a>
+              </td>
+              <!-- One cell per level for that choice -->
+              <% choice.levels.each.with_index do |level,i| %>
+                <td class='choice'>
+                  <a href='#' data-choicenumber='<%= choice.number %>' data-choicelevel='<%= i+1 %>' id='c<%= choice.number %>l<%= i+1%>' title='<%= choice.descriptions[i] %>' class='choiceLink' >
+                    <%= level %>
+                </a>
+              </td>
+            <% end %>
+            </tr>
+          <% end %>
+        </table>
+
+ <table>
+          <!--Se incluyen segmentos con los subtitulos para la división de los sectores-->
+	 <p><b>Combustibles fosiles</b></p> 
+          <!--Originalmente va de 0 a 23 -->
+           <% structure.choices[12..16].each do |choice| %>
+            <tr class='<%= choice.incremental_or_alternative %>' id='r<%= choice.number %>'>
+              <td class='name'>
+                <a href='/assets/onepage/<%= choice.doc %>' target='_new' data-choicenumber='<%= choice.number %>'>
+                  <%= choice.name %>
+                </a>
+              </td>
+              <td class='help'>
+                <a title='Click for more detail on what choices <%= choice.levels.to_a.join(' ')%> mean.' href='/assets/onepage/<%= choice.doc %>' target='_new'>?</a>
+              </td>
+              <!-- One cell per level for that choice -->
+              <% choice.levels.each.with_index do |level,i| %>
+                <td class='choice'>
+                  <a href='#' data-choicenumber='<%= choice.number %>' data-choicelevel='<%= i+1 %>' id='c<%= choice.number %>l<%= i+1%>' title='<%= choice.descriptions[i] %>' class='choiceLink' >
+                    <%= level %>
+                </a>
+              </td>
+            <% end %>
+            </tr>
+          <% end %>
+        </table>
+
+ <table>
+          <!--Se incluyen segmentos con los subtitulos para la división de los sectores-->
+	 <p><b>Residuos</b></p> 
+          <!--Originalmente va de 0 a 23 -->
+           <% structure.choices[17..18].each do |choice| %>
+            <tr class='<%= choice.incremental_or_alternative %>' id='r<%= choice.number %>'>
+              <td class='name'>
+                <a href='/assets/onepage/<%= choice.doc %>' target='_new' data-choicenumber='<%= choice.number %>'>
+                  <%= choice.name %>
+                </a>
+              </td>
+              <td class='help'>
+                <a title='Click for more detail on what choices <%= choice.levels.to_a.join(' ')%> mean.' href='/assets/onepage/<%= choice.doc %>' target='_new'>?</a>
+              </td>
+              <!-- One cell per level for that choice -->
+              <% choice.levels.each.with_index do |level,i| %>
+                <td class='choice'>
+                  <a href='#' data-choicenumber='<%= choice.number %>' data-choicelevel='<%= i+1 %>' id='c<%= choice.number %>l<%= i+1%>' title='<%= choice.descriptions[i] %>' class='choiceLink' >
+                    <%= level %>
+                </a>
+              </td>
+            <% end %>
+            </tr>
+          <% end %>
+        </table>
+
+
+
+
       </div>
       <!-- The right column -->
       <div id='other'>
-        <table>
-          <!-- this should actually go up to choice 42, but that isn't ready for prime time yet -->
-          <% structure.choices[40..41].each do |choice| %>
+        
+     <table>
+        <!--Se incluyen segmentos con los subtitulos para la división de los sectores-->
+	 <p><b>Agricultura, ganadería y Bosques</b></p>   
+        <!-- this should actually go up to choice 42, but that isn't ready for prime time yet -->
+          <% structure.choices[34..41].each do |choice| %>
             <tr class='<%= choice.incremental_or_alternative %>' id='r<%= choice.number %>'>
               <td class='name'>
                 <a href='/assets/onepage/<%= choice.doc %>' target='_new' data-choicenumber='<%= choice.number %>'>
@@ -162,6 +369,12 @@
             </tr>
           <% end %>
         </table>
+       
+     
+
+
+
+
         <h4>Notes</h4>
         <table id='notes'>
           <tr><td id='firstcell'><div class='help'>?</div></td><td>Question marks take you to one page descriptions of each choice</td></tr>
@@ -170,7 +383,7 @@
           <tr><td><div class='level3'>3</div></td><td>Viewed as unlikely without significant change from the current system and/or significant technological breakthroughs</td></tr>
           <tr><td><div class='level4'>4</div></td><td>The upper end of what is thought to be physically plausible by the most optimistic observer.</td></tr>
           <tr><td><div class='alternate'>A</div>&ndash;<div class='alternate'>D</div></td><td>A range of options where one alternative is not neccesiarily harder than another</td></tr>
-          <tr class='primary_energy_notes'><td>Total used in the UK<sup>1</sup></td><td>Primary energy supply is normally higher than final energy demand, because of the energy used to generate electricity.</td></tr>
+          <tr class='primary_energy_notes'><td>Total used in the Colombia<sup>1</sup></td><td>Primary energy supply is normally higher than final energy demand, because of the energy used to generate electricity.</td></tr>
           <tr class='primary_energy_notes'><td>Targets<sup>2</sup></td><td>The targets up to 2027 exclude international aviation and shipping. They are also calculated as five year 'budgets', rather than the single year targets shown here.</td></tr>
           <tr class='primary_energy_notes'><td>Total<sup>3</sup></td><td>The total includes the reduction in emissions from carbon capture and storage and from growing new biomass to replace that used (the bioenergy credit).</td></tr> 
       </table>
@@ -180,7 +393,7 @@
     <div id='tooltip'></div>
     <div id='footer'>
       <!-- Change this to link to your country's website -->
-      All the assumptions and calculations are available in a spreadsheet. Download <a href='/model.xlsx'>Excel <%= structure.reported_calculator_version %> <%= %></a> (<a href='http://2050-calculator-tool-wiki.decc.gov.uk/pages/140'>Version history</a>). The source code for this site is available under an open source licence from <a href='http://github.com/decc/twenty-fifty'>http://github.com/decc/twenty-fifty</a>
+      All the assumptions and calculations are available in a spreadsheet. Download <a href='/model.xlsx'>Excel <%= structure.reported_calculator_version %> <%= %></a> (<a href='http://www.colombia2050.com'>Version history</a>). The source code for this site is available under an open source licence from <a href='http://github.com/decc/twenty-fifty'>http://github.com/decc/twenty-fifty</a>
     </div>
     <!-- The following html is only displayed on screen when a user selects a particular view -->
     <div id='snippets'>
@@ -253,3 +466,4 @@
     </div>
   </body>
 </html>
+
