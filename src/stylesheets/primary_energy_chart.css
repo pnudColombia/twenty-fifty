@@ -39,7 +39,7 @@ g.drawing {
 .axis path, .axis line {
   fill: none;
   stroke: #000;
-  stroke-width: 1px; }
+  stroke-width: 2px; } 
 
 .axis text {
   font-size: 0.72em;

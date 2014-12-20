@@ -16,18 +16,18 @@ window.twentyfifty.views.primary_energy_chart = function() {
     this.final_energy_chart = timeSeriesStackedAreaChart()
       .title("Final Energy Demand")
       .unit('TWh/yr')
-      .max_value(4000);
+      .max_value(1200); //Ajuste del maximo valor
 
     this.primary_energy_chart = timeSeriesStackedAreaChart()
       .title("Primary Energy Supply")
       .unit('TWh/yr')
-      .max_value(4000);
+      .max_value(1200);//Ajuste del maximo valor
 
     this.emissions_chart = timeSeriesStackedAreaChart()
       .title("Greenhouse Gas Emissions")
       .unit('MtCO2e/yr')
-      .min_value(-500)
-      .max_value(1000);
+      .min_value(-100)
+      .max_value(300); //Valor maximo de emisiones
   };
 
   // This is called when a new view has been selected
@@ -61,7 +61,7 @@ window.twentyfifty.views.primary_energy_chart = function() {
   this.updateResults = function(pathway) {
 
     // Add some footnote references
-    if(pathway.primary_energy_supply[pathway.primary_energy_supply.length-1][0] == "Total used in UK") {
+    if(pathway.primary_energy_supply[pathway.primary_energy_supply.length-1][0] == "Total used in Colombia") {
       pathway.primary_energy_supply[pathway.primary_energy_supply.length-1][0] =  pathway.primary_energy_supply[pathway.primary_energy_supply.length-1][0] + "¹";
     }
 

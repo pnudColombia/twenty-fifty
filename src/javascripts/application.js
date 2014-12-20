@@ -31,6 +31,7 @@
 //= require views/map
 //= require views/sankey_display
 //= require views/air_quality
+//= require views/air_quality2
 //= require views/costs_in_context
 //= require views/costs_compared_overview
 //= require views/costs_compared_within_sector
