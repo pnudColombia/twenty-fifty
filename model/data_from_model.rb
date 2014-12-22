@@ -34,7 +34,7 @@ excel.input_choices = choices
 {
 '_id' => code,
 'choices' => choices,
-# 'sankey' => excel.output_flows, # output.flows in the Excel
+'sankey' => excel.output_flows, # output.flows in the Excel
 'ghg' => excel.output_ghg_by_ipcc_sector, # output.ghg.by.ipcc.sector in Excel
 'ghg_by_sectors' => excel.output_ghg_colsector, # Nueva linea para hacer grafica.
 #'ghg_reduction_from_1990' => excel.output_ghg_percentage_reduction, # output.ghg.percentage.reduction in Excel

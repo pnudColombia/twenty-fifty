@@ -65,17 +65,17 @@ window.twentyfifty.views.primary_energy_chart = function() {
       pathway.primary_energy_supply[pathway.primary_energy_supply.length-1][0] =  pathway.primary_energy_supply[pathway.primary_energy_supply.length-1][0] + "¹";
     }
 
-    if(pathway.ghg[pathway.ghg.length-2][0] == "Total") {
-      pathway.ghg[pathway.ghg.length-2][0] =  pathway.ghg[pathway.ghg.length-2][0] + "³";
+    if(pathway.ghg_by_sectors[pathway.ghg_by_sectors.length-2][0] == "Total") {
+      pathway.ghg_by_sectors[pathway.ghg_by_sectors.length-2][0] =  pathway.ghg_by_sectors[pathway.ghg_by_sectors.length-2][0] + "³";
     }
 
 
     // Get the data in the right format
     demand = convert_table_to_hash(pathway.final_energy_demand);
     supply = convert_table_to_hash(pathway.primary_energy_supply);
-    ghg = convert_table_to_hash(pathway.ghg.slice(0,-1)); 
-    //ghg = convert_table_to_hash(pathway.ghg.slice(0,-1))"linea anterior"
-    percent = pathway.ghg_reduction_from_1990;
+    ghg_by_sectors = convert_table_to_hash(pathway.ghg_by_sectors.slice(0,-1)); 
+    //ghg_by_sectors = convert_table_to_hash(pathway.ghg_by_sectors.slice(0,-1))"linea anterior"
+    percent = pathway.ghg_by_sectors_reduction_from_1990;
 
     // Draw the charts
     d3.select('#demand_chart')
@@ -87,7 +87,7 @@ window.twentyfifty.views.primary_energy_chart = function() {
       .call(this.primary_energy_chart);
 
     d3.select('#emissions_chart')
-      .datum(ghg)
+      .datum(ghg_by_sectors)
       .call(this.emissions_chart);
 
     // This is to add the target text to the chart
@@ -110,7 +110,7 @@ window.twentyfifty.views.primary_energy_chart = function() {
     x = this.emissions_chart.xScale;
     y = this.emissions_chart.yScale;
 
-    targets = pathway.ghg[pathway.ghg.length -1].slice(1);
+    targets = pathway.ghg_by_sectors[pathway.ghg_by_sectors.length -1].slice(1);
 
     t = d3.select('#emissions_chart g.drawing').selectAll('circle.target')
       .data(targets);
