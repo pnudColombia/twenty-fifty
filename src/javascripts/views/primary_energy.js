@@ -14,20 +14,20 @@ window.twentyfifty.views.primary_energy_chart = function() {
       .attr('class', 'chart');
 
     this.final_energy_chart = timeSeriesStackedAreaChart()
-      .title("Final Energy Demand")
+      .title("Demanda de energía")
       .unit('TWh/yr')
-      .max_value(1200); //Ajuste del maximo valor
+      .max_value(1000); //Ajuste del maximo valor
 
     this.primary_energy_chart = timeSeriesStackedAreaChart()
-      .title("Primary Energy Supply")
+      .title("Oferta de energía")
       .unit('TWh/yr')
-      .max_value(1200);//Ajuste del maximo valor
+      .max_value(1000);//Ajuste del maximo valor
 
     this.emissions_chart = timeSeriesStackedAreaChart()
-      .title("Greenhouse Gas Emissions")
+      .title("Emisiones ")
       .unit('MtCO2e/yr')
       .min_value(-100)
-      .max_value(300); //Valor maximo de emisiones
+      .max_value(500); //Valor maximo de emisiones
   };
 
   // This is called when a new view has been selected
@@ -61,7 +61,7 @@ window.twentyfifty.views.primary_energy_chart = function() {
   this.updateResults = function(pathway) {
 
     // Add some footnote references
-    if(pathway.primary_energy_supply[pathway.primary_energy_supply.length-1][0] == "Total used in Colombia") {
+    if(pathway.primary_energy_supply[pathway.primary_energy_supply.length-1][0] == "Total used in Col") {
       pathway.primary_energy_supply[pathway.primary_energy_supply.length-1][0] =  pathway.primary_energy_supply[pathway.primary_energy_supply.length-1][0] + "¹";
     }
 
@@ -73,7 +73,8 @@ window.twentyfifty.views.primary_energy_chart = function() {
     // Get the data in the right format
     demand = convert_table_to_hash(pathway.final_energy_demand);
     supply = convert_table_to_hash(pathway.primary_energy_supply);
-    ghg = convert_table_to_hash(pathway.ghg.slice(0,-1));
+    ghg = convert_table_to_hash(pathway.ghg.slice(0,-1)); 
+    //ghg = convert_table_to_hash(pathway.ghg.slice(0,-1))"linea anterior"
     percent = pathway.ghg_reduction_from_1990;
 
     // Draw the charts

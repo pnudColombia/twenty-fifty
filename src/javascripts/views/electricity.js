@@ -13,18 +13,18 @@ window.twentyfifty.views.electricity = function() {
     this.demand_chart = timeSeriesStackedAreaChart()
       .title("Electricity Demand")
       .unit('TWh/yr')
-      .max_value(100);
+      .max_value(500);
 
     this.supply_chart = timeSeriesStackedAreaChart()
       .title("Electricity Supply")
       .unit('TWh/yr')
-      .max_value(100);
+      .max_value(500);
 
     this.emissions_chart = timeSeriesStackedAreaChart()
       .title("Emissions from Electricity")
       .unit('MtCO2e/yr')
       .min_value(-500)
-      .max_value(1000);
+      .max_value(500);
   };
 
   // This is called when a new view has been selected

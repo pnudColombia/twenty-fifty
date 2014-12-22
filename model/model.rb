@@ -1673,6 +1673,107 @@ class Model
     attach_function 'control_f55', [], ExcelValue.by_value
     attach_function 'control_f56', [], ExcelValue.by_value
     # end of Control
+    attach_function 'emisiones_d25', [], ExcelValue.by_value
+    attach_function 'emisiones_e25', [], ExcelValue.by_value
+    attach_function 'emisiones_f25', [], ExcelValue.by_value
+    attach_function 'emisiones_g25', [], ExcelValue.by_value
+    attach_function 'emisiones_h25', [], ExcelValue.by_value
+    attach_function 'emisiones_i25', [], ExcelValue.by_value
+    attach_function 'emisiones_j25', [], ExcelValue.by_value
+    attach_function 'emisiones_k25', [], ExcelValue.by_value
+    attach_function 'emisiones_l25', [], ExcelValue.by_value
+    attach_function 'emisiones_m25', [], ExcelValue.by_value
+    attach_function 'emisiones_d26', [], ExcelValue.by_value
+    attach_function 'emisiones_e26', [], ExcelValue.by_value
+    attach_function 'emisiones_f26', [], ExcelValue.by_value
+    attach_function 'emisiones_g26', [], ExcelValue.by_value
+    attach_function 'emisiones_h26', [], ExcelValue.by_value
+    attach_function 'emisiones_i26', [], ExcelValue.by_value
+    attach_function 'emisiones_j26', [], ExcelValue.by_value
+    attach_function 'emisiones_k26', [], ExcelValue.by_value
+    attach_function 'emisiones_l26', [], ExcelValue.by_value
+    attach_function 'emisiones_m26', [], ExcelValue.by_value
+    attach_function 'emisiones_d27', [], ExcelValue.by_value
+    attach_function 'emisiones_e27', [], ExcelValue.by_value
+    attach_function 'emisiones_f27', [], ExcelValue.by_value
+    attach_function 'emisiones_g27', [], ExcelValue.by_value
+    attach_function 'emisiones_h27', [], ExcelValue.by_value
+    attach_function 'emisiones_i27', [], ExcelValue.by_value
+    attach_function 'emisiones_j27', [], ExcelValue.by_value
+    attach_function 'emisiones_k27', [], ExcelValue.by_value
+    attach_function 'emisiones_l27', [], ExcelValue.by_value
+    attach_function 'emisiones_m27', [], ExcelValue.by_value
+    attach_function 'emisiones_d28', [], ExcelValue.by_value
+    attach_function 'emisiones_e28', [], ExcelValue.by_value
+    attach_function 'emisiones_f28', [], ExcelValue.by_value
+    attach_function 'emisiones_g28', [], ExcelValue.by_value
+    attach_function 'emisiones_h28', [], ExcelValue.by_value
+    attach_function 'emisiones_i28', [], ExcelValue.by_value
+    attach_function 'emisiones_j28', [], ExcelValue.by_value
+    attach_function 'emisiones_k28', [], ExcelValue.by_value
+    attach_function 'emisiones_l28', [], ExcelValue.by_value
+    attach_function 'emisiones_m28', [], ExcelValue.by_value
+    attach_function 'emisiones_d29', [], ExcelValue.by_value
+    attach_function 'emisiones_e29', [], ExcelValue.by_value
+    attach_function 'emisiones_f29', [], ExcelValue.by_value
+    attach_function 'emisiones_g29', [], ExcelValue.by_value
+    attach_function 'emisiones_h29', [], ExcelValue.by_value
+    attach_function 'emisiones_i29', [], ExcelValue.by_value
+    attach_function 'emisiones_j29', [], ExcelValue.by_value
+    attach_function 'emisiones_k29', [], ExcelValue.by_value
+    attach_function 'emisiones_l29', [], ExcelValue.by_value
+    attach_function 'emisiones_m29', [], ExcelValue.by_value
+    attach_function 'emisiones_d30', [], ExcelValue.by_value
+    attach_function 'emisiones_e30', [], ExcelValue.by_value
+    attach_function 'emisiones_f30', [], ExcelValue.by_value
+    attach_function 'emisiones_g30', [], ExcelValue.by_value
+    attach_function 'emisiones_h30', [], ExcelValue.by_value
+    attach_function 'emisiones_i30', [], ExcelValue.by_value
+    attach_function 'emisiones_j30', [], ExcelValue.by_value
+    attach_function 'emisiones_k30', [], ExcelValue.by_value
+    attach_function 'emisiones_l30', [], ExcelValue.by_value
+    attach_function 'emisiones_m30', [], ExcelValue.by_value
+    attach_function 'emisiones_d31', [], ExcelValue.by_value
+    attach_function 'emisiones_e31', [], ExcelValue.by_value
+    attach_function 'emisiones_f31', [], ExcelValue.by_value
+    attach_function 'emisiones_g31', [], ExcelValue.by_value
+    attach_function 'emisiones_h31', [], ExcelValue.by_value
+    attach_function 'emisiones_i31', [], ExcelValue.by_value
+    attach_function 'emisiones_j31', [], ExcelValue.by_value
+    attach_function 'emisiones_k31', [], ExcelValue.by_value
+    attach_function 'emisiones_l31', [], ExcelValue.by_value
+    attach_function 'emisiones_m31', [], ExcelValue.by_value
+    attach_function 'emisiones_d32', [], ExcelValue.by_value
+    attach_function 'emisiones_e32', [], ExcelValue.by_value
+    attach_function 'emisiones_f32', [], ExcelValue.by_value
+    attach_function 'emisiones_g32', [], ExcelValue.by_value
+    attach_function 'emisiones_h32', [], ExcelValue.by_value
+    attach_function 'emisiones_i32', [], ExcelValue.by_value
+    attach_function 'emisiones_j32', [], ExcelValue.by_value
+    attach_function 'emisiones_k32', [], ExcelValue.by_value
+    attach_function 'emisiones_l32', [], ExcelValue.by_value
+    attach_function 'emisiones_m32', [], ExcelValue.by_value
+    attach_function 'emisiones_d33', [], ExcelValue.by_value
+    attach_function 'emisiones_e33', [], ExcelValue.by_value
+    attach_function 'emisiones_f33', [], ExcelValue.by_value
+    attach_function 'emisiones_g33', [], ExcelValue.by_value
+    attach_function 'emisiones_h33', [], ExcelValue.by_value
+    attach_function 'emisiones_i33', [], ExcelValue.by_value
+    attach_function 'emisiones_j33', [], ExcelValue.by_value
+    attach_function 'emisiones_k33', [], ExcelValue.by_value
+    attach_function 'emisiones_l33', [], ExcelValue.by_value
+    attach_function 'emisiones_m33', [], ExcelValue.by_value
+    attach_function 'emisiones_d34', [], ExcelValue.by_value
+    attach_function 'emisiones_e34', [], ExcelValue.by_value
+    attach_function 'emisiones_f34', [], ExcelValue.by_value
+    attach_function 'emisiones_g34', [], ExcelValue.by_value
+    attach_function 'emisiones_h34', [], ExcelValue.by_value
+    attach_function 'emisiones_i34', [], ExcelValue.by_value
+    attach_function 'emisiones_j34', [], ExcelValue.by_value
+    attach_function 'emisiones_k34', [], ExcelValue.by_value
+    attach_function 'emisiones_l34', [], ExcelValue.by_value
+    attach_function 'emisiones_m34', [], ExcelValue.by_value
+    # end of Emisiones
     attach_function 'intermediate_output_b2', [], ExcelValue.by_value
     attach_function 'intermediate_output_h3', [], ExcelValue.by_value
     attach_function 'intermediate_output_ay3', [], ExcelValue.by_value
@@ -6835,8 +6936,10 @@ class Model
     attach_function 'ghg_k25', [], ExcelValue.by_value
     attach_function 'ghg_l25', [], ExcelValue.by_value
     attach_function 'ghg_m25', [], ExcelValue.by_value
-    attach_function 'ghg_e43', [], ExcelValue.by_value
+    attach_function 'ghg_e76', [], ExcelValue.by_value
     # end of GHG
+    # end of Flows
+    # end of Land
     # end of Indicators
     attach_function 'electricity_d60', [], ExcelValue.by_value
     attach_function 'electricity_e60', [], ExcelValue.by_value
@@ -7219,8 +7322,6 @@ class Model
     attach_function 'electricity_l53', [], ExcelValue.by_value
     attach_function 'electricity_m53', [], ExcelValue.by_value
     # end of Electricity
-    # end of Land Use
-    # end of Flows
     # end of Conversions
     # end of Constants
     # end of Global assumptions
@@ -7235,8 +7336,8 @@ class Model
     # end of III.a
     # end of IV.a
     # end of V.a
-    # end of VI.a
     # end of V.b
+    # end of VI.a
     # end of VII.a
     # end of VII.b
     # end of VII.c
@@ -7245,11 +7346,11 @@ class Model
     # end of VIII.b
     # end of IX.a.1
     # end of IX.a.2
+    # end of X.a
     # end of XI.a
     # end of XI.b
     # end of XI.c
     # end of XI.d
-    # end of X.a
     # end of XII.a
     # end of XII.b
     # end of XII.c
@@ -7296,6 +7397,7 @@ class Model
     attach_function 'output_finalenergyde', [], ExcelValue.by_value
     attach_function 'output_finalenergydemand', [], ExcelValue.by_value
     attach_function 'output_ghg_by_ipcc_sector', [], ExcelValue.by_value
+    attach_function 'output_ghg_colsector', [], ExcelValue.by_value
     attach_function 'output_ghg_percentage_reduction', [], ExcelValue.by_value
     attach_function 'output_primaryenergysupply', [], ExcelValue.by_value
     attach_function 'input_choices', [], ExcelValue.by_value
@@ -7312,6 +7414,7 @@ class Model
     attach_function 'output_finalenergyde', [], ExcelValue.by_value
     attach_function 'output_finalenergydemand', [], ExcelValue.by_value
     attach_function 'output_ghg_by_ipcc_sector', [], ExcelValue.by_value
+    attach_function 'output_ghg_colsector', [], ExcelValue.by_value
     attach_function 'output_ghg_percentage_reduction', [], ExcelValue.by_value
     attach_function 'output_primaryenergysupply', [], ExcelValue.by_value
     attach_function 'set_input_choices', [ExcelValue.by_value], :void

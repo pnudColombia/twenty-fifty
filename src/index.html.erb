@@ -54,7 +54,7 @@
         <a class='view' data-view='primary_energy_chart' href='#'>Energia</a>
         <a class='view' data-view='electricity' href='#'>Electricidad</a>
        <!-- <a class='view' data-view='energy_security' href='#'>Seguridad</a> -->
-       <!-- <a class='view' data-view='sankey' href='#'>Flujos</a>-->
+       <a class='view' data-view='sankey' href='#'>Flujos</a>
        <!-- <a class='view' data-view='map' href='#'>Mapa</a>-->
         <a class='view' data-view='story' href='#'>Historia</a>
        <!-- <a class='newdropdown' data-dropdown='#cost_choices' href='#' id='cost_choice'>Costos</a> -->
@@ -95,7 +95,7 @@
         <table>
           <!-- One row per choice -->
 	 <p><b>Edificaciones</b></p> 
-          <% structure.choices[20..27].each do |choice| %>
+          <% structure.choices[20..25].each do |choice| %>
             <tr class='<%= choice.incremental_or_alternative %>' id='r<%= choice.number %>'>
               <td class='name'>
                 <a href='/assets/onepage/<%= choice.doc %>' target='_new' data-choicenumber='<%= choice.number %>'>
