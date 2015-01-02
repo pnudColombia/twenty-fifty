@@ -49,7 +49,7 @@ s = null;
 this.setup = function() {
 $('#results').append("<div id='sankey'></div>");
 this.s = s = new Sankey();
-s.stack(0, ["Pumped heat", "Solar", "Wind", "Tidal", "Wave", "Geothermal", "Hydro", "Electricity imports", "Nuclear", "Coal reserves", "Coal imports", "Biomass imports", "Gas reserves", "Gas imports", "Oil reserves", "Oil imports", "Biofuel imports", "UK land based bioenergy", "Agricultural 'waste'", "Other waste", "Marine algae"]);
+s.stack(0, ["Solar", "Wind", "Biomasa seca y residuos", "Tidal", "Wave", "Geothermal", "Hydro", "Electricity imports", "Nuclear", "Coal reserves", "Coal imports", "Biomass imports", "Gas reserves", "Gas imports", "Oil reserves", "Oil imports", "Biofuel imports", "UK land based bioenergy", "Estiercol", "Other waste"]);
 s.stack(1, ["Coal"], "Coal reserves");
 s.stack(1, ["Natural Gas"], "Gas reserves");
 s.stack(1, ["Oil"], "Oil reserves");
@@ -60,10 +60,8 @@ s.stack(3, ["Thermal generation", "CHP"], "Nuclear");
 s.stack(4, ["Electricity grid", "District heating"], "Wind");
 s.stack(5, ["H2 conversion"], "Electricity grid");
 s.stack(6, ["H2"], "H2 conversion");
-s.stack(7, ["Heating and cooling - homes", "Heating and cooling - commercial", "Lighting & appliances - homes", "Lighting & appliances - commercial", "Industry", "Road transport", "Rail transport", "Domestic aviation", "International aviation", "National navigation", "International shipping", "Agriculture", "Geosequestration", "Over generation / exports", "Losses"]);
-s.nudge_boxes_callback = function() {
-this.boxes["Losses"].y = this.boxes["Marine algae"].b() - this.boxes["Losses"].size();
-};
+s.stack(7, ["Edificaciones residenciales", "Edificaciones comerciales y de servicios", "Industry", "Road transport", "Rail transport", "Domestic aviation", "International aviation", "National navigation", "International shipping", "Agriculture", "Geosequestration", "Over generation / exports", "Losses"]);
+s.stack(7, ["Losses"],"UK land based bioenergy");
 s.setColors({
 "Coal reserves": "#8F6F38",
 "Coal": "#8F6F38",
