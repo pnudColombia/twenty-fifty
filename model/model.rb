@@ -115,7 +115,228 @@ class Model
     # use this function to reset all cell values
     attach_function 'reset', [], :void
     # end of LinksList
+    # end of Calidad
     # end of Preferences
+    attach_function 'land_c4', [], ExcelValue.by_value
+    attach_function 'land_d4', [], ExcelValue.by_value
+    attach_function 'land_e4', [], ExcelValue.by_value
+    attach_function 'land_f4', [], ExcelValue.by_value
+    attach_function 'land_g4', [], ExcelValue.by_value
+    attach_function 'land_h4', [], ExcelValue.by_value
+    attach_function 'land_i4', [], ExcelValue.by_value
+    attach_function 'land_j4', [], ExcelValue.by_value
+    attach_function 'land_k4', [], ExcelValue.by_value
+    attach_function 'land_l4', [], ExcelValue.by_value
+    attach_function 'land_m4', [], ExcelValue.by_value
+    attach_function 'land_c5', [], ExcelValue.by_value
+    attach_function 'land_d5', [], ExcelValue.by_value
+    attach_function 'land_e5', [], ExcelValue.by_value
+    attach_function 'land_f5', [], ExcelValue.by_value
+    attach_function 'land_g5', [], ExcelValue.by_value
+    attach_function 'land_h5', [], ExcelValue.by_value
+    attach_function 'land_i5', [], ExcelValue.by_value
+    attach_function 'land_j5', [], ExcelValue.by_value
+    attach_function 'land_k5', [], ExcelValue.by_value
+    attach_function 'land_l5', [], ExcelValue.by_value
+    attach_function 'land_m5', [], ExcelValue.by_value
+    attach_function 'land_c6', [], ExcelValue.by_value
+    attach_function 'land_d6', [], ExcelValue.by_value
+    attach_function 'land_e6', [], ExcelValue.by_value
+    attach_function 'land_f6', [], ExcelValue.by_value
+    attach_function 'land_g6', [], ExcelValue.by_value
+    attach_function 'land_h6', [], ExcelValue.by_value
+    attach_function 'land_i6', [], ExcelValue.by_value
+    attach_function 'land_j6', [], ExcelValue.by_value
+    attach_function 'land_k6', [], ExcelValue.by_value
+    attach_function 'land_l6', [], ExcelValue.by_value
+    attach_function 'land_m6', [], ExcelValue.by_value
+    attach_function 'land_c7', [], ExcelValue.by_value
+    attach_function 'land_d7', [], ExcelValue.by_value
+    attach_function 'land_e7', [], ExcelValue.by_value
+    attach_function 'land_f7', [], ExcelValue.by_value
+    attach_function 'land_g7', [], ExcelValue.by_value
+    attach_function 'land_h7', [], ExcelValue.by_value
+    attach_function 'land_i7', [], ExcelValue.by_value
+    attach_function 'land_j7', [], ExcelValue.by_value
+    attach_function 'land_k7', [], ExcelValue.by_value
+    attach_function 'land_l7', [], ExcelValue.by_value
+    attach_function 'land_m7', [], ExcelValue.by_value
+    attach_function 'land_c8', [], ExcelValue.by_value
+    attach_function 'land_d8', [], ExcelValue.by_value
+    attach_function 'land_e8', [], ExcelValue.by_value
+    attach_function 'land_f8', [], ExcelValue.by_value
+    attach_function 'land_g8', [], ExcelValue.by_value
+    attach_function 'land_h8', [], ExcelValue.by_value
+    attach_function 'land_i8', [], ExcelValue.by_value
+    attach_function 'land_j8', [], ExcelValue.by_value
+    attach_function 'land_k8', [], ExcelValue.by_value
+    attach_function 'land_l8', [], ExcelValue.by_value
+    attach_function 'land_m8', [], ExcelValue.by_value
+    attach_function 'land_c9', [], ExcelValue.by_value
+    attach_function 'land_d9', [], ExcelValue.by_value
+    attach_function 'land_e9', [], ExcelValue.by_value
+    attach_function 'land_f9', [], ExcelValue.by_value
+    attach_function 'land_g9', [], ExcelValue.by_value
+    attach_function 'land_h9', [], ExcelValue.by_value
+    attach_function 'land_i9', [], ExcelValue.by_value
+    attach_function 'land_j9', [], ExcelValue.by_value
+    attach_function 'land_k9', [], ExcelValue.by_value
+    attach_function 'land_l9', [], ExcelValue.by_value
+    attach_function 'land_m9', [], ExcelValue.by_value
+    attach_function 'land_c10', [], ExcelValue.by_value
+    attach_function 'land_d10', [], ExcelValue.by_value
+    attach_function 'land_e10', [], ExcelValue.by_value
+    attach_function 'land_f10', [], ExcelValue.by_value
+    attach_function 'land_g10', [], ExcelValue.by_value
+    attach_function 'land_h10', [], ExcelValue.by_value
+    attach_function 'land_i10', [], ExcelValue.by_value
+    attach_function 'land_j10', [], ExcelValue.by_value
+    attach_function 'land_k10', [], ExcelValue.by_value
+    attach_function 'land_l10', [], ExcelValue.by_value
+    attach_function 'land_m10', [], ExcelValue.by_value
+    attach_function 'land_c11', [], ExcelValue.by_value
+    attach_function 'land_d11', [], ExcelValue.by_value
+    attach_function 'land_e11', [], ExcelValue.by_value
+    attach_function 'land_f11', [], ExcelValue.by_value
+    attach_function 'land_g11', [], ExcelValue.by_value
+    attach_function 'land_h11', [], ExcelValue.by_value
+    attach_function 'land_i11', [], ExcelValue.by_value
+    attach_function 'land_j11', [], ExcelValue.by_value
+    attach_function 'land_k11', [], ExcelValue.by_value
+    attach_function 'land_l11', [], ExcelValue.by_value
+    attach_function 'land_m11', [], ExcelValue.by_value
+    attach_function 'land_c12', [], ExcelValue.by_value
+    attach_function 'land_d12', [], ExcelValue.by_value
+    attach_function 'land_e12', [], ExcelValue.by_value
+    attach_function 'land_f12', [], ExcelValue.by_value
+    attach_function 'land_g12', [], ExcelValue.by_value
+    attach_function 'land_h12', [], ExcelValue.by_value
+    attach_function 'land_i12', [], ExcelValue.by_value
+    attach_function 'land_j12', [], ExcelValue.by_value
+    attach_function 'land_k12', [], ExcelValue.by_value
+    attach_function 'land_l12', [], ExcelValue.by_value
+    attach_function 'land_m12', [], ExcelValue.by_value
+    attach_function 'land_c13', [], ExcelValue.by_value
+    attach_function 'land_d13', [], ExcelValue.by_value
+    attach_function 'land_e13', [], ExcelValue.by_value
+    attach_function 'land_f13', [], ExcelValue.by_value
+    attach_function 'land_g13', [], ExcelValue.by_value
+    attach_function 'land_h13', [], ExcelValue.by_value
+    attach_function 'land_i13', [], ExcelValue.by_value
+    attach_function 'land_j13', [], ExcelValue.by_value
+    attach_function 'land_k13', [], ExcelValue.by_value
+    attach_function 'land_l13', [], ExcelValue.by_value
+    attach_function 'land_m13', [], ExcelValue.by_value
+    attach_function 'land_c14', [], ExcelValue.by_value
+    attach_function 'land_d14', [], ExcelValue.by_value
+    attach_function 'land_e14', [], ExcelValue.by_value
+    attach_function 'land_f14', [], ExcelValue.by_value
+    attach_function 'land_g14', [], ExcelValue.by_value
+    attach_function 'land_h14', [], ExcelValue.by_value
+    attach_function 'land_i14', [], ExcelValue.by_value
+    attach_function 'land_j14', [], ExcelValue.by_value
+    attach_function 'land_k14', [], ExcelValue.by_value
+    attach_function 'land_l14', [], ExcelValue.by_value
+    attach_function 'land_m14', [], ExcelValue.by_value
+    attach_function 'land_c15', [], ExcelValue.by_value
+    attach_function 'land_d15', [], ExcelValue.by_value
+    attach_function 'land_e15', [], ExcelValue.by_value
+    attach_function 'land_f15', [], ExcelValue.by_value
+    attach_function 'land_g15', [], ExcelValue.by_value
+    attach_function 'land_h15', [], ExcelValue.by_value
+    attach_function 'land_i15', [], ExcelValue.by_value
+    attach_function 'land_j15', [], ExcelValue.by_value
+    attach_function 'land_k15', [], ExcelValue.by_value
+    attach_function 'land_l15', [], ExcelValue.by_value
+    attach_function 'land_m15', [], ExcelValue.by_value
+    attach_function 'land_c16', [], ExcelValue.by_value
+    attach_function 'land_d16', [], ExcelValue.by_value
+    attach_function 'land_e16', [], ExcelValue.by_value
+    attach_function 'land_f16', [], ExcelValue.by_value
+    attach_function 'land_g16', [], ExcelValue.by_value
+    attach_function 'land_h16', [], ExcelValue.by_value
+    attach_function 'land_i16', [], ExcelValue.by_value
+    attach_function 'land_j16', [], ExcelValue.by_value
+    attach_function 'land_k16', [], ExcelValue.by_value
+    attach_function 'land_l16', [], ExcelValue.by_value
+    attach_function 'land_m16', [], ExcelValue.by_value
+    attach_function 'land_c17', [], ExcelValue.by_value
+    attach_function 'land_d17', [], ExcelValue.by_value
+    attach_function 'land_e17', [], ExcelValue.by_value
+    attach_function 'land_f17', [], ExcelValue.by_value
+    attach_function 'land_g17', [], ExcelValue.by_value
+    attach_function 'land_h17', [], ExcelValue.by_value
+    attach_function 'land_i17', [], ExcelValue.by_value
+    attach_function 'land_j17', [], ExcelValue.by_value
+    attach_function 'land_k17', [], ExcelValue.by_value
+    attach_function 'land_l17', [], ExcelValue.by_value
+    attach_function 'land_m17', [], ExcelValue.by_value
+    attach_function 'land_c18', [], ExcelValue.by_value
+    attach_function 'land_d18', [], ExcelValue.by_value
+    attach_function 'land_e18', [], ExcelValue.by_value
+    attach_function 'land_f18', [], ExcelValue.by_value
+    attach_function 'land_g18', [], ExcelValue.by_value
+    attach_function 'land_h18', [], ExcelValue.by_value
+    attach_function 'land_i18', [], ExcelValue.by_value
+    attach_function 'land_j18', [], ExcelValue.by_value
+    attach_function 'land_k18', [], ExcelValue.by_value
+    attach_function 'land_l18', [], ExcelValue.by_value
+    attach_function 'land_m18', [], ExcelValue.by_value
+    attach_function 'land_c19', [], ExcelValue.by_value
+    attach_function 'land_d19', [], ExcelValue.by_value
+    attach_function 'land_e19', [], ExcelValue.by_value
+    attach_function 'land_f19', [], ExcelValue.by_value
+    attach_function 'land_g19', [], ExcelValue.by_value
+    attach_function 'land_h19', [], ExcelValue.by_value
+    attach_function 'land_i19', [], ExcelValue.by_value
+    attach_function 'land_j19', [], ExcelValue.by_value
+    attach_function 'land_k19', [], ExcelValue.by_value
+    attach_function 'land_l19', [], ExcelValue.by_value
+    attach_function 'land_m19', [], ExcelValue.by_value
+    attach_function 'land_c20', [], ExcelValue.by_value
+    attach_function 'land_d20', [], ExcelValue.by_value
+    attach_function 'land_e20', [], ExcelValue.by_value
+    attach_function 'land_f20', [], ExcelValue.by_value
+    attach_function 'land_g20', [], ExcelValue.by_value
+    attach_function 'land_h20', [], ExcelValue.by_value
+    attach_function 'land_i20', [], ExcelValue.by_value
+    attach_function 'land_j20', [], ExcelValue.by_value
+    attach_function 'land_k20', [], ExcelValue.by_value
+    attach_function 'land_l20', [], ExcelValue.by_value
+    attach_function 'land_m20', [], ExcelValue.by_value
+    attach_function 'land_c21', [], ExcelValue.by_value
+    attach_function 'land_d21', [], ExcelValue.by_value
+    attach_function 'land_e21', [], ExcelValue.by_value
+    attach_function 'land_f21', [], ExcelValue.by_value
+    attach_function 'land_g21', [], ExcelValue.by_value
+    attach_function 'land_h21', [], ExcelValue.by_value
+    attach_function 'land_i21', [], ExcelValue.by_value
+    attach_function 'land_j21', [], ExcelValue.by_value
+    attach_function 'land_k21', [], ExcelValue.by_value
+    attach_function 'land_l21', [], ExcelValue.by_value
+    attach_function 'land_m21', [], ExcelValue.by_value
+    attach_function 'land_c22', [], ExcelValue.by_value
+    attach_function 'land_d22', [], ExcelValue.by_value
+    attach_function 'land_e22', [], ExcelValue.by_value
+    attach_function 'land_f22', [], ExcelValue.by_value
+    attach_function 'land_g22', [], ExcelValue.by_value
+    attach_function 'land_h22', [], ExcelValue.by_value
+    attach_function 'land_i22', [], ExcelValue.by_value
+    attach_function 'land_j22', [], ExcelValue.by_value
+    attach_function 'land_k22', [], ExcelValue.by_value
+    attach_function 'land_l22', [], ExcelValue.by_value
+    attach_function 'land_m22', [], ExcelValue.by_value
+    attach_function 'land_c23', [], ExcelValue.by_value
+    attach_function 'land_d23', [], ExcelValue.by_value
+    attach_function 'land_e23', [], ExcelValue.by_value
+    attach_function 'land_f23', [], ExcelValue.by_value
+    attach_function 'land_g23', [], ExcelValue.by_value
+    attach_function 'land_h23', [], ExcelValue.by_value
+    attach_function 'land_i23', [], ExcelValue.by_value
+    attach_function 'land_j23', [], ExcelValue.by_value
+    attach_function 'land_k23', [], ExcelValue.by_value
+    attach_function 'land_l23', [], ExcelValue.by_value
+    attach_function 'land_m23', [], ExcelValue.by_value
     # end of Land
     attach_function 'flows_c5', [], ExcelValue.by_value
     attach_function 'flows_d5', [], ExcelValue.by_value
@@ -2394,7 +2615,18 @@ class Model
     attach_function 'control_f54', [], ExcelValue.by_value
     attach_function 'control_f55', [], ExcelValue.by_value
     attach_function 'control_f56', [], ExcelValue.by_value
+    attach_function 'control_a1', [], ExcelValue.by_value
     # end of Control
+    attach_function 'emisiones_d24', [], ExcelValue.by_value
+    attach_function 'emisiones_e24', [], ExcelValue.by_value
+    attach_function 'emisiones_f24', [], ExcelValue.by_value
+    attach_function 'emisiones_g24', [], ExcelValue.by_value
+    attach_function 'emisiones_h24', [], ExcelValue.by_value
+    attach_function 'emisiones_i24', [], ExcelValue.by_value
+    attach_function 'emisiones_j24', [], ExcelValue.by_value
+    attach_function 'emisiones_k24', [], ExcelValue.by_value
+    attach_function 'emisiones_l24', [], ExcelValue.by_value
+    attach_function 'emisiones_m24', [], ExcelValue.by_value
     attach_function 'emisiones_d25', [], ExcelValue.by_value
     attach_function 'emisiones_e25', [], ExcelValue.by_value
     attach_function 'emisiones_f25', [], ExcelValue.by_value
@@ -2485,16 +2717,6 @@ class Model
     attach_function 'emisiones_k33', [], ExcelValue.by_value
     attach_function 'emisiones_l33', [], ExcelValue.by_value
     attach_function 'emisiones_m33', [], ExcelValue.by_value
-    attach_function 'emisiones_d34', [], ExcelValue.by_value
-    attach_function 'emisiones_e34', [], ExcelValue.by_value
-    attach_function 'emisiones_f34', [], ExcelValue.by_value
-    attach_function 'emisiones_g34', [], ExcelValue.by_value
-    attach_function 'emisiones_h34', [], ExcelValue.by_value
-    attach_function 'emisiones_i34', [], ExcelValue.by_value
-    attach_function 'emisiones_j34', [], ExcelValue.by_value
-    attach_function 'emisiones_k34', [], ExcelValue.by_value
-    attach_function 'emisiones_l34', [], ExcelValue.by_value
-    attach_function 'emisiones_m34', [], ExcelValue.by_value
     # end of Emisiones
     attach_function 'intermediate_output_b2', [], ExcelValue.by_value
     attach_function 'intermediate_output_h3', [], ExcelValue.by_value
@@ -8297,9 +8519,7 @@ class Model
     attach_function 'input_names', [], ExcelValue.by_value
     attach_function 'input_onepagenotes', [], ExcelValue.by_value
     attach_function 'input_types', [], ExcelValue.by_value
-    attach_function 'output_areas', [], ExcelValue.by_value
-    attach_function 'output_capacity_automaticallybuilt', [], ExcelValue.by_value
-    attach_function 'output_diversity', [], ExcelValue.by_value
+    attach_function 'output_e', [], ExcelValue.by_value
     attach_function 'output_electricity_capacity', [], ExcelValue.by_value
     attach_function 'output_electricity_demand', [], ExcelValue.by_value
     attach_function 'output_electricity_ghg', [], ExcelValue.by_value
@@ -8310,11 +8530,8 @@ class Model
     attach_function 'output_ghg_by_ipcc_sector', [], ExcelValue.by_value
     attach_function 'output_ghg_colsector', [], ExcelValue.by_value
     attach_function 'output_ghg_percentage_reduction', [], ExcelValue.by_value
-    attach_function 'output_heating_mix', [], ExcelValue.by_value
-    attach_function 'output_imports_proportion', [], ExcelValue.by_value
-    attach_function 'output_imports_quantity', [], ExcelValue.by_value
     attach_function 'output_primaryenergysupply', [], ExcelValue.by_value
-    attach_function 'output_shannonweinerindex', [], ExcelValue.by_value
+    attach_function 'output_prueba1', [], ExcelValue.by_value
     attach_function 'input_choices', [], ExcelValue.by_value
     attach_function 'input_descriptions', [], ExcelValue.by_value
     attach_function 'input_example_pathways', [], ExcelValue.by_value
@@ -8322,9 +8539,7 @@ class Model
     attach_function 'input_names', [], ExcelValue.by_value
     attach_function 'input_onepagenotes', [], ExcelValue.by_value
     attach_function 'input_types', [], ExcelValue.by_value
-    attach_function 'output_areas', [], ExcelValue.by_value
-    attach_function 'output_capacity_automaticallybuilt', [], ExcelValue.by_value
-    attach_function 'output_diversity', [], ExcelValue.by_value
+    attach_function 'output_e', [], ExcelValue.by_value
     attach_function 'output_electricity_capacity', [], ExcelValue.by_value
     attach_function 'output_electricity_demand', [], ExcelValue.by_value
     attach_function 'output_electricity_ghg', [], ExcelValue.by_value
@@ -8335,11 +8550,8 @@ class Model
     attach_function 'output_ghg_by_ipcc_sector', [], ExcelValue.by_value
     attach_function 'output_ghg_colsector', [], ExcelValue.by_value
     attach_function 'output_ghg_percentage_reduction', [], ExcelValue.by_value
-    attach_function 'output_heating_mix', [], ExcelValue.by_value
-    attach_function 'output_imports_proportion', [], ExcelValue.by_value
-    attach_function 'output_imports_quantity', [], ExcelValue.by_value
     attach_function 'output_primaryenergysupply', [], ExcelValue.by_value
-    attach_function 'output_shannonweinerindex', [], ExcelValue.by_value
+    attach_function 'output_prueba1', [], ExcelValue.by_value
     attach_function 'set_input_choices', [ExcelValue.by_value], :void
     # End of named references
   end # C module

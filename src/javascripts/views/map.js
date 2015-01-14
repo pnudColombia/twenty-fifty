@@ -75,29 +75,29 @@ window.twentyfifty.views.map = function() {
   MW = GW / 1000;
 
   colours = {
-    'III.a.2': '#ff0000',
-    'III.a.1': '#ff0000',
-    'IV.c': '#aa0000',
+    'II.a.1': '#ff0000',
+    'II.b.1': '#ff0000',
+    'XVII.a.1': '#aa0000',
+    'XVII.a.2': '#00ff00',
+    'XVII.a.3': '#408000',
     'VI.a.Biocrop': '#00ff00',
-    'VI.a.Forestry': '#408000',
-    'VI.c': '#00ff00',
-    'V.b': '#00ff00',
-    'IV.a': '#ffff00',
-    'IV.b': '#cccc00',
-    'VII.a': '#ffff00',
-    'III.b': '#0000ff',
-    'III.c.TidalRange': '#0000ff',
-    'III.c.TidalStream': '#aaaaff',
-    'I.a': '#666',
-    'I.b': '#CCC',
-    'II.a': '#FF0',
-    'III.d': '#F00',
-    'VII.c': '#008000',
-    'VI.b': '#F00'
+    'VI.a.Forestry': '#00ff00',
+    'II.a.2': '#ffff00',
+    'II.c.TidalStream': '#cccc00',
+    'II.c.TidalRange': '#ffff00',
+    'VI.c': '#0000ff',
+    'V.b': '#0000ff',
+    'VII.a': '#aaaaff',
+    'II.c.Wave': '#666',
+    'I.a': '#CCC',
+    'IV.a': '#FF0',
+    'II.d': '#F00',
+    'VII.b': '#008000',
+    'XV.a': '#F00'
   };
 
   labels = {
-    'III.a.2': 'Offshore wind',
+    'II.a.1': 'Offshore wind',
     'III.a.1': 'Onshore wind',
     'IV.c': 'Micro wind',
     'VI.a.Biocrop': 'Energy crops',
@@ -120,11 +120,10 @@ window.twentyfifty.views.map = function() {
 
   pointSizes = {
     'I.a': 2,
-    'I.b': 1.2,
-    'II.a': 3,
-    'III.d': 0.01,
-    'VII.c': 1,
-    'VI.b': 0.01
+    'IV.a': 1.2,
+    'II.d': 3,
+    'VII.b': 0.01,
+    'XV.a': 1
   };
 
   // This is called first, before the data is ready
@@ -152,7 +151,7 @@ window.twentyfifty.views.map = function() {
     x = (map_width / 2) + map_offset_x;
     y = map_height + map_offset_y - 100;
     this.land_boxes = {};
-    land_box_names = ['III.a.1', 'III.b', 'IV.a', 'IV.b', 'IV.c', 'VI.a.Biocrop', 'VI.a.Forestry'];
+    land_box_names = ['II.a.1', 'II.b.1', 'XVII.a.1', 'XVII.a.2', 'XVII.a.3', 'VI.a.Biocrop', 'VI.a.Forestry'];
     for (i = 0, len = land_box_names.length; i < len; i++) {
       name = land_box_names[i];
       this.land_boxes[name] = r.upiabeled_square(x, y, labels[name], 0, colours[name]);
@@ -162,7 +161,7 @@ window.twentyfifty.views.map = function() {
     x = (map_width / 2) + map_offset_x + 250;
     y = 30;
     this.sea_boxes = {};
-    sea_box_names = ['III.a.2', 'III.c.TidalStream', 'III.c.TidalRange', 'VI.c'];
+    sea_box_names = ['II.a.2', 'II.c.TidalStream', 'II.c.TidalRange', 'VI.c'];
     for (i = 0, len = sea_box_names.length; i < len; i++) {
       name = sea_box_names[i];
       this.sea_boxes[name] = r.downiabeled_square(x, y, labels[name], 0, colours[name]);
@@ -236,12 +235,12 @@ window.twentyfifty.views.map = function() {
     });
 
     // Draw the line for wave machines
-    if (map['III.c.Wave'] > 0) {
+    if (map['II.c.Wave'] > 0) {
       this.wave.label.show();
     } else {
       this.wave.label.hide();
     };
-    this.wave.line.attr({ path: ["M", 100, 30, "l", 0, map['III.c.Wave'] * km] });
+    this.wave.line.attr({ path: ["M", 100, 30, "l", 0, map['II.c.Wave'] * km] });
 
     // Now draw the land boxes in the right spot
     y = map_height + map_offset_y - 100;
@@ -321,7 +320,7 @@ window.twentyfifty.views.map = function() {
     x = 1055;
     values = [];
 
-    point_cluster_names = ['I.a', 'I.b', 'II.a', 'III.d', 'VII.c', 'VI.b'];
+    point_cluster_names = ['I.a', 'IV.a', 'II.d', 'VII.b', 'XV.a'];
     for (i = 0, len = point_cluster_names.length; i < len; i++) {
       name = point_cluster_names[i];
       values.push({ name: name, value: map[name] });
