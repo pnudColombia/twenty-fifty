@@ -14,33 +14,32 @@ window.twentyfifty.views.story = function() {
 
     element = $('#demand_story');
     element.empty();
-    this.stories_for_choices(element, "Homes in 2050", 32, 33, 37, 38);
-    this.heating_choice_table(element, this.pathway.heating, "Residential");
-    this.stories_for_choices(element, "Personal transport in 2050", 25, 26, 27, 29);
-    this.stories_for_choices(element, "Businesses in 2050", 43, 47, 48);
-    this.heating_choice_table(element, this.pathway.heating, "Commercial");
-    this.stories_for_choices(element, "Industry in 2050", 40, 41);
-    this.stories_for_choices(element, "Commercial transport in 2050", 28, 29, 30);
+    this.stories_for_choices(element, "Hogares en 2050", 26, 28, 30);
+    //this.heating_choice_table(element, this.pathway.heating, "Residential");
+    this.stories_for_choices(element, "Transporte personal en 2050", 37, 38);
+    this.stories_for_choices(element, "Negocios en 2050", 31, 32);
+    //this.heating_choice_table(element, this.pathway.heating, "Commercial");
+    this.stories_for_choices(element, "Industria en 2050", 34, 35);
+    this.stories_for_choices(element, "Transporte comercial en 2050", 40, 41);
 
     element = $('#supply_story');
     element.empty();
-    this.stories_for_choices(element, "Thermal power stations in 2050", 0, 2, 3, 9, 12);
-    this.stories_for_choices(element, "Wind in 2050", 4, 5, 14);
-    this.stories_for_choices(element, "Water: wave, tide and hydro in 2050", 6, 7, 8, 13);
-    this.stories_for_choices(element, "Solar in 2050", 10, 11, 15);
-    this.stories_for_choices(element, "Bioenergy, farming and waste in 2050", 22, 17, 18, 19, 20, 21);
+    this.stories_for_choices(element, "Estaciones termicas en 2050", 0,9);
+    this.stories_for_choices(element, "Aire en 2050", 2, 3);
+    this.stories_for_choices(element, "Agua: olas, mareas e hidroelectricas en 2050", 6, 4);//posiblemente agregar 6 peque;as centrales hidroelectricas
+    this.stories_for_choices(element, "Solar en 2050", 8, 9); //Agregar importaciones
+    this.stories_for_choices(element, "Bioenergy, farming and waste in 2050",11, 20,21); //Agregar importaciones bionergia y procesos de transformacion de la bioenergia
 
     element = $('#ghg_story');
     element.empty();
     this.electricity_generation_capacity_table(element);
     element.append("<h4>Greenhouse gases</h4>");
-    element.append("<p>2050 emissions will be " + Math.round(this.pathway.ghg_reduction_from_1990*100) + "% below 1990 levels.</p>");
-    element.append("<p>International aviation and shipping emissions are not included in the UK's 2050 target but are included here to enable emissions from all sectors to be considered.</p>");
-    this.stories_for_choices(element, null, 50);
+    element.append("<p>Emisiones en 2050 seran " + Math.round(this.pathway.ghg_reduction_from_1990*100) + "% abajo de los niveles de 1990.</p>");
+    element.append("<p>Las emisiones de la aviacion internacional y transporte maritimo no son incluidas en el objetivo para el año 2050, pero son incluidas aqui para permitir las emisiones de todos los sectores que se deben considerar.</p>");
     element.append("<h4>Energy security</h4>");
-    this.stories_for_choices(element, null, 51);
-    element.append("<p>If there are five cold, almost windless, winter days, then up to " + (Math.round(this.pathway.balancing[2][this.pathway.balancing[2].length - 1])) + " GW of backup generation capacity will be required to ensure that electricity is always available.</p>");
-    this.stories_for_choices(element, null, 22, 15);
+    //this.stories_for_choices(element, null, 42); no hay descripcion para aviacion internacional
+   // element.append("<p>If there are five cold, almost windless, winter days, then up to " + (Math.round(this.pathway.balancing[2][this.pathway.balancing[2].length - 1])) + " GW of backup generation capacity will be required to ensure that electricity is always available.</p>"); Corresponde a la parte de seguridad que no esta en el modelo.
+   // this.stories_for_choices(element, null, 22, 15); corresponde a Bionergy imports e importacion de electricidad (no esta en hoja de control)
   };
 
   this.stories_for_choices = function(element, title) {

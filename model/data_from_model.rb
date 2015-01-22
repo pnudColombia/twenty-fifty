@@ -37,7 +37,7 @@ excel.input_choices = choices
 'sankey' => excel.output_flows, # output.flows in the Excel
 'ghg' => excel.output_ghg_by_ipcc_sector, # output.ghg.by.ipcc.sector in Excel
 'ghg_by_sectors' => excel.output_ghg_colsector, # Nueva linea para hacer grafica.
-#'ghg_reduction_from_1990' => excel.output_ghg_percentage_reduction, # output.ghg.percentage.reduction in Excel
+'ghg_reduction_from_1990' => excel.output_ghg_percentage_reduction, # output.ghg.percentage.reduction in Excel
 'final_energy_demand' => excel.output_finalenergydemand, # output.finalenergydemand
 'primary_energy_supply' => excel.output_primaryenergysupply, # output.primaryenergysupply
 'electricity' => {
@@ -46,7 +46,7 @@ excel.input_choices = choices
 'ghg' => excel.output_electricity_ghg,
 'capacity' => excel.output_electricity_capacity
 },
-#'heating' => excel.output_heating_mix, # output.heating.mix
+'heating' => excel.output_heating_mix, # output.heating.mix
 #'costs' => excel.output_costpercapita_detail,
 'map' => excel.output_prueba1, # output.areas
 #'imports' => {

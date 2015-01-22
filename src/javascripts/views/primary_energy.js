@@ -26,8 +26,8 @@ window.twentyfifty.views.primary_energy_chart = function() {
     this.emissions_chart = timeSeriesStackedAreaChart()
       .title("Emisiones ")
       .unit('MtCO2e/yr')
-      .min_value(-100)
-      .max_value(500); //Valor maximo de emisiones
+      .min_value(-25)
+      .max_value(200); //Valor maximo de emisiones
   };
 
   // This is called when a new view has been selected
@@ -89,59 +89,7 @@ window.twentyfifty.views.primary_energy_chart = function() {
     d3.select('#emissions_chart')
       .datum(ghg_by_sectors)
       .call(this.emissions_chart);
-
-    // This is to add the target text to the chart
-    t = d3.select('#emissions_chart g.drawing').selectAll('text.target')
-      .data([percent*100]);
-
-    t.enter().append('text')
-      .attr('class', 'target');
-
-    t.attr('transform', 'translate(' + this.emissions_chart.x_center() + ',-18)');
-
-    t.transition().tween('text', function(d) {
-      current = parseInt(this.textContent) || +d;
-      i = d3.interpolateRound(current, +d);
-      return function(t) {
-        return this.textContent = "" + (i(t)) + "% reduction 1990-2050; Target is 80%";
-      };
-    });
-
-    x = this.emissions_chart.xScale;
-    y = this.emissions_chart.yScale;
-
-    targets = pathway.ghg_by_sectors[pathway.ghg_by_sectors.length -1].slice(1);
-
-    t = d3.select('#emissions_chart g.drawing').selectAll('circle.target')
-      .data(targets);
-
-    t.enter().append('circle')
-      .attr('class', 'target')
-      .attr('r', function(d) { return d == undefined ? 0 : 3 });
-
-    t.attr('cx', function(d,i) { return x(2010 + (i*5)) });
-    t.attr('cy', function(d,i) { return y(d) });
-
-    t = d3.select('#emissions_chart g.drawing').selectAll("g.targetlabel")
-      .data([targets[1]]);
-
-    new_label = t.enter().append('g')
-      .attr('class', 'targetlabel');
-
-    new_label.append('text')
-      .text("Targets²");
-
-    t.select('text')
-      .attr('x', function(d,i) { return x(2022) })
-      .attr('y', function(d,i) { return y(800) });
-
-    new_label.append('line');
-
-    t.select('line')
-      .attr('x1', function(d,i) { return x(2015)+4 })
-      .attr('y1', function(d,i) { return y(d)-4 })
-      .attr('x2', function(d,i) { return x(2022) })
-      .attr('y2', function(d,i) { return y(800) });
+    
 
   };
 

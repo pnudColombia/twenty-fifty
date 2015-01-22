@@ -15,6 +15,7 @@
 //= require d3.min
 //= require jstorage.min
 //= require sankey
+//= require c3.min
 
 // Now the utility methods
 //= require util/model_structure
@@ -30,12 +31,13 @@
 //= require views/energy_security
 //= require views/map
 //= require views/sankey_display
+//= require views/emisiones
 //= require views/air_quality
-//= require views/air_quality2
 //= require views/costs_in_context
 //= require views/costs_compared_overview
 //= require views/costs_compared_within_sector
 //= require views/costs_sensitivity
 //= require views/story
 //= require views/share
+
 
