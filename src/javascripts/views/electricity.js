@@ -16,7 +16,7 @@ window.twentyfifty.views.electricity = function() {
       .max_value(200);
 
     this.supply_chart = timeSeriesStackedAreaChart()
-      .title("Suministro electrico")
+      .title("Suministro eléctrico")
       .unit('TWh/yr')
       .min_value(-30)	
       .max_value(200);

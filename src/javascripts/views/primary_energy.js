@@ -19,7 +19,7 @@ window.twentyfifty.views.primary_energy_chart = function() {
       .max_value(1000); //Ajuste del maximo valor
 
     this.primary_energy_chart = timeSeriesStackedAreaChart()
-      .title("Oferta de energía")
+      .title("Suministro de energía")
       .unit('TWh/yr')
       .max_value(3000);//Ajuste del maximo valor
 

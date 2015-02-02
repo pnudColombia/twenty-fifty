@@ -14,28 +14,28 @@ window.twentyfifty.views.story = function() {
 
     element = $('#demand_story');
     element.empty();
-    this.stories_for_choices(element, "Hogares en 2050", 26, 28, 30);
+    this.stories_for_choices(element, "Hogares 2050", 26, 28, 30);
     //this.heating_choice_table(element, this.pathway.heating, "Residential");
-    this.stories_for_choices(element, "Transporte personal en 2050", 37, 38);
-    this.stories_for_choices(element, "Negocios en 2050", 31, 32);
+    this.stories_for_choices(element, "Transporte particular 2050", 37, 38);
+    this.stories_for_choices(element, "Negocios 2050", 31, 32);
     //this.heating_choice_table(element, this.pathway.heating, "Commercial");
-    this.stories_for_choices(element, "Industria en 2050", 34, 35);
-    this.stories_for_choices(element, "Transporte comercial en 2050", 40, 41);
+    this.stories_for_choices(element, "Industria 2050", 34, 35);
+    this.stories_for_choices(element, "Transporte comercial 2050", 40, 41);
 
     element = $('#supply_story');
     element.empty();
     this.stories_for_choices(element, "Estaciones termicas en 2050", 0,9);
-    this.stories_for_choices(element, "Aire en 2050", 2, 3);
-    this.stories_for_choices(element, "Agua: olas, mareas e hidroelectricas en 2050", 6, 4);//posiblemente agregar 6 peque;as centrales hidroelectricas
+    this.stories_for_choices(element, "Energía eólica 2050", 2, 3);
+    this.stories_for_choices(element, "Energía por fuentes hídricas y marítimas 2050", 6, 4);//posiblemente agregar 6 peque;as centrales hidroelectricas
     this.stories_for_choices(element, "Solar en 2050", 8, 9); //Agregar importaciones
-    this.stories_for_choices(element, "Bioenergy, farming and waste in 2050",11, 20,21); //Agregar importaciones bionergia y procesos de transformacion de la bioenergia
+    this.stories_for_choices(element, "Bioenergía, agricultura y residuos 2050",11, 20,21); //Agregar importaciones bionergia y procesos de transformacion de la bioenergia
 
     element = $('#ghg_story');
     element.empty();
     this.electricity_generation_capacity_table(element);
-    element.append("<h4>Greenhouse gases</h4>");
+    element.append("<h4>Gases de efecto invernadero</h4>");
     element.append("<p>Emisiones en 2050 seran " + Math.round(this.pathway.ghg_reduction_from_1990*100) + "% abajo de los niveles de 1990.</p>");
-    element.append("<p>Las emisiones de la aviacion internacional y transporte maritimo no son incluidas en el objetivo para el año 2050, pero son incluidas aqui para permitir las emisiones de todos los sectores que se deben considerar.</p>");
+    element.append("<p>Las emisiones de la aviación internacional y transporte marítimo no son incluidas en el objetivo para el año 2050, pero son incluidas aquí para permitir el calculo de las emisiones para todos los sectores que se deben considerar.</p>");
     element.append("<h4>Energy security</h4>");
     //this.stories_for_choices(element, null, 42); no hay descripcion para aviacion internacional
    // element.append("<p>If there are five cold, almost windless, winter days, then up to " + (Math.round(this.pathway.balancing[2][this.pathway.balancing[2].length - 1])) + " GW of backup generation capacity will be required to ensure that electricity is always available.</p>"); Corresponde a la parte de seguridad que no esta en el modelo.
