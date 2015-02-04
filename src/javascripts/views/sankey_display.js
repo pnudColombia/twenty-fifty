@@ -49,19 +49,19 @@ s = null;
 this.setup = function() {
 $('#results').append("<div id='sankey'></div>");
 this.s = s = new Sankey();
-s.stack(0, ["Solar", "Wind", "Biomasa seca y residuos", "Tidal", "Wave", "Geothermal", "Hydro", "Electricity imports", "Nuclear", "Coal reserves", "Coal imports", "Biomass imports", "Gas reserves", "Gas imports", "Oil reserves", "Oil imports", "Biofuel imports", "UK land based bioenergy", "Estiercol", "Other waste"]);
-s.stack(1, ["Coal"], "Coal reserves");
-s.stack(1, ["Natural Gas"], "Gas reserves");
-s.stack(1, ["Oil"], "Oil reserves");
-s.stack(1, ["Bio-conversion"], "UK land based bioenergy");
-s.stack(2, ["Solar Thermal", "Solar PV"], "Solar");
-s.stack(2, ["Solid", "Gas", "Liquid"], "Coal");
-s.stack(3, ["Thermal generation", "CHP"], "Nuclear");
-s.stack(4, ["Electricity grid", "District heating"], "Wind");
+s.stack(0, ["Solar", "Eólica", "Biomasa seca y residuos", "Mareas", "Olas", "Geotérmica", "Hydro", "Importaciones de electricidad", "Nuclear", "Reservas de carbón", "Importación de carbón", "Importaciones de biomasa", "Reservas de gas", "Importaciones de gas", "Reservas de petróleo", "Importaciones de petróleo", "Importaciones de biocombustibles", "Tierra Col Bioenergía", "Estiercol", "Otros residuos"]);
+s.stack(1, ["Carbón"], "Reservas de carbón");
+s.stack(1, ["Gas Natural"], "Reservas de gas");
+s.stack(1, ["Petróleo"], "Reservas de petroleo");
+s.stack(1, ["Bio- conversión"], "Tierra Col Bioenergía");
+s.stack(2, ["Solar Térmica", "Solar PV"], "Solar");
+s.stack(2, ["Sólido", "Gas", "Líquido"], "Carbón");
+s.stack(3, ["Generación térmica"], "Nuclear");
+s.stack(4, ["Red eléctrica"], "Eólica");
 s.stack(5, ["H2 conversion"], "Electricity grid");
 s.stack(6, ["H2"], "H2 conversion");
-s.stack(7, ["Edificaciones residenciales", "Edificaciones comerciales y de servicios", "Industry", "Road transport", "Rail transport", "Domestic aviation", "International aviation", "National navigation", "International shipping", "Agriculture", "Geosequestration", "Over generation / exports", "Losses"]);
-s.stack(7, ["Losses"],"UK land based bioenergy");
+s.stack(7, ["Edificaciones residenciales", "Edificaciones comerciales y de servicios", "Industria", "Transporte por carretera", "Transporte por ferrocarril", "Aviación nacional", "Aviación internacional", "Navegación Nacional", "Envíos internacional", "Agricultura", "Geosequestration", "Sobre generación / exportaciones"]);
+s.stack(7, ["Perdidas"],"Tierra Col Bioenergía");
 s.setColors({
 "Coal reserves": "#8F6F38",
 "Coal": "#8F6F38",
