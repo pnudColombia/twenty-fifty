@@ -97,25 +97,20 @@ window.twentyfifty.views.map = function() {
   };
 
   labels = {
-    'II.a.1': 'Offshore wind',
-    'III.a.1': 'Onshore wind',
-    'IV.c': 'Micro wind',
-    'VI.a.Biocrop': 'Energy crops',
-    'VI.a.Forestry': 'Forest',
-    'VI.c': 'Marine algae',
-    'V.b': 'Biocrops',
-    'IV.a': 'Solar PV',
-    'IV.b': 'Solar thermal',
-    'VII.a': 'Solar PV',
-    'III.b': 'Hydro',
-    'III.c.TidalRange': 'Tidal range',
-    'III.c.TidalStream': 'Tidal stream',
-    'I.a': '2 GW coal gas or biomass power stations without CCS',
-    'I.b': '1.2 GW coal gas or biomass power stations with CCS',
-    'II.a': '3 GW nuclear power station',
-    'III.d': '0.01 GW geothermal stations',
-    'VII.c': '1 GW gas standby power stations',
-    'VI.b': '215 kt/y waste to energy conversion facilities'
+    'II.a.1': 'Eólica terrestre',
+    'II.b.1': 'Hydro',
+    'XVII.a.1': 'Solar PV',
+    'XVII.a.2': 'Solar térmica',
+    'XVII.a.3': 'Solar PV',
+    'VI.a.Biocrop': 'Biocrop',
+    'VI.a.Forestry': 'Forestry',
+    'II.a.2': 'Eólica marina',
+    'II.c.TidalStream': 'Tidal Stream',
+    'II.c.TidalRange': 'Tidal Range',
+    'VI.c': 'Pendiente',
+    'V.b': 'Biocrops Overseas',
+    'VII.a': 'Dispositivos solares en el mar',
+    'II.c.Wave': 'Convertidores de olas'
   };
 
   pointSizes = {
