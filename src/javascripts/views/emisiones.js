@@ -21,8 +21,8 @@ window.twentyfifty.views.emisiones = function() {
     this.ghg = timeSeriesStackedAreaChart()
       .title("Emisiones IPCC")
       .unit('MtCO2e/yr')
-      .min_value(-100)
-      .max_value(3000);//Ajuste del maximo valor
+      .min_value(-50)
+      .max_value(500);//Ajuste del maximo valor
 
     this.emissions_chart = timeSeriesStackedAreaChart()
       .title("Emisiones ")

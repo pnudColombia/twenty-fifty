@@ -36,7 +36,7 @@ return [row[from_column], row[flow_column], row[to_column]]
 });
 this.s.updateData(data);
 this.s.redraw();
-max_y = s.boxes['Losses'].b();
+max_y = s.boxes['Perdidas'].b();
 if ($('#sankey').height() < max_y) {
 $('#sankey').height(max_y);
 this.s.r.setSize($('#sankey').width(), max_y);
@@ -105,9 +105,7 @@ s.setColors({
 "H2": "#FF6FCF"
 });
 s.nudge_colours_callback = function() {
-this.recolour(this.boxes["Losses"].left_lines, "#ddd");
-this.recolour(this.boxes["District heating"].left_lines, "#FF0000");
-this.recolour(this.boxes["Electricity grid"].left_lines, "#0000FF");
+this.recolour(this.boxes["Perdidas"].left_lines, "#ddd");
 };
 pixels_per_TWh = $('#sankey').height() / 6000;
 s.y_space = Math.round(100 * pixels_per_TWh);
