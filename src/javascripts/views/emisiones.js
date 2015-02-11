@@ -13,7 +13,7 @@ window.twentyfifty.views.emisiones = function() {
       .attr('id', Object)
       .attr('class', 'chart');
 
-    this.final_energy_chart = timeSeriesStackedAreaChart()
+   this.final_energy_chart = timeSeriesStackedAreaChart()
       .title("Demanda de energía")
       .unit('TWh/yr')
       .max_value(1000); //Ajuste del maximo valor
@@ -68,9 +68,9 @@ window.twentyfifty.views.emisiones = function() {
     percent = pathway.ghg_by_sectors_reduction_from_1990;
 
     // Draw the charts
-    d3.select('#demand_chart')
-      .datum(demand)
-      .call(this.final_energy_chart);
+    //d3.select('#demand_chart')
+     // .datum(demand)
+     // .call(this.final_energy_chart);
 
     d3.select('#ghg')
       .datum(supply)

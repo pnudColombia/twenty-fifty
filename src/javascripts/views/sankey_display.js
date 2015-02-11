@@ -49,14 +49,14 @@ s = null;
 this.setup = function() {
 $('#results').append("<div id='sankey'></div>");
 this.s = s = new Sankey();
-s.stack(0, ["Solar", "Eólica", "Biomasa seca y residuos", "Mareas", "Olas", "Geotérmica", "Hydro", "Importaciones de electricidad", "Nuclear", "Reservas de carbón", "Importación de carbón", "Importaciones de biomasa", "Reservas de gas", "Importaciones de gas", "Reservas de petróleo", "Importaciones de petróleo", "Importaciones de biocombustibles", "Tierra Col Bioenergía", "Estiercol", "Otros residuos"]);
+s.stack(0, ["Solar", "Eólica","Importaciones de petróleo", "Biomasa seca y residuos", "Mareas", "Olas", "Geotérmica", "Hydro", "Importaciones de electricidad", "Nuclear", "Reservas de carbón", "Importación de carbón", "Importaciones de biomasa", "Reservas de gas", "Importaciones de gas", "Reservas de petróleo", "Importaciones de biocombustibles", "Tierra Col Bioenergía", "Estiercol", "Otros residuos"]);
 s.stack(1, ["Carbón"], "Reservas de carbón");
 s.stack(1, ["Gas Natural"], "Reservas de gas");
-s.stack(1, ["Petróleo"], "Reservas de petroleo");
+s.stack(1, ["Petróleo"], "Importaciones de petróleo");
 s.stack(1, ["Bio- conversión"], "Tierra Col Bioenergía");
 s.stack(2, ["Solar Térmica", "Solar PV"], "Solar");
-s.stack(2, ["Sólido", "Gas", "Líquido"], "Carbón");
-s.stack(3, ["Generación térmica"], "Nuclear");
+s.stack(2, ["Líquido","Sólido", "Gas"], "Carbón");
+s.stack(3, ["Generación térmica"], "Hydro");
 s.stack(4, ["Red eléctrica"], "Eólica");
 s.stack(5, ["H2 conversion"], "Electricity grid");
 s.stack(6, ["H2"], "H2 conversion");
