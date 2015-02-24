@@ -13,6 +13,7 @@ window.twentyfifty.views.electricity = function() {
     this.demand_chart = timeSeriesStackedAreaChart()
       .title("Demanda de electricidad")
       .unit('TWh/yr')
+      .min_value(0)	
       .max_value(200);
 
     this.supply_chart = timeSeriesStackedAreaChart()

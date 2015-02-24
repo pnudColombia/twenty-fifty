@@ -28,7 +28,7 @@ window.twentyfifty.views.emisiones = function() {
       .title("Emisiones ")
       .unit('MtCO2e/yr')
       .min_value(-30)
-      .max_value(200); //Valor maximo de emisiones
+      .max_value(450); //Valor maximo de emisiones
   };
 
   // This is called when a new view has been selected

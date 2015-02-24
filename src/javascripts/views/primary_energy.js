@@ -26,8 +26,8 @@ window.twentyfifty.views.primary_energy_chart = function() {
     this.emissions_chart = timeSeriesStackedAreaChart()
       .title("Emisiones ")
       .unit('MtCO2e/yr')
-      .min_value(-25)
-      .max_value(200); //Valor maximo de emisiones
+      .min_value(-20)
+      .max_value(400); //Valor maximo de emisiones
   };
 
   // This is called when a new view has been selected

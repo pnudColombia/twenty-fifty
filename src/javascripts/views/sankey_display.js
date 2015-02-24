@@ -107,7 +107,7 @@ s.setColors({
 s.nudge_colours_callback = function() {
 this.recolour(this.boxes["Perdidas"].left_lines, "#ddd");
 };
-pixels_per_TWh = $('#sankey').height() / 6000;
+pixels_per_TWh = $('#sankey').height() / 4000;
 s.y_space = Math.round(100 * pixels_per_TWh);
 s.right_margin = 250;
 s.left_margin = 150;
@@ -123,4 +123,3 @@ return "" + Math.round(flow) + " TWh/y";
 };
 return this;
 }.call({});
-
