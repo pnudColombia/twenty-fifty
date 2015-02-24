@@ -27,7 +27,7 @@ window.twentyfifty.views.primary_energy_chart = function() {
       .title("Emisiones ")
       .unit('MtCO2e/yr')
       .min_value(-20)
-      .max_value(400); //Valor maximo de emisiones
+      .max_value(500); //Valor maximo de emisiones
   };
 
   // This is called when a new view has been selected

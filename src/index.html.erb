@@ -95,7 +95,7 @@
         <table>
           <!-- One row per choice -->
 	 <p><b>Edificaciones</b></p> 
-          <% structure.choices[20..25].each do |choice| %>
+          <% structure.choices[21..26].each do |choice| %>
             <tr class='<%= choice.incremental_or_alternative %>' id='r<%= choice.number %>'>
               <td class='name'>
                 <a href='/assets/onepage/<%= choice.doc %>' target='_new' data-choicenumber='<%= choice.number %>'>
@@ -120,7 +120,7 @@
         <table>
           <!-- One row per choice -->
 	 <p><b>Industria</b></p> 
-          <% structure.choices[26..27].each do |choice| %>
+          <% structure.choices[27..28].each do |choice| %>
             <tr class='<%= choice.incremental_or_alternative %>' id='r<%= choice.number %>'>
               <td class='name'>
                 <a href='/assets/onepage/<%= choice.doc %>' target='_new' data-choicenumber='<%= choice.number %>'>
@@ -145,7 +145,7 @@
 <table>
           <!-- One row per choice -->
 	 <p><b>Transporte</b></p> 
-          <% structure.choices[28..33].each do |choice| %>
+          <% structure.choices[29..32].each do |choice| %>
             <tr class='<%= choice.incremental_or_alternative %>' id='r<%= choice.number %>'>
               <td class='name'>
                 <a href='/assets/onepage/<%= choice.doc %>' target='_new' data-choicenumber='<%= choice.number %>'>
@@ -184,7 +184,7 @@
           <!--Se incluyen segmentos con los subtitulos para la división de los sectores-->
 	 <p><b>Energía no renovable</b></p> 
           <!--Originalmente va de 0 a 23 -->
-           <% structure.choices[0..0].each do |choice| %>
+           <% structure.choices[0..1].each do |choice| %>
             <tr class='<%= choice.incremental_or_alternative %>' id='r<%= choice.number %>'>
               <td class='name'>
                 <a href='/assets/onepage/<%= choice.doc %>' target='_new' data-choicenumber='<%= choice.number %>'>
@@ -211,7 +211,7 @@
           <!--Se incluyen segmentos con los subtitulos para la división de los sectores-->
 	 <p><b>Energía renovable </b></p> 
           <!--Originalmente va de 0 a 23 -->
-           <% structure.choices[2..9].each do |choice| %>
+           <% structure.choices[2..10].each do |choice| %>
             <tr class='<%= choice.incremental_or_alternative %>' id='r<%= choice.number %>'>
               <td class='name'>
                 <a href='/assets/onepage/<%= choice.doc %>' target='_new' data-choicenumber='<%= choice.number %>'>
@@ -237,7 +237,7 @@
           <!--Se incluyen segmentos con los subtitulos para la división de los sectores-->
 	 <p><b>Energía en zonas no interconectadas</b></p> 
           <!--Originalmente va de 0 a 23 -->
-           <% structure.choices[10..10].each do |choice| %>
+           <% structure.choices[11..11].each do |choice| %>
             <tr class='<%= choice.incremental_or_alternative %>' id='r<%= choice.number %>'>
               <td class='name'>
                 <a href='/assets/onepage/<%= choice.doc %>' target='_new' data-choicenumber='<%= choice.number %>'>
@@ -263,7 +263,7 @@
           <!--Se incluyen segmentos con los subtitulos para la división de los sectores-->
 	 <p><b>Biocombustibles</b></p> 
           <!--Originalmente va de 0 a 23 -->
-           <% structure.choices[11..11].each do |choice| %>
+           <% structure.choices[12..12].each do |choice| %>
             <tr class='<%= choice.incremental_or_alternative %>' id='r<%= choice.number %>'>
               <td class='name'>
                 <a href='/assets/onepage/<%= choice.doc %>' target='_new' data-choicenumber='<%= choice.number %>'>
@@ -289,7 +289,7 @@
           <!--Se incluyen segmentos con los subtitulos para la división de los sectores-->
 	 <p><b>Combustibles fosiles</b></p> 
           <!--Originalmente va de 0 a 23 -->
-           <% structure.choices[12..16].each do |choice| %>
+           <% structure.choices[13..17].each do |choice| %>
             <tr class='<%= choice.incremental_or_alternative %>' id='r<%= choice.number %>'>
               <td class='name'>
                 <a href='/assets/onepage/<%= choice.doc %>' target='_new' data-choicenumber='<%= choice.number %>'>
@@ -315,7 +315,7 @@
           <!--Se incluyen segmentos con los subtitulos para la división de los sectores-->
 	 <p><b>Residuos</b></p> 
           <!--Originalmente va de 0 a 23 -->
-           <% structure.choices[17..18].each do |choice| %>
+           <% structure.choices[18..19].each do |choice| %>
             <tr class='<%= choice.incremental_or_alternative %>' id='r<%= choice.number %>'>
               <td class='name'>
                 <a href='/assets/onepage/<%= choice.doc %>' target='_new' data-choicenumber='<%= choice.number %>'>
@@ -348,7 +348,7 @@
         <!--Se incluyen segmentos con los subtitulos para la división de los sectores-->
 	 <p><b>Agricultura, ganadería y Bosques</b></p>   
         <!-- this should actually go up to choice 42, but that isn't ready for prime time yet -->
-          <% structure.choices[34..41].each do |choice| %>
+          <% structure.choices[35..40].each do |choice| %>
             <tr class='<%= choice.incremental_or_alternative %>' id='r<%= choice.number %>'>
               <td class='name'>
                 <a href='/assets/onepage/<%= choice.doc %>' target='_new' data-choicenumber='<%= choice.number %>'>
