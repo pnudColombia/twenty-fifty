@@ -168,7 +168,6 @@ class Model
     attach_function 'set_control_e54', [ExcelValue.by_value], :void
     attach_function 'set_control_e55', [ExcelValue.by_value], :void
     attach_function 'set_control_e56', [ExcelValue.by_value], :void
-    attach_function 'set_control_e57', [ExcelValue.by_value], :void
     attach_function 'control_e5', [], ExcelValue.by_value
     attach_function 'control_e6', [], ExcelValue.by_value
     attach_function 'control_e7', [], ExcelValue.by_value
@@ -221,7 +220,6 @@ class Model
     attach_function 'control_e54', [], ExcelValue.by_value
     attach_function 'control_e55', [], ExcelValue.by_value
     attach_function 'control_e56', [], ExcelValue.by_value
-    attach_function 'control_e57', [], ExcelValue.by_value
     attach_function 'control_i5', [], ExcelValue.by_value
     attach_function 'control_j5', [], ExcelValue.by_value
     attach_function 'control_k5', [], ExcelValue.by_value
@@ -430,10 +428,6 @@ class Model
     attach_function 'control_j56', [], ExcelValue.by_value
     attach_function 'control_k56', [], ExcelValue.by_value
     attach_function 'control_l56', [], ExcelValue.by_value
-    attach_function 'control_i57', [], ExcelValue.by_value
-    attach_function 'control_j57', [], ExcelValue.by_value
-    attach_function 'control_k57', [], ExcelValue.by_value
-    attach_function 'control_l57', [], ExcelValue.by_value
     attach_function 'control_n4', [], ExcelValue.by_value
     attach_function 'control_o4', [], ExcelValue.by_value
     attach_function 'control_p4', [], ExcelValue.by_value
@@ -1282,22 +1276,6 @@ class Model
     attach_function 'control_aa56', [], ExcelValue.by_value
     attach_function 'control_ab56', [], ExcelValue.by_value
     attach_function 'control_ac56', [], ExcelValue.by_value
-    attach_function 'control_n57', [], ExcelValue.by_value
-    attach_function 'control_o57', [], ExcelValue.by_value
-    attach_function 'control_p57', [], ExcelValue.by_value
-    attach_function 'control_q57', [], ExcelValue.by_value
-    attach_function 'control_r57', [], ExcelValue.by_value
-    attach_function 'control_s57', [], ExcelValue.by_value
-    attach_function 'control_t57', [], ExcelValue.by_value
-    attach_function 'control_u57', [], ExcelValue.by_value
-    attach_function 'control_v57', [], ExcelValue.by_value
-    attach_function 'control_w57', [], ExcelValue.by_value
-    attach_function 'control_x57', [], ExcelValue.by_value
-    attach_function 'control_y57', [], ExcelValue.by_value
-    attach_function 'control_z57', [], ExcelValue.by_value
-    attach_function 'control_aa57', [], ExcelValue.by_value
-    attach_function 'control_ab57', [], ExcelValue.by_value
-    attach_function 'control_ac57', [], ExcelValue.by_value
     attach_function 'control_bf5', [], ExcelValue.by_value
     attach_function 'control_bg5', [], ExcelValue.by_value
     attach_function 'control_bh5', [], ExcelValue.by_value
@@ -1534,10 +1512,6 @@ class Model
     attach_function 'control_bg63', [], ExcelValue.by_value
     attach_function 'control_bh63', [], ExcelValue.by_value
     attach_function 'control_bi63', [], ExcelValue.by_value
-    attach_function 'control_bf64', [], ExcelValue.by_value
-    attach_function 'control_bg64', [], ExcelValue.by_value
-    attach_function 'control_bh64', [], ExcelValue.by_value
-    attach_function 'control_bi64', [], ExcelValue.by_value
     attach_function 'control_d5', [], ExcelValue.by_value
     attach_function 'control_d6', [], ExcelValue.by_value
     attach_function 'control_d7', [], ExcelValue.by_value
@@ -1590,7 +1564,6 @@ class Model
     attach_function 'control_d54', [], ExcelValue.by_value
     attach_function 'control_d55', [], ExcelValue.by_value
     attach_function 'control_d56', [], ExcelValue.by_value
-    attach_function 'control_d57', [], ExcelValue.by_value
     attach_function 'control_g5', [], ExcelValue.by_value
     attach_function 'control_g6', [], ExcelValue.by_value
     attach_function 'control_g7', [], ExcelValue.by_value
@@ -1643,7 +1616,6 @@ class Model
     attach_function 'control_g54', [], ExcelValue.by_value
     attach_function 'control_g55', [], ExcelValue.by_value
     attach_function 'control_g56', [], ExcelValue.by_value
-    attach_function 'control_g57', [], ExcelValue.by_value
     attach_function 'control_f5', [], ExcelValue.by_value
     attach_function 'control_f6', [], ExcelValue.by_value
     attach_function 'control_f7', [], ExcelValue.by_value
@@ -1696,7 +1668,6 @@ class Model
     attach_function 'control_f54', [], ExcelValue.by_value
     attach_function 'control_f55', [], ExcelValue.by_value
     attach_function 'control_f56', [], ExcelValue.by_value
-    attach_function 'control_f57', [], ExcelValue.by_value
     # end of Control
     attach_function 'land_c4', [], ExcelValue.by_value
     attach_function 'land_d4', [], ExcelValue.by_value

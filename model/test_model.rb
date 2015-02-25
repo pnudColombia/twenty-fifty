@@ -24,33 +24,32 @@ class TestModel < Minitest::Unit::TestCase
   def test_control_e16; assert_in_epsilon(4.0, worksheet.control_e16, 0.002); end
   def test_control_e18; assert_in_epsilon(4.0, worksheet.control_e18, 0.002); end
   def test_control_e20; assert_in_epsilon(4.0, worksheet.control_e20, 0.002); end
-  def test_control_e21; assert_in_epsilon(4.0, worksheet.control_e21, 0.002); end
-  def test_control_e23; assert_in_epsilon(3.0, worksheet.control_e23, 0.002); end
+  def test_control_e22; assert_in_epsilon(3.0, worksheet.control_e22, 0.002); end
+  def test_control_e23; assert_in_epsilon(4.0, worksheet.control_e23, 0.002); end
   def test_control_e24; assert_in_epsilon(4.0, worksheet.control_e24, 0.002); end
-  def test_control_e25; assert_in_epsilon(4.0, worksheet.control_e25, 0.002); end
+  def test_control_e26; assert_in_epsilon(4.0, worksheet.control_e26, 0.002); end
   def test_control_e27; assert_in_epsilon(4.0, worksheet.control_e27, 0.002); end
   def test_control_e28; assert_in_epsilon(4.0, worksheet.control_e28, 0.002); end
-  def test_control_e29; assert_in_epsilon(4.0, worksheet.control_e29, 0.002); end
-  def test_control_e31; assert_in_epsilon(4.0, worksheet.control_e31, 0.002); end
+  def test_control_e30; assert_in_epsilon(4.0, worksheet.control_e30, 0.002); end
+  def test_control_e32; assert_in_epsilon(4.0, worksheet.control_e32, 0.002); end
   def test_control_e33; assert_in_epsilon(4.0, worksheet.control_e33, 0.002); end
   def test_control_e34; assert_in_epsilon(4.0, worksheet.control_e34, 0.002); end
   def test_control_e35; assert_in_epsilon(4.0, worksheet.control_e35, 0.002); end
   def test_control_e36; assert_in_epsilon(4.0, worksheet.control_e36, 0.002); end
-  def test_control_e37; assert_in_epsilon(4.0, worksheet.control_e37, 0.002); end
-  def test_control_e39; assert_in_epsilon(3.0, worksheet.control_e39, 0.002); end
-  def test_control_e40; assert_in_epsilon(4.0, worksheet.control_e40, 0.002); end
+  def test_control_e38; assert_in_epsilon(3.0, worksheet.control_e38, 0.002); end
+  def test_control_e39; assert_in_epsilon(4.0, worksheet.control_e39, 0.002); end
+  def test_control_e41; assert_in_epsilon(4.0, worksheet.control_e41, 0.002); end
   def test_control_e42; assert_in_epsilon(4.0, worksheet.control_e42, 0.002); end
-  def test_control_e43; assert_in_epsilon(4.0, worksheet.control_e43, 0.002); end
+  def test_control_e44; assert_in_epsilon(4.0, worksheet.control_e44, 0.002); end
   def test_control_e45; assert_in_epsilon(4.0, worksheet.control_e45, 0.002); end
   def test_control_e46; assert_in_epsilon(4.0, worksheet.control_e46, 0.002); end
   def test_control_e47; assert_in_epsilon(4.0, worksheet.control_e47, 0.002); end
-  def test_control_e48; assert_in_epsilon(4.0, worksheet.control_e48, 0.002); end
+  def test_control_e50; assert_in_epsilon(4.0, worksheet.control_e50, 0.002); end
   def test_control_e51; assert_in_epsilon(4.0, worksheet.control_e51, 0.002); end
   def test_control_e52; assert_in_epsilon(4.0, worksheet.control_e52, 0.002); end
   def test_control_e53; assert_in_epsilon(4.0, worksheet.control_e53, 0.002); end
-  def test_control_e54; assert_in_epsilon(4.0, worksheet.control_e54, 0.002); end
+  def test_control_e55; assert_in_epsilon(4.0, worksheet.control_e55, 0.002); end
   def test_control_e56; assert_in_epsilon(4.0, worksheet.control_e56, 0.002); end
-  def test_control_e57; assert_in_epsilon(4.0, worksheet.control_e57, 0.002); end
   def test_control_i5; assert_equal("Se mantiene la capacidad de 201 MW de plantas a gas y 622 MW a carbón actualmente existente y bajo construcción", worksheet.control_i5); end
   def test_control_j5; assert_equal("500 MW de plantas a gas y 874 MW a carbón. 14MW en cogeneración.", worksheet.control_j5); end
   def test_control_k5; assert_equal("1897 MW de plantas a gas y 1196 MW a carbón. 290 MW en cogeneración.", worksheet.control_k5); end
@@ -103,96 +102,92 @@ class TestModel < Minitest::Unit::TestCase
   def test_control_j20; assert_equal("Captura y aprovechamiento del 20% del metano generado", worksheet.control_j20); end
   def test_control_k20; assert_equal("Captura y aprovechamiento del 25% del metano generado", worksheet.control_k20); end
   def test_control_l20; assert_equal("Captura y aprovechamiento del 36% del metano generado", worksheet.control_l20); end
-  def test_control_i21; assert_equal("No se realizan esfuerzos por mejorar la eficiencia energética en las operaciones de extracción minera.", worksheet.control_i21); end
-  def test_control_j21; assert_equal("Aumento del 20% de la eficiencia energética en las operaciones de extracción minera", worksheet.control_j21); end
-  def test_control_k21; assert_equal("Aumento del 30% de la eficiencia energética en las operaciones de extracción minera ", worksheet.control_k21); end
-  def test_control_l21; assert_equal("Aumento del 50% en la eficiencia energética en las operaciones de extracción minera", worksheet.control_l21); end
-  def test_control_i23; assert_equal("Limitaciones en la oferta de hidrocarburos: 300 miles de barriles de petroleo y 0,1 trillones de pies cubicos de gas natural por año\r", worksheet.control_i23); end
-  def test_control_j23; assert_equal("Continuidad en la tendencia reciente de incorporación de reservas: 480 miles de barriles de petroleo y 0,33 trillones de pies cubicos de gas natural por año", worksheet.control_j23); end
-  def test_control_k23; assert_equal("Oferta por encima de los mejores años en la última década: 1.450 miles de barriles de petróleo y 0,85 trillones de pies cubicos de gas natural por año", worksheet.control_k23); end
-  def test_control_i24; assert_equal("No se consideran mejoras en la eficiencia energética", worksheet.control_i24); end
-  def test_control_j24; assert_equal("La eficiencia energética aumenta el 5%", worksheet.control_j24); end
-  def test_control_k24; assert_equal("La eficiencia energética aumenta el 20%", worksheet.control_k24); end
-  def test_control_l24; assert_equal("La eficiencia energética aumenta el 50%. Sustitución del 20% del consumo de combustibles fósiles del sector por energías renovables.", worksheet.control_l24); end
-  def test_control_i25; assert_equal("No se implementan tecnologías de recuperación mejorada de petróleo", worksheet.control_i25); end
-  def test_control_j25; assert_equal("Penetración del 30% de tecnologías recuperación mejorada de petróleo", worksheet.control_j25); end
-  def test_control_k25; assert_equal("Penetración del 40% de tecnologías recuperación mejorada de petróleo", worksheet.control_k25); end
-  def test_control_l25; assert_equal("Penetración del 50% de tecnologías recuperación mejorada de petróleo", worksheet.control_l25); end
-  def test_control_i27; assert_equal("Todos los residuos son dispuestos al relleno sanitario\r", worksheet.control_i27); end
-  def test_control_j27; assert_equal("El 40% de los residuos se destina para reciclaje, compostaje y combustión. Aprovechamiento del 30% del metano", worksheet.control_j27); end
-  def test_control_k27; assert_equal("El 45% de los residuos se destina para reciclaje, compostaje y combustión. Aprovechamiento del 60% del metano", worksheet.control_k27); end
-  def test_control_l27; assert_equal("El 60% de los residuos se destina para reciclaje, compostaje y combustión. Aprovechamiento del 80% del metano", worksheet.control_l27); end
-  def test_control_i28; assert_equal("Tratamiento convencional de aguas residuales sin aprovechamiento de metano\r", worksheet.control_i28); end
-  def test_control_j28; assert_equal("Aprovechamiento del 30% del metano", worksheet.control_j28); end
-  def test_control_k28; assert_equal("Aprovechamiento del 50% del metano", worksheet.control_k28); end
-  def test_control_l28; assert_equal("Aprovechamiento del 75% del metano", worksheet.control_l28); end
-  def test_control_i31; assert_equal("El consumo de energía para acondicionamiento de espacios es de 12.6 TWh", worksheet.control_i31); end
-  def test_control_j31; assert_equal("El consumo de energía para acondicionamiento de espacios es de 11.5 TWh", worksheet.control_j31); end
-  def test_control_k31; assert_equal("El consumo de energía para acondicionamiento de espacios es de 11.05 TWh", worksheet.control_k31); end
-  def test_control_l31; assert_equal("El consumo de energía para acondicionamiento de espacios es de 10.5 TWh", worksheet.control_l31); end
-  def test_control_i33; assert_equal("No hay cambios importantes en las tecnologías utilizadas para iluminación, refrigeración y cocción", worksheet.control_i33); end
-  def test_control_j33; assert_equal("Tenencia de iluminación LED del 0%, neveras con edad superior a 6 años del 17% y estufas mejoradas del 31%", worksheet.control_j33); end
-  def test_control_k33; assert_equal("Tenencia de iluminación LED del 35%, neveras con edad superior a 6 años del 0% y estufas mejoradas del 61% ", worksheet.control_k33); end
-  def test_control_l33; assert_equal("Tenencia de iluminación LED del 100%, neveras con edad superior a 6 años del 0% y estufas mejoradas del 100% ", worksheet.control_l33); end
-  def test_control_i35; assert_equal("Uso de leña en un 60%, el GLP en un 7% y la electricidad en un 26%", worksheet.control_i35); end
-  def test_control_j35; assert_equal("Uso de leña en un 55%, el GLP en un 12% y la electricidad en un 26%", worksheet.control_j35); end
-  def test_control_k35; assert_equal("Uso de leña en un 45%, el GLP en un 19% y la electricidad en un 29%", worksheet.control_k35); end
-  def test_control_l35; assert_equal("Uso de leña en un 38%, el GLP en un 24% y la electricidad en un 31%", worksheet.control_l35); end
-  def test_control_i36; assert_equal("El consumo de energía crece con un 4% promedio anual", worksheet.control_i36); end
+  def test_control_i22; assert_equal("Limitaciones en la oferta de hidrocarburos: 300 miles de barriles de petroleo y 0,1 trillones de pies cubicos de gas natural por año\r", worksheet.control_i22); end
+  def test_control_j22; assert_equal("Continuidad en la tendencia reciente de incorporación de reservas: 480 miles de barriles de petroleo y 0,33 trillones de pies cubicos de gas natural por año", worksheet.control_j22); end
+  def test_control_k22; assert_equal("Oferta por encima de los mejores años en la última década: 1.450 miles de barriles de petróleo y 0,85 trillones de pies cubicos de gas natural por año", worksheet.control_k22); end
+  def test_control_i23; assert_equal("No se consideran mejoras en la eficiencia energética", worksheet.control_i23); end
+  def test_control_j23; assert_equal("La eficiencia energética aumenta el 5%", worksheet.control_j23); end
+  def test_control_k23; assert_equal("La eficiencia energética aumenta el 20%", worksheet.control_k23); end
+  def test_control_l23; assert_equal("La eficiencia energética aumenta el 50%. Sustitución del 20% del consumo de combustibles fósiles del sector por energías renovables.", worksheet.control_l23); end
+  def test_control_i24; assert_equal("No se implementan tecnologías de recuperación mejorada de petróleo", worksheet.control_i24); end
+  def test_control_j24; assert_equal("Penetración del 30% de tecnologías recuperación mejorada de petróleo", worksheet.control_j24); end
+  def test_control_k24; assert_equal("Penetración del 40% de tecnologías recuperación mejorada de petróleo", worksheet.control_k24); end
+  def test_control_l24; assert_equal("Penetración del 50% de tecnologías recuperación mejorada de petróleo", worksheet.control_l24); end
+  def test_control_i26; assert_equal("Todos los residuos son dispuestos al relleno sanitario\r", worksheet.control_i26); end
+  def test_control_j26; assert_equal("El 40% de los residuos se destina para reciclaje, compostaje y combustión. Aprovechamiento del 30% del metano", worksheet.control_j26); end
+  def test_control_k26; assert_equal("El 45% de los residuos se destina para reciclaje, compostaje y combustión. Aprovechamiento del 60% del metano", worksheet.control_k26); end
+  def test_control_l26; assert_equal("El 60% de los residuos se destina para reciclaje, compostaje y combustión. Aprovechamiento del 80% del metano", worksheet.control_l26); end
+  def test_control_i27; assert_equal("Tratamiento convencional de aguas residuales sin aprovechamiento de metano\r", worksheet.control_i27); end
+  def test_control_j27; assert_equal("Aprovechamiento del 30% del metano", worksheet.control_j27); end
+  def test_control_k27; assert_equal("Aprovechamiento del 50% del metano", worksheet.control_k27); end
+  def test_control_l27; assert_equal("Aprovechamiento del 75% del metano", worksheet.control_l27); end
+  def test_control_i30; assert_equal("El consumo de energía para acondicionamiento de espacios es de 12.6 TWh", worksheet.control_i30); end
+  def test_control_j30; assert_equal("El consumo de energía para acondicionamiento de espacios es de 11.5 TWh", worksheet.control_j30); end
+  def test_control_k30; assert_equal("El consumo de energía para acondicionamiento de espacios es de 11.05 TWh", worksheet.control_k30); end
+  def test_control_l30; assert_equal("El consumo de energía para acondicionamiento de espacios es de 10.5 TWh", worksheet.control_l30); end
+  def test_control_i32; assert_equal("No hay cambios importantes en las tecnologías utilizadas para iluminación, refrigeración y cocción", worksheet.control_i32); end
+  def test_control_j32; assert_equal("Tenencia de iluminación LED del 0%, neveras con edad superior a 6 años del 17% y estufas mejoradas del 31%", worksheet.control_j32); end
+  def test_control_k32; assert_equal("Tenencia de iluminación LED del 35%, neveras con edad superior a 6 años del 0% y estufas mejoradas del 61% ", worksheet.control_k32); end
+  def test_control_l32; assert_equal("Tenencia de iluminación LED del 100%, neveras con edad superior a 6 años del 0% y estufas mejoradas del 100% ", worksheet.control_l32); end
+  def test_control_i34; assert_equal("Uso de leña en un 60%, el GLP en un 7% y la electricidad en un 26%", worksheet.control_i34); end
+  def test_control_j34; assert_equal("Uso de leña en un 55%, el GLP en un 12% y la electricidad en un 26%", worksheet.control_j34); end
+  def test_control_k34; assert_equal("Uso de leña en un 45%, el GLP en un 19% y la electricidad en un 29%", worksheet.control_k34); end
+  def test_control_l34; assert_equal("Uso de leña en un 38%, el GLP en un 24% y la electricidad en un 31%", worksheet.control_l34); end
+  def test_control_i35; assert_equal("El consumo de energía crece con un 4% promedio anual", worksheet.control_i35); end
+  def test_control_j35; assert_equal("El consumo de energía disminuye con un 5% promedio anual", worksheet.control_j35); end
+  def test_control_k35; assert_equal("El consumo de energía disminuye con un 10% promedio anual", worksheet.control_k35); end
+  def test_control_l35; assert_equal("El consumo de energía disminuye con un 17% promedio anual", worksheet.control_l35); end
+  def test_control_i36; assert_equal("El consumo de energía crece con un 2,4% promedio anual", worksheet.control_i36); end
   def test_control_j36; assert_equal("El consumo de energía disminuye con un 5% promedio anual", worksheet.control_j36); end
-  def test_control_k36; assert_equal("El consumo de energía disminuye con un 10% promedio anual", worksheet.control_k36); end
-  def test_control_l36; assert_equal("El consumo de energía disminuye con un 17% promedio anual", worksheet.control_l36); end
-  def test_control_i37; assert_equal("El consumo de energía crece con un 2,4% promedio anual", worksheet.control_i37); end
-  def test_control_j37; assert_equal("El consumo de energía disminuye con un 5% promedio anual", worksheet.control_j37); end
-  def test_control_k37; assert_equal("El consumo de energía disminuye con un 27% promedio anual", worksheet.control_k37); end
-  def test_control_l37; assert_equal("El consumo de energía disminuye con un 50% promedio anual", worksheet.control_l37); end
-  def test_control_i39; assert_equal("Escenario de la UPME de demanda energética de acuerdo al crecimiento del PIB sectorial", worksheet.control_i39); end
-  def test_control_j39; assert_equal("Demanda energética crece 1% anual por encima del escenario UPME", worksheet.control_j39); end
-  def test_control_k39; assert_equal("La demanda energética se desacelera 1% anual respecto al escenario UPME", worksheet.control_k39); end
-  def test_control_i40; assert_equal("No se realiza ningún esfuerzo por reducir las emisiones.", worksheet.control_i40); end
-  def test_control_j40; assert_equal("Reducción de las emisiones por proceso con 5%, eficiencia energética mejora 2,5%, cambio del 20% de combustibles fósiles por electricidad", worksheet.control_j40); end
-  def test_control_k40; assert_equal("Reducción de emisiones por proceso con 10%, eficiencia energética mejora 5%, cambio del 40% de combustibles fósiles por electricidad", worksheet.control_k40); end
-  def test_control_l40; assert_equal("Reducción de emisiones por proceso con 14%, eficiencia energética mejora 10%, cambio del 50% de combustibles fósiles por electricidad", worksheet.control_l40); end
-  def test_control_i42; assert_equal("Transporte privado motorizado 47%, modos no motorizados 11% y transporte público 33% en 2050", worksheet.control_i42); end
-  def test_control_j42; assert_equal("Transporte privado motorizado 42%, modos no motorizados 13,5% y transporte público 35,5%", worksheet.control_j42); end
-  def test_control_k42; assert_equal("Transporte privado motorizado 32%, modos no motorizados 21% y transporte público 38%", worksheet.control_k42); end
-  def test_control_l42; assert_equal("Transporte privado motorizado 27%, modos no motorizados 21% y transporte público 43%", worksheet.control_l42); end
-  def test_control_i43; assert_equal("Penetración muy baja de tecnologías eléctrica e híbrida", worksheet.control_i43); end
-  def test_control_j43; assert_equal("25% vehículos privados electricos y 27% híbridos, 15% buses electricos y 20% híbridos", worksheet.control_j43); end
-  def test_control_k43; assert_equal("50% vehículos privados eléctricos y 38% híbridos, 30% buses electricos y 25% híbridos", worksheet.control_k43); end
-  def test_control_l43; assert_equal("80% vehículos privados eléctricos y 45% híbridos, 50% buses electricos y 30% híbridos", worksheet.control_l43); end
-  def test_control_i45; assert_equal("Penetración muy baja de tecnologías limpias", worksheet.control_i45); end
-  def test_control_j45; assert_equal("20% de los camiones con tecnologías limpias", worksheet.control_j45); end
-  def test_control_k45; assert_equal("30% de los camiones con tecnologías limpias", worksheet.control_k45); end
-  def test_control_l45; assert_equal("70% de los camiones con tecnologías limpias", worksheet.control_l45); end
-  def test_control_i46; assert_equal("60% modo carretero", worksheet.control_i46); end
-  def test_control_j46; assert_equal("57% modo carretero, 3% fluvial y ferreo", worksheet.control_j46); end
-  def test_control_k46; assert_equal("54% modo carretero, 6% fluvial y ferreo", worksheet.control_k46); end
-  def test_control_l46; assert_equal("51% modo carretero, 9% fluvial y ferreo", worksheet.control_l46); end
-  def test_control_i51; assert_equal("Un colombiano promedio aumenta su consumo de carne a 575g y leche a 3,8 litros a la semana para 2050\r", worksheet.control_i51); end
-  def test_control_j51; assert_equal("Un colombiano promedio aumenta su consumo de carne a 479g y leche a 3,3 litros a la semana para 2050\r", worksheet.control_j51); end
-  def test_control_k51; assert_equal("Un colombiano promedio mantiene su consumo de carne en 362g y leche a 3,1 litros a la semana para 2050", worksheet.control_k51); end
-  def test_control_l51; assert_equal("Un colombiano promedio disminuye su consumo de carne a 288g y leche a 2,9 litros a la semana para 2050\r", worksheet.control_l51); end
-  def test_control_i52; assert_equal("No se implementan prácticas sostenibles en suelos ganaderos", worksheet.control_i52); end
-  def test_control_j52; assert_equal("Siembra de 1'428.000 Ha de árboles y arbustos. Rehabilitación de 51.487 Ha de pasturas", worksheet.control_j52); end
-  def test_control_k52; assert_equal("Siembra de 1'527.960 Ha de árboles y arbustos. Rehabilitación de 54.576 Ha de pasturas", worksheet.control_k52); end
-  def test_control_l52; assert_equal("Siembra de 1'556.520 Ha de árboles y arbustos. Rehabilitación de 55.606 Ha de pasturas", worksheet.control_l52); end
-  def test_control_i53; assert_equal("No se implementan mejores prácticas pecuarias", worksheet.control_i53); end
-  def test_control_j53; assert_equal("Mejora en la dieta del 10% del hato ganadero. Prácticas de pastoreo racional en 303.000 Ha", worksheet.control_j53); end
-  def test_control_k53; assert_equal("Mejora en la dieta del 30% del hato ganadero. Prácticas de pastoreo racional en 324.210 Ha", worksheet.control_k53); end
-  def test_control_l53; assert_equal("Mejora en la dieta del 50% del hato ganadero. Prácticas de pastoreo racional en 330.270 Ha", worksheet.control_l53); end
-  def test_control_i54; assert_equal("No se implementan mejores prácticas agrícolas", worksheet.control_i54); end
-  def test_control_j54; assert_equal("Mejores prácticas agrícolas en el 5% del área agrícola del país", worksheet.control_j54); end
-  def test_control_k54; assert_equal("Mejores prácticas agrícolas en el 7% del área agrícola del país", worksheet.control_k54); end
-  def test_control_l54; assert_equal("Mejores prácticas agrícolas en el 9% del área agrícola del país", worksheet.control_l54); end
-  def test_control_i56; assert_equal("Deforestación anual nacional de 8,9 miles de Ha\r", worksheet.control_i56); end
-  def test_control_j56; assert_equal("Deforestación anual nacional de 7,2 miles de Ha\r", worksheet.control_j56); end
-  def test_control_k56; assert_equal("Deforestación anual nacional de 5,6 miles de Ha\r", worksheet.control_k56); end
-  def test_control_l56; assert_equal("No se presenta deforestación a nivel nacional", worksheet.control_l56); end
-  def test_control_i57; assert_equal("Siembras anuales de 40 mil Ha de bosque", worksheet.control_i57); end
-  def test_control_j57; assert_equal("Siembras anuales de 62 mil Ha de bosque", worksheet.control_j57); end
-  def test_control_k57; assert_equal("Siembras anuales de 69 mil Ha de bosque", worksheet.control_k57); end
-  def test_control_l57; assert_equal("Siembras anuales de 88 mil Ha de bosque", worksheet.control_l57); end
+  def test_control_k36; assert_equal("El consumo de energía disminuye con un 27% promedio anual", worksheet.control_k36); end
+  def test_control_l36; assert_equal("El consumo de energía disminuye con un 50% promedio anual", worksheet.control_l36); end
+  def test_control_i38; assert_equal("Escenario de la UPME de demanda energética de acuerdo al crecimiento del PIB sectorial", worksheet.control_i38); end
+  def test_control_j38; assert_equal("Demanda energética crece 1% anual por encima del escenario UPME", worksheet.control_j38); end
+  def test_control_k38; assert_equal("La demanda energética se desacelera 1% anual respecto al escenario UPME", worksheet.control_k38); end
+  def test_control_i39; assert_equal("No se realiza ningún esfuerzo por reducir las emisiones.", worksheet.control_i39); end
+  def test_control_j39; assert_equal("Reducción de las emisiones por proceso con 5%, eficiencia energética mejora 2,5%, cambio del 20% de combustibles fósiles por electricidad", worksheet.control_j39); end
+  def test_control_k39; assert_equal("Reducción de emisiones por proceso con 10%, eficiencia energética mejora 5%, cambio del 40% de combustibles fósiles por electricidad", worksheet.control_k39); end
+  def test_control_l39; assert_equal("Reducción de emisiones por proceso con 14%, eficiencia energética mejora 10%, cambio del 50% de combustibles fósiles por electricidad", worksheet.control_l39); end
+  def test_control_i41; assert_equal("Transporte privado motorizado 47%, modos no motorizados 11% y transporte público 33% en 2050", worksheet.control_i41); end
+  def test_control_j41; assert_equal("Transporte privado motorizado 42%, modos no motorizados 13,5% y transporte público 35,5%", worksheet.control_j41); end
+  def test_control_k41; assert_equal("Transporte privado motorizado 32%, modos no motorizados 21% y transporte público 38%", worksheet.control_k41); end
+  def test_control_l41; assert_equal("Transporte privado motorizado 27%, modos no motorizados 21% y transporte público 43%", worksheet.control_l41); end
+  def test_control_i42; assert_equal("Penetración muy baja de tecnologías eléctrica e híbrida", worksheet.control_i42); end
+  def test_control_j42; assert_equal("25% vehículos privados electricos y 27% híbridos, 15% buses electricos y 20% híbridos", worksheet.control_j42); end
+  def test_control_k42; assert_equal("50% vehículos privados eléctricos y 38% híbridos, 30% buses electricos y 25% híbridos", worksheet.control_k42); end
+  def test_control_l42; assert_equal("80% vehículos privados eléctricos y 45% híbridos, 50% buses electricos y 30% híbridos", worksheet.control_l42); end
+  def test_control_i44; assert_equal("Penetración muy baja de tecnologías limpias", worksheet.control_i44); end
+  def test_control_j44; assert_equal("20% de los camiones con tecnologías limpias", worksheet.control_j44); end
+  def test_control_k44; assert_equal("30% de los camiones con tecnologías limpias", worksheet.control_k44); end
+  def test_control_l44; assert_equal("70% de los camiones con tecnologías limpias", worksheet.control_l44); end
+  def test_control_i45; assert_equal("60% modo carretero", worksheet.control_i45); end
+  def test_control_j45; assert_equal("57% modo carretero, 3% fluvial y ferreo", worksheet.control_j45); end
+  def test_control_k45; assert_equal("54% modo carretero, 6% fluvial y ferreo", worksheet.control_k45); end
+  def test_control_l45; assert_equal("51% modo carretero, 9% fluvial y ferreo", worksheet.control_l45); end
+  def test_control_i50; assert_equal("Un colombiano promedio aumenta su consumo de carne a 575g y leche a 3,8 litros a la semana para 2050\r", worksheet.control_i50); end
+  def test_control_j50; assert_equal("Un colombiano promedio aumenta su consumo de carne a 479g y leche a 3,3 litros a la semana para 2050\r", worksheet.control_j50); end
+  def test_control_k50; assert_equal("Un colombiano promedio mantiene su consumo de carne en 362g y leche a 3,1 litros a la semana para 2050", worksheet.control_k50); end
+  def test_control_l50; assert_equal("Un colombiano promedio disminuye su consumo de carne a 288g y leche a 2,9 litros a la semana para 2050\r", worksheet.control_l50); end
+  def test_control_i51; assert_equal("No se implementan prácticas sostenibles en suelos ganaderos", worksheet.control_i51); end
+  def test_control_j51; assert_equal("Siembra de 1'428.000 Ha de árboles y arbustos. Rehabilitación de 51.487 Ha de pasturas", worksheet.control_j51); end
+  def test_control_k51; assert_equal("Siembra de 1'527.960 Ha de árboles y arbustos. Rehabilitación de 54.576 Ha de pasturas", worksheet.control_k51); end
+  def test_control_l51; assert_equal("Siembra de 1'556.520 Ha de árboles y arbustos. Rehabilitación de 55.606 Ha de pasturas", worksheet.control_l51); end
+  def test_control_i52; assert_equal("No se implementan mejores prácticas pecuarias", worksheet.control_i52); end
+  def test_control_j52; assert_equal("Mejora en la dieta del 10% del hato ganadero. Prácticas de pastoreo racional en 303.000 Ha", worksheet.control_j52); end
+  def test_control_k52; assert_equal("Mejora en la dieta del 30% del hato ganadero. Prácticas de pastoreo racional en 324.210 Ha", worksheet.control_k52); end
+  def test_control_l52; assert_equal("Mejora en la dieta del 50% del hato ganadero. Prácticas de pastoreo racional en 330.270 Ha", worksheet.control_l52); end
+  def test_control_i53; assert_equal("No se implementan mejores prácticas agrícolas", worksheet.control_i53); end
+  def test_control_j53; assert_equal("Mejores prácticas agrícolas en el 5% del área agrícola del país", worksheet.control_j53); end
+  def test_control_k53; assert_equal("Mejores prácticas agrícolas en el 7% del área agrícola del país", worksheet.control_k53); end
+  def test_control_l53; assert_equal("Mejores prácticas agrícolas en el 9% del área agrícola del país", worksheet.control_l53); end
+  def test_control_i55; assert_equal("Deforestación anual nacional de 8,9 miles de Ha\r", worksheet.control_i55); end
+  def test_control_j55; assert_equal("Deforestación anual nacional de 7,2 miles de Ha\r", worksheet.control_j55); end
+  def test_control_k55; assert_equal("Deforestación anual nacional de 5,6 miles de Ha\r", worksheet.control_k55); end
+  def test_control_l55; assert_equal("No se presenta deforestación a nivel nacional", worksheet.control_l55); end
+  def test_control_i56; assert_equal("Siembras anuales de 40 mil Ha de bosque", worksheet.control_i56); end
+  def test_control_j56; assert_equal("Siembras anuales de 62 mil Ha de bosque", worksheet.control_j56); end
+  def test_control_k56; assert_equal("Siembras anuales de 69 mil Ha de bosque", worksheet.control_k56); end
+  def test_control_l56; assert_equal("Siembras anuales de 88 mil Ha de bosque", worksheet.control_l56); end
   def test_control_n4; assert_equal("Escenario Calculadora", worksheet.control_n4); end
   def test_control_o4; assert_equal("Todo en nivel máximo", worksheet.control_o4); end
   def test_control_p4; assert_equal("Todo en nivel 1", worksheet.control_p4); end
@@ -238,30 +233,30 @@ class TestModel < Minitest::Unit::TestCase
   def test_control_n20; assert_in_epsilon(3.0, worksheet.control_n20, 0.002); end
   def test_control_o20; assert_in_epsilon(4.0, worksheet.control_o20, 0.002); end
   def test_control_p20; assert_in_delta(1.0, worksheet.control_p20, 0.002); end
-  def test_control_n21; assert_in_epsilon(4.0, worksheet.control_n21, 0.002); end
-  def test_control_o21; assert_in_epsilon(4.0, worksheet.control_o21, 0.002); end
-  def test_control_p21; assert_in_delta(1.0, worksheet.control_p21, 0.002); end
-  def test_control_n23; assert_in_epsilon(2.0, worksheet.control_n23, 0.002); end
-  def test_control_o23; assert_in_epsilon(3.0, worksheet.control_o23, 0.002); end
+  def test_control_n22; assert_in_epsilon(2.0, worksheet.control_n22, 0.002); end
+  def test_control_o22; assert_in_epsilon(3.0, worksheet.control_o22, 0.002); end
+  def test_control_p22; assert_in_delta(1.0, worksheet.control_p22, 0.002); end
+  def test_control_n23; assert_in_epsilon(4.0, worksheet.control_n23, 0.002); end
+  def test_control_o23; assert_in_epsilon(4.0, worksheet.control_o23, 0.002); end
   def test_control_p23; assert_in_delta(1.0, worksheet.control_p23, 0.002); end
-  def test_control_n24; assert_in_epsilon(4.0, worksheet.control_n24, 0.002); end
+  def test_control_n24; assert_in_epsilon(3.0, worksheet.control_n24, 0.002); end
   def test_control_o24; assert_in_epsilon(4.0, worksheet.control_o24, 0.002); end
   def test_control_p24; assert_in_delta(1.0, worksheet.control_p24, 0.002); end
-  def test_control_n25; assert_in_epsilon(3.0, worksheet.control_n25, 0.002); end
-  def test_control_o25; assert_in_epsilon(4.0, worksheet.control_o25, 0.002); end
-  def test_control_p25; assert_in_delta(1.0, worksheet.control_p25, 0.002); end
+  def test_control_n26; assert_in_delta(1.0, worksheet.control_n26, 0.002); end
+  def test_control_o26; assert_in_epsilon(4.0, worksheet.control_o26, 0.002); end
+  def test_control_p26; assert_in_delta(1.0, worksheet.control_p26, 0.002); end
   def test_control_n27; assert_in_delta(1.0, worksheet.control_n27, 0.002); end
   def test_control_o27; assert_in_epsilon(4.0, worksheet.control_o27, 0.002); end
   def test_control_p27; assert_in_delta(1.0, worksheet.control_p27, 0.002); end
   def test_control_n28; assert_in_delta(1.0, worksheet.control_n28, 0.002); end
   def test_control_o28; assert_in_epsilon(4.0, worksheet.control_o28, 0.002); end
   def test_control_p28; assert_in_delta(1.0, worksheet.control_p28, 0.002); end
-  def test_control_n29; assert_in_delta(1.0, worksheet.control_n29, 0.002); end
-  def test_control_o29; assert_in_epsilon(4.0, worksheet.control_o29, 0.002); end
-  def test_control_p29; assert_in_delta(1.0, worksheet.control_p29, 0.002); end
-  def test_control_n31; assert_in_delta(1.0, worksheet.control_n31, 0.002); end
-  def test_control_o31; assert_in_epsilon(4.0, worksheet.control_o31, 0.002); end
-  def test_control_p31; assert_in_delta(1.0, worksheet.control_p31, 0.002); end
+  def test_control_n30; assert_in_delta(1.0, worksheet.control_n30, 0.002); end
+  def test_control_o30; assert_in_epsilon(4.0, worksheet.control_o30, 0.002); end
+  def test_control_p30; assert_in_delta(1.0, worksheet.control_p30, 0.002); end
+  def test_control_n32; assert_in_delta(1.0, worksheet.control_n32, 0.002); end
+  def test_control_o32; assert_in_epsilon(4.0, worksheet.control_o32, 0.002); end
+  def test_control_p32; assert_in_delta(1.0, worksheet.control_p32, 0.002); end
   def test_control_n33; assert_in_delta(1.0, worksheet.control_n33, 0.002); end
   def test_control_o33; assert_in_epsilon(4.0, worksheet.control_o33, 0.002); end
   def test_control_p33; assert_in_delta(1.0, worksheet.control_p33, 0.002); end
@@ -274,21 +269,21 @@ class TestModel < Minitest::Unit::TestCase
   def test_control_n36; assert_in_delta(1.0, worksheet.control_n36, 0.002); end
   def test_control_o36; assert_in_epsilon(4.0, worksheet.control_o36, 0.002); end
   def test_control_p36; assert_in_delta(1.0, worksheet.control_p36, 0.002); end
-  def test_control_n37; assert_in_delta(1.0, worksheet.control_n37, 0.002); end
-  def test_control_o37; assert_in_epsilon(4.0, worksheet.control_o37, 0.002); end
-  def test_control_p37; assert_in_delta(1.0, worksheet.control_p37, 0.002); end
+  def test_control_n38; assert_in_delta(1.0, worksheet.control_n38, 0.002); end
+  def test_control_o38; assert_in_epsilon(3.0, worksheet.control_o38, 0.002); end
+  def test_control_p38; assert_in_delta(1.0, worksheet.control_p38, 0.002); end
   def test_control_n39; assert_in_delta(1.0, worksheet.control_n39, 0.002); end
-  def test_control_o39; assert_in_epsilon(3.0, worksheet.control_o39, 0.002); end
+  def test_control_o39; assert_in_epsilon(4.0, worksheet.control_o39, 0.002); end
   def test_control_p39; assert_in_delta(1.0, worksheet.control_p39, 0.002); end
-  def test_control_n40; assert_in_delta(1.0, worksheet.control_n40, 0.002); end
-  def test_control_o40; assert_in_epsilon(4.0, worksheet.control_o40, 0.002); end
-  def test_control_p40; assert_in_delta(1.0, worksheet.control_p40, 0.002); end
-  def test_control_n42; assert_in_delta(1.0, worksheet.control_n42, 0.002); end
+  def test_control_n41; assert_in_delta(1.0, worksheet.control_n41, 0.002); end
+  def test_control_o41; assert_in_epsilon(4.0, worksheet.control_o41, 0.002); end
+  def test_control_p41; assert_in_delta(1.0, worksheet.control_p41, 0.002); end
+  def test_control_n42; assert_in_epsilon(4.0, worksheet.control_n42, 0.002); end
   def test_control_o42; assert_in_epsilon(4.0, worksheet.control_o42, 0.002); end
   def test_control_p42; assert_in_delta(1.0, worksheet.control_p42, 0.002); end
-  def test_control_n43; assert_in_epsilon(4.0, worksheet.control_n43, 0.002); end
-  def test_control_o43; assert_in_epsilon(4.0, worksheet.control_o43, 0.002); end
-  def test_control_p43; assert_in_delta(1.0, worksheet.control_p43, 0.002); end
+  def test_control_n44; assert_in_delta(1.0, worksheet.control_n44, 0.002); end
+  def test_control_o44; assert_in_epsilon(4.0, worksheet.control_o44, 0.002); end
+  def test_control_p44; assert_in_delta(1.0, worksheet.control_p44, 0.002); end
   def test_control_n45; assert_in_delta(1.0, worksheet.control_n45, 0.002); end
   def test_control_o45; assert_in_epsilon(4.0, worksheet.control_o45, 0.002); end
   def test_control_p45; assert_in_delta(1.0, worksheet.control_p45, 0.002); end
@@ -298,27 +293,24 @@ class TestModel < Minitest::Unit::TestCase
   def test_control_n47; assert_in_delta(1.0, worksheet.control_n47, 0.002); end
   def test_control_o47; assert_in_epsilon(4.0, worksheet.control_o47, 0.002); end
   def test_control_p47; assert_in_delta(1.0, worksheet.control_p47, 0.002); end
-  def test_control_n48; assert_in_delta(1.0, worksheet.control_n48, 0.002); end
-  def test_control_o48; assert_in_epsilon(4.0, worksheet.control_o48, 0.002); end
-  def test_control_p48; assert_in_delta(1.0, worksheet.control_p48, 0.002); end
+  def test_control_n50; assert_in_epsilon(4.0, worksheet.control_n50, 0.002); end
+  def test_control_o50; assert_in_epsilon(4.0, worksheet.control_o50, 0.002); end
+  def test_control_p50; assert_in_delta(1.0, worksheet.control_p50, 0.002); end
   def test_control_n51; assert_in_epsilon(4.0, worksheet.control_n51, 0.002); end
   def test_control_o51; assert_in_epsilon(4.0, worksheet.control_o51, 0.002); end
   def test_control_p51; assert_in_delta(1.0, worksheet.control_p51, 0.002); end
   def test_control_n52; assert_in_epsilon(4.0, worksheet.control_n52, 0.002); end
   def test_control_o52; assert_in_epsilon(4.0, worksheet.control_o52, 0.002); end
   def test_control_p52; assert_in_delta(1.0, worksheet.control_p52, 0.002); end
-  def test_control_n53; assert_in_epsilon(4.0, worksheet.control_n53, 0.002); end
+  def test_control_n53; assert_in_epsilon(3.0, worksheet.control_n53, 0.002); end
   def test_control_o53; assert_in_epsilon(4.0, worksheet.control_o53, 0.002); end
   def test_control_p53; assert_in_delta(1.0, worksheet.control_p53, 0.002); end
-  def test_control_n54; assert_in_epsilon(3.0, worksheet.control_n54, 0.002); end
-  def test_control_o54; assert_in_epsilon(4.0, worksheet.control_o54, 0.002); end
-  def test_control_p54; assert_in_delta(1.0, worksheet.control_p54, 0.002); end
+  def test_control_n55; assert_in_delta(1.0, worksheet.control_n55, 0.002); end
+  def test_control_o55; assert_in_epsilon(4.0, worksheet.control_o55, 0.002); end
+  def test_control_p55; assert_in_delta(1.0, worksheet.control_p55, 0.002); end
   def test_control_n56; assert_in_delta(1.0, worksheet.control_n56, 0.002); end
   def test_control_o56; assert_in_epsilon(4.0, worksheet.control_o56, 0.002); end
   def test_control_p56; assert_in_delta(1.0, worksheet.control_p56, 0.002); end
-  def test_control_n57; assert_in_delta(1.0, worksheet.control_n57, 0.002); end
-  def test_control_o57; assert_in_epsilon(4.0, worksheet.control_o57, 0.002); end
-  def test_control_p57; assert_in_delta(1.0, worksheet.control_p57, 0.002); end
   def test_control_bf5; assert_equal("Se mantiene la capacidad de 201 MW de plantas a gas y 622 MW a carbón actualmente existente y bajo construcción", worksheet.control_bf5); end
   def test_control_bg5; assert_equal("500 MW de plantas a gas y 874 MW a carbón. 14MW en cogeneración.", worksheet.control_bg5); end
   def test_control_bh5; assert_equal("1897 MW de plantas a gas y 1196 MW a carbón. 290 MW en cogeneración.", worksheet.control_bh5); end
@@ -367,116 +359,113 @@ class TestModel < Minitest::Unit::TestCase
   def test_control_bg19; assert_equal("Aumento del 20% de la eficiencia energética en las operaciones de extracción minera", worksheet.control_bg19); end
   def test_control_bh19; assert_equal("Aumento del 30% de la eficiencia energética en las operaciones de extracción minera ", worksheet.control_bh19); end
   def test_control_bi19; assert_equal("Aumento del 50% en la eficiencia energética en las operaciones de extracción minera", worksheet.control_bi19); end
-  def test_control_bf21; assert_equal("Limitaciones en la oferta de hidrocarburos: 300 miles de barriles de petroleo y 0,1 trillones de pies cubicos de gas natural por año\r", worksheet.control_bf21); end
-  def test_control_bg21; assert_equal("Continuidad en la tendencia reciente de incorporación de reservas: 480 miles de barriles de petroleo y 0,33 trillones de pies cubicos de gas natural por año", worksheet.control_bg21); end
-  def test_control_bh21; assert_equal("Oferta por encima de los mejores años en la última década: 1.450 miles de barriles de petróleo y 0,85 trillones de pies cubicos de gas natural por año", worksheet.control_bh21); end
-  def test_control_bf22; assert_equal("No se consideran mejoras en la eficiencia energética", worksheet.control_bf22); end
-  def test_control_bg22; assert_equal("La eficiencia energética aumenta el 5%", worksheet.control_bg22); end
-  def test_control_bh22; assert_equal("La eficiencia energética aumenta el 20%", worksheet.control_bh22); end
-  def test_control_bi22; assert_equal("La eficiencia energética aumenta el 50%. Sustitución del 20% del consumo de combustibles fósiles del sector por energías renovables.", worksheet.control_bi22); end
-  def test_control_bf23; assert_equal("No se implementan tecnologías de recuperación mejorada de petróleo", worksheet.control_bf23); end
-  def test_control_bg23; assert_equal("Penetración del 30% de tecnologías recuperación mejorada de petróleo", worksheet.control_bg23); end
-  def test_control_bh23; assert_equal("Penetración del 40% de tecnologías recuperación mejorada de petróleo", worksheet.control_bh23); end
-  def test_control_bi23; assert_equal("Penetración del 50% de tecnologías recuperación mejorada de petróleo", worksheet.control_bi23); end
-  def test_control_bf25; assert_equal("Todos los residuos son dispuestos al relleno sanitario\r", worksheet.control_bf25); end
-  def test_control_bg25; assert_equal("El 40% de los residuos se destina para reciclaje, compostaje y combustión. Aprovechamiento del 30% del metano", worksheet.control_bg25); end
-  def test_control_bh25; assert_equal("El 45% de los residuos se destina para reciclaje, compostaje y combustión. Aprovechamiento del 60% del metano", worksheet.control_bh25); end
-  def test_control_bi25; assert_equal("El 60% de los residuos se destina para reciclaje, compostaje y combustión. Aprovechamiento del 80% del metano", worksheet.control_bi25); end
-  def test_control_bf26; assert_equal("Tratamiento convencional de aguas residuales sin aprovechamiento de metano\r", worksheet.control_bf26); end
-  def test_control_bg26; assert_equal("Aprovechamiento del 30% del metano", worksheet.control_bg26); end
-  def test_control_bh26; assert_equal("Aprovechamiento del 50% del metano", worksheet.control_bh26); end
-  def test_control_bi26; assert_equal("Aprovechamiento del 75% del metano", worksheet.control_bi26); end
-  def test_control_bf28; assert_equal("Se mantienen la capacidad de 5 MW de capacidad actualmente existente", worksheet.control_bf28); end
-  def test_control_bg28; assert_equal("15 MW de capacidad solar fotovoltaica", worksheet.control_bg28); end
-  def test_control_bh28; assert_equal("40 MW de capacidad solar fotovoltaica", worksheet.control_bh28); end
-  def test_control_bi28; assert_equal("1 GW de capacidad solar fotovoltaica", worksheet.control_bi28); end
-  def test_control_bf29; assert_equal("Se mantiene la capacidad de 77 MW de capacidad actualmente existente", worksheet.control_bf29); end
-  def test_control_bg29; assert_equal("65.000 hogares con calentadores solares de agua. El 30% de las edificaciones comerciales y de servicios nuevas el 30% tiene calentadores solares de agua", worksheet.control_bg29); end
-  def test_control_bh29; assert_equal("100.000 hogares con calentadores solares de agua. El 50% de las edificaciones comerciales y de servicios nuevas el 30% tiene calentadores solares de agua", worksheet.control_bh29); end
-  def test_control_bi29; assert_equal("185.000 hogares con calentadores solares de agua. El 70% de las edificaciones comerciales y de servicios nuevas el 30% tiene calentadores solares de agua ", worksheet.control_bi29); end
-  def test_control_bf31; assert_equal("El consumo de energía para acondicionamiento de espacios es de 12.6 TWh", worksheet.control_bf31); end
-  def test_control_bg31; assert_equal("El consumo de energía para acondicionamiento de espacios es de 11.5 TWh", worksheet.control_bg31); end
-  def test_control_bh31; assert_equal("El consumo de energía para acondicionamiento de espacios es de 11.05 TWh", worksheet.control_bh31); end
-  def test_control_bi31; assert_equal("El consumo de energía para acondicionamiento de espacios es de 10.5 TWh", worksheet.control_bi31); end
-  def test_control_bf33; assert_equal("No hay cambios importantes en las tecnologías utilizadas para iluminación, refrigeración y cocción", worksheet.control_bf33); end
-  def test_control_bg33; assert_equal("Tenencia de iluminación LED del 0%, neveras con edad superior a 6 años del 17% y estufas mejoradas del 31%", worksheet.control_bg33); end
-  def test_control_bh33; assert_equal("Tenencia de iluminación LED del 35%, neveras con edad superior a 6 años del 0% y estufas mejoradas del 61% ", worksheet.control_bh33); end
-  def test_control_bi33; assert_equal("Tenencia de iluminación LED del 100%, neveras con edad superior a 6 años del 0% y estufas mejoradas del 100% ", worksheet.control_bi33); end
-  def test_control_bf35; assert_equal("Uso de leña en un 60%, el GLP en un 7% y la electricidad en un 26%", worksheet.control_bf35); end
-  def test_control_bg35; assert_equal("Uso de leña en un 55%, el GLP en un 12% y la electricidad en un 26%", worksheet.control_bg35); end
-  def test_control_bh35; assert_equal("Uso de leña en un 45%, el GLP en un 19% y la electricidad en un 29%", worksheet.control_bh35); end
-  def test_control_bi35; assert_equal("Uso de leña en un 38%, el GLP en un 24% y la electricidad en un 31%", worksheet.control_bi35); end
-  def test_control_bf36; assert_equal("El consumo de energía crece con un 4% promedio anual", worksheet.control_bf36); end
+  def test_control_bf21; assert_equal("No se consideran mejoras en la eficiencia energética", worksheet.control_bf21); end
+  def test_control_bg21; assert_equal("La eficiencia energética aumenta el 5%", worksheet.control_bg21); end
+  def test_control_bh21; assert_equal("La eficiencia energética aumenta el 20%", worksheet.control_bh21); end
+  def test_control_bi21; assert_equal("La eficiencia energética aumenta el 50%. Sustitución del 20% del consumo de combustibles fósiles del sector por energías renovables.", worksheet.control_bi21); end
+  def test_control_bf22; assert_equal("No se implementan tecnologías de recuperación mejorada de petróleo", worksheet.control_bf22); end
+  def test_control_bg22; assert_equal("Penetración del 30% de tecnologías recuperación mejorada de petróleo", worksheet.control_bg22); end
+  def test_control_bh22; assert_equal("Penetración del 40% de tecnologías recuperación mejorada de petróleo", worksheet.control_bh22); end
+  def test_control_bi22; assert_equal("Penetración del 50% de tecnologías recuperación mejorada de petróleo", worksheet.control_bi22); end
+  def test_control_bf24; assert_equal("Todos los residuos son dispuestos al relleno sanitario\r", worksheet.control_bf24); end
+  def test_control_bg24; assert_equal("El 40% de los residuos se destina para reciclaje, compostaje y combustión. Aprovechamiento del 30% del metano", worksheet.control_bg24); end
+  def test_control_bh24; assert_equal("El 45% de los residuos se destina para reciclaje, compostaje y combustión. Aprovechamiento del 60% del metano", worksheet.control_bh24); end
+  def test_control_bi24; assert_equal("El 60% de los residuos se destina para reciclaje, compostaje y combustión. Aprovechamiento del 80% del metano", worksheet.control_bi24); end
+  def test_control_bf25; assert_equal("Tratamiento convencional de aguas residuales sin aprovechamiento de metano\r", worksheet.control_bf25); end
+  def test_control_bg25; assert_equal("Aprovechamiento del 30% del metano", worksheet.control_bg25); end
+  def test_control_bh25; assert_equal("Aprovechamiento del 50% del metano", worksheet.control_bh25); end
+  def test_control_bi25; assert_equal("Aprovechamiento del 75% del metano", worksheet.control_bi25); end
+  def test_control_bf27; assert_equal("Se mantienen la capacidad de 5 MW de capacidad actualmente existente", worksheet.control_bf27); end
+  def test_control_bg27; assert_equal("15 MW de capacidad solar fotovoltaica", worksheet.control_bg27); end
+  def test_control_bh27; assert_equal("40 MW de capacidad solar fotovoltaica", worksheet.control_bh27); end
+  def test_control_bi27; assert_equal("1 GW de capacidad solar fotovoltaica", worksheet.control_bi27); end
+  def test_control_bf28; assert_equal("Se mantiene la capacidad de 77 MW de capacidad actualmente existente", worksheet.control_bf28); end
+  def test_control_bg28; assert_equal("65.000 hogares con calentadores solares de agua. El 30% de las edificaciones comerciales y de servicios nuevas el 30% tiene calentadores solares de agua", worksheet.control_bg28); end
+  def test_control_bh28; assert_equal("100.000 hogares con calentadores solares de agua. El 50% de las edificaciones comerciales y de servicios nuevas el 30% tiene calentadores solares de agua", worksheet.control_bh28); end
+  def test_control_bi28; assert_equal("185.000 hogares con calentadores solares de agua. El 70% de las edificaciones comerciales y de servicios nuevas el 30% tiene calentadores solares de agua ", worksheet.control_bi28); end
+  def test_control_bf30; assert_equal("El consumo de energía para acondicionamiento de espacios es de 12.6 TWh", worksheet.control_bf30); end
+  def test_control_bg30; assert_equal("El consumo de energía para acondicionamiento de espacios es de 11.5 TWh", worksheet.control_bg30); end
+  def test_control_bh30; assert_equal("El consumo de energía para acondicionamiento de espacios es de 11.05 TWh", worksheet.control_bh30); end
+  def test_control_bi30; assert_equal("El consumo de energía para acondicionamiento de espacios es de 10.5 TWh", worksheet.control_bi30); end
+  def test_control_bf32; assert_equal("No hay cambios importantes en las tecnologías utilizadas para iluminación, refrigeración y cocción", worksheet.control_bf32); end
+  def test_control_bg32; assert_equal("Tenencia de iluminación LED del 0%, neveras con edad superior a 6 años del 17% y estufas mejoradas del 31%", worksheet.control_bg32); end
+  def test_control_bh32; assert_equal("Tenencia de iluminación LED del 35%, neveras con edad superior a 6 años del 0% y estufas mejoradas del 61% ", worksheet.control_bh32); end
+  def test_control_bi32; assert_equal("Tenencia de iluminación LED del 100%, neveras con edad superior a 6 años del 0% y estufas mejoradas del 100% ", worksheet.control_bi32); end
+  def test_control_bf34; assert_equal("Uso de leña en un 60%, el GLP en un 7% y la electricidad en un 26%", worksheet.control_bf34); end
+  def test_control_bg34; assert_equal("Uso de leña en un 55%, el GLP en un 12% y la electricidad en un 26%", worksheet.control_bg34); end
+  def test_control_bh34; assert_equal("Uso de leña en un 45%, el GLP en un 19% y la electricidad en un 29%", worksheet.control_bh34); end
+  def test_control_bi34; assert_equal("Uso de leña en un 38%, el GLP en un 24% y la electricidad en un 31%", worksheet.control_bi34); end
+  def test_control_bf35; assert_equal("El consumo de energía crece con un 4% promedio anual", worksheet.control_bf35); end
+  def test_control_bg35; assert_equal("El consumo de energía disminuye con un 5% promedio anual", worksheet.control_bg35); end
+  def test_control_bh35; assert_equal("El consumo de energía disminuye con un 10% promedio anual", worksheet.control_bh35); end
+  def test_control_bi35; assert_equal("El consumo de energía disminuye con un 17% promedio anual", worksheet.control_bi35); end
+  def test_control_bf36; assert_equal("El consumo de energía crece con un 2,4% promedio anual", worksheet.control_bf36); end
   def test_control_bg36; assert_equal("El consumo de energía disminuye con un 5% promedio anual", worksheet.control_bg36); end
-  def test_control_bh36; assert_equal("El consumo de energía disminuye con un 10% promedio anual", worksheet.control_bh36); end
-  def test_control_bi36; assert_equal("El consumo de energía disminuye con un 17% promedio anual", worksheet.control_bi36); end
-  def test_control_bf37; assert_equal("El consumo de energía crece con un 2,4% promedio anual", worksheet.control_bf37); end
-  def test_control_bg37; assert_equal("El consumo de energía disminuye con un 5% promedio anual", worksheet.control_bg37); end
-  def test_control_bh37; assert_equal("El consumo de energía disminuye con un 27% promedio anual", worksheet.control_bh37); end
-  def test_control_bi37; assert_equal("El consumo de energía disminuye con un 50% promedio anual", worksheet.control_bi37); end
-  def test_control_bf39; assert_equal("Escenario de la UPME de demanda energética de acuerdo al crecimiento del PIB sectorial", worksheet.control_bf39); end
-  def test_control_bg39; assert_equal("Demanda energética crece 1% anual por encima del escenario UPME", worksheet.control_bg39); end
-  def test_control_bh39; assert_equal("La demanda energética se desacelera 1% anual respecto al escenario UPME", worksheet.control_bh39); end
-  def test_control_bf40; assert_equal("No se realiza ningún esfuerzo por reducir las emisiones.", worksheet.control_bf40); end
-  def test_control_bg40; assert_equal("Reducción de las emisiones por proceso con 5%, eficiencia energética mejora 2,5%, cambio del 20% de combustibles fósiles por electricidad", worksheet.control_bg40); end
-  def test_control_bh40; assert_equal("Reducción de emisiones por proceso con 10%, eficiencia energética mejora 5%, cambio del 40% de combustibles fósiles por electricidad", worksheet.control_bh40); end
-  def test_control_bi40; assert_equal("Reducción de emisiones por proceso con 14%, eficiencia energética mejora 10%, cambio del 50% de combustibles fósiles por electricidad", worksheet.control_bi40); end
-  def test_control_bf42; assert_equal("Transporte privado motorizado 47%, modos no motorizados 11% y transporte público 33% en 2050", worksheet.control_bf42); end
-  def test_control_bg42; assert_equal("Transporte privado motorizado 42%, modos no motorizados 13,5% y transporte público 35,5%", worksheet.control_bg42); end
-  def test_control_bh42; assert_equal("Transporte privado motorizado 32%, modos no motorizados 21% y transporte público 38%", worksheet.control_bh42); end
-  def test_control_bi42; assert_equal("Transporte privado motorizado 27%, modos no motorizados 21% y transporte público 43%", worksheet.control_bi42); end
-  def test_control_bf43; assert_equal("Penetración muy baja de tecnologías eléctrica e híbrida", worksheet.control_bf43); end
-  def test_control_bg43; assert_equal("25% vehículos privados electricos y 27% híbridos, 15% buses electricos y 20% híbridos", worksheet.control_bg43); end
-  def test_control_bh43; assert_equal("50% vehículos privados eléctricos y 38% híbridos, 30% buses electricos y 25% híbridos", worksheet.control_bh43); end
-  def test_control_bi43; assert_equal("80% vehículos privados eléctricos y 45% híbridos, 50% buses electricos y 30% híbridos", worksheet.control_bi43); end
-  def test_control_bf45; assert_equal("Penetración muy baja de tecnologías limpias", worksheet.control_bf45); end
-  def test_control_bg45; assert_equal("20% de los camiones con tecnologías limpias", worksheet.control_bg45); end
-  def test_control_bh45; assert_equal("30% de los camiones con tecnologías limpias", worksheet.control_bh45); end
-  def test_control_bi45; assert_equal("70% de los camiones con tecnologías limpias", worksheet.control_bi45); end
-  def test_control_bf46; assert_equal("60% modo carretero", worksheet.control_bf46); end
-  def test_control_bg46; assert_equal("57% modo carretero, 3% fluvial y ferreo", worksheet.control_bg46); end
-  def test_control_bh46; assert_equal("54% modo carretero, 6% fluvial y ferreo", worksheet.control_bh46); end
-  def test_control_bi46; assert_equal("51% modo carretero, 9% fluvial y ferreo", worksheet.control_bi46); end
-  def test_control_bf51; assert_equal("Un colombiano promedio aumenta su consumo de carne a 575g y leche a 3,8 litros a la semana para 2050\r", worksheet.control_bf51); end
-  def test_control_bg51; assert_equal("Un colombiano promedio aumenta su consumo de carne a 479g y leche a 3,3 litros a la semana para 2050\r", worksheet.control_bg51); end
-  def test_control_bh51; assert_equal("Un colombiano promedio mantiene su consumo de carne en 362g y leche a 3,1 litros a la semana para 2050", worksheet.control_bh51); end
-  def test_control_bi51; assert_equal("Un colombiano promedio disminuye su consumo de carne a 288g y leche a 2,9 litros a la semana para 2050\r", worksheet.control_bi51); end
-  def test_control_bf52; assert_equal("No se implementan prácticas sostenibles en suelos ganaderos", worksheet.control_bf52); end
-  def test_control_bg52; assert_equal("Siembra de 1'428.000 Ha de árboles y arbustos. Rehabilitación de 51.487 Ha de pasturas", worksheet.control_bg52); end
-  def test_control_bh52; assert_equal("Siembra de 1'527.960 Ha de árboles y arbustos. Rehabilitación de 54.576 Ha de pasturas", worksheet.control_bh52); end
-  def test_control_bi52; assert_equal("Siembra de 1'556.520 Ha de árboles y arbustos. Rehabilitación de 55.606 Ha de pasturas", worksheet.control_bi52); end
-  def test_control_bf53; assert_equal("No se implementan mejores prácticas pecuarias", worksheet.control_bf53); end
-  def test_control_bg53; assert_equal("Mejora en la dieta del 10% del hato ganadero. Prácticas de pastoreo racional en 303.000 Ha", worksheet.control_bg53); end
-  def test_control_bh53; assert_equal("Mejora en la dieta del 30% del hato ganadero. Prácticas de pastoreo racional en 324.210 Ha", worksheet.control_bh53); end
-  def test_control_bi53; assert_equal("Mejora en la dieta del 50% del hato ganadero. Prácticas de pastoreo racional en 330.270 Ha", worksheet.control_bi53); end
-  def test_control_bf54; assert_equal("No se implementan mejores prácticas agrícolas", worksheet.control_bf54); end
-  def test_control_bg54; assert_equal("Mejores prácticas agrícolas en el 5% del área agrícola del país", worksheet.control_bg54); end
-  def test_control_bh54; assert_equal("Mejores prácticas agrícolas en el 7% del área agrícola del país", worksheet.control_bh54); end
-  def test_control_bi54; assert_equal("Mejores prácticas agrícolas en el 9% del área agrícola del país", worksheet.control_bi54); end
-  def test_control_bf56; assert_equal("Deforestación anual nacional de 8,9 miles de Ha\r", worksheet.control_bf56); end
-  def test_control_bg56; assert_equal("Deforestación anual nacional de 7,2 miles de Ha\r", worksheet.control_bg56); end
-  def test_control_bh56; assert_equal("Deforestación anual nacional de 5,6 miles de Ha\r", worksheet.control_bh56); end
-  def test_control_bi56; assert_equal("No se presenta deforestación a nivel nacional", worksheet.control_bi56); end
-  def test_control_bf57; assert_equal("Siembras anuales de 40 mil Ha de bosque", worksheet.control_bf57); end
-  def test_control_bg57; assert_equal("Siembras anuales de 62 mil Ha de bosque", worksheet.control_bg57); end
-  def test_control_bh57; assert_equal("Siembras anuales de 69 mil Ha de bosque", worksheet.control_bh57); end
-  def test_control_bi57; assert_equal("Siembras anuales de 88 mil Ha de bosque", worksheet.control_bi57); end
-  def test_control_bf60; assert_equal("Energy demand for commercial lights & appliances increases by 33%. Energy for cooking is stable", worksheet.control_bf60); end
-  def test_control_bg60; assert_equal("Energy demand for commercial lights & appliances increases by 15%; decreases by 5% for cooking", worksheet.control_bg60); end
-  def test_control_bh60; assert_equal("Energy demand for commercial lights & appliances decreases by 5%; decreases by 20% for cooking", worksheet.control_bh60); end
-  def test_control_bi60; assert_equal("Energy demand for commercial lights & appliances decreases by 30%; decreases by 25% for cooking", worksheet.control_bi60); end
-  def test_control_bf61; assert_equal("Energy used for commercial cooking is 60% electricity and 40% gas (no change from 2007)", worksheet.control_bf61); end
-  def test_control_bg61; assert_equal("Energy used for commercial cooking is 100% electric", worksheet.control_bg61); end
-  def test_control_bh61; assert_equal("Energy used for commercial cooking is 100% electric", worksheet.control_bh61); end
-  def test_control_bi61; assert_equal("Energy used for commercial cooking is 100% electric", worksheet.control_bi61); end
-  def test_control_bf63; assert_equal("No geosequestration", worksheet.control_bf63); end
-  def test_control_bg63; assert_equal("Carbon dioxide sequestred at a rate of 1 million tonnes per annum by 2050", worksheet.control_bg63); end
-  def test_control_bh63; assert_equal("Carbon dioxide  sequestred at a rate of ~30 million tonnes per annum by 2050", worksheet.control_bh63); end
-  def test_control_bi63; assert_equal("Carbon dioxide sequestred at a rate of ~110 million tonnes per annum by 2050", worksheet.control_bi63); end
-  def test_control_bf64; assert_equal("Today’s 3.5 GW of pumped storage and 4 GW interconnection with Europe available for balancing electricity supply and demand", worksheet.control_bf64); end
-  def test_control_bg64; assert_equal("4 GW of pumped storage and 10 GW interconnection with Europe available for balancing electricity supply and demand", worksheet.control_bg64); end
-  def test_control_bh64; assert_equal("7 GW of pumped storage (includign 2 more sites), 15 GW of interconnection with Europe and some demand shifting available for balancing electricity supply and demand", worksheet.control_bh64); end
-  def test_control_bi64; assert_equal("20 GW of pumped storage with large lagoons, 30 GW of interconnection with Europe and substantial demand shifting available for balancing electricity supply and demand", worksheet.control_bi64); end
+  def test_control_bh36; assert_equal("El consumo de energía disminuye con un 27% promedio anual", worksheet.control_bh36); end
+  def test_control_bi36; assert_equal("El consumo de energía disminuye con un 50% promedio anual", worksheet.control_bi36); end
+  def test_control_bf38; assert_equal("Escenario de la UPME de demanda energética de acuerdo al crecimiento del PIB sectorial", worksheet.control_bf38); end
+  def test_control_bg38; assert_equal("Demanda energética crece 1% anual por encima del escenario UPME", worksheet.control_bg38); end
+  def test_control_bh38; assert_equal("La demanda energética se desacelera 1% anual respecto al escenario UPME", worksheet.control_bh38); end
+  def test_control_bf39; assert_equal("No se realiza ningún esfuerzo por reducir las emisiones.", worksheet.control_bf39); end
+  def test_control_bg39; assert_equal("Reducción de las emisiones por proceso con 5%, eficiencia energética mejora 2,5%, cambio del 20% de combustibles fósiles por electricidad", worksheet.control_bg39); end
+  def test_control_bh39; assert_equal("Reducción de emisiones por proceso con 10%, eficiencia energética mejora 5%, cambio del 40% de combustibles fósiles por electricidad", worksheet.control_bh39); end
+  def test_control_bi39; assert_equal("Reducción de emisiones por proceso con 14%, eficiencia energética mejora 10%, cambio del 50% de combustibles fósiles por electricidad", worksheet.control_bi39); end
+  def test_control_bf41; assert_equal("Transporte privado motorizado 47%, modos no motorizados 11% y transporte público 33% en 2050", worksheet.control_bf41); end
+  def test_control_bg41; assert_equal("Transporte privado motorizado 42%, modos no motorizados 13,5% y transporte público 35,5%", worksheet.control_bg41); end
+  def test_control_bh41; assert_equal("Transporte privado motorizado 32%, modos no motorizados 21% y transporte público 38%", worksheet.control_bh41); end
+  def test_control_bi41; assert_equal("Transporte privado motorizado 27%, modos no motorizados 21% y transporte público 43%", worksheet.control_bi41); end
+  def test_control_bf42; assert_equal("Penetración muy baja de tecnologías eléctrica e híbrida", worksheet.control_bf42); end
+  def test_control_bg42; assert_equal("25% vehículos privados electricos y 27% híbridos, 15% buses electricos y 20% híbridos", worksheet.control_bg42); end
+  def test_control_bh42; assert_equal("50% vehículos privados eléctricos y 38% híbridos, 30% buses electricos y 25% híbridos", worksheet.control_bh42); end
+  def test_control_bi42; assert_equal("80% vehículos privados eléctricos y 45% híbridos, 50% buses electricos y 30% híbridos", worksheet.control_bi42); end
+  def test_control_bf44; assert_equal("Penetración muy baja de tecnologías limpias", worksheet.control_bf44); end
+  def test_control_bg44; assert_equal("20% de los camiones con tecnologías limpias", worksheet.control_bg44); end
+  def test_control_bh44; assert_equal("30% de los camiones con tecnologías limpias", worksheet.control_bh44); end
+  def test_control_bi44; assert_equal("70% de los camiones con tecnologías limpias", worksheet.control_bi44); end
+  def test_control_bf45; assert_equal("60% modo carretero", worksheet.control_bf45); end
+  def test_control_bg45; assert_equal("57% modo carretero, 3% fluvial y ferreo", worksheet.control_bg45); end
+  def test_control_bh45; assert_equal("54% modo carretero, 6% fluvial y ferreo", worksheet.control_bh45); end
+  def test_control_bi45; assert_equal("51% modo carretero, 9% fluvial y ferreo", worksheet.control_bi45); end
+  def test_control_bf50; assert_equal("Un colombiano promedio aumenta su consumo de carne a 575g y leche a 3,8 litros a la semana para 2050\r", worksheet.control_bf50); end
+  def test_control_bg50; assert_equal("Un colombiano promedio aumenta su consumo de carne a 479g y leche a 3,3 litros a la semana para 2050\r", worksheet.control_bg50); end
+  def test_control_bh50; assert_equal("Un colombiano promedio mantiene su consumo de carne en 362g y leche a 3,1 litros a la semana para 2050", worksheet.control_bh50); end
+  def test_control_bi50; assert_equal("Un colombiano promedio disminuye su consumo de carne a 288g y leche a 2,9 litros a la semana para 2050\r", worksheet.control_bi50); end
+  def test_control_bf51; assert_equal("No se implementan prácticas sostenibles en suelos ganaderos", worksheet.control_bf51); end
+  def test_control_bg51; assert_equal("Siembra de 1'428.000 Ha de árboles y arbustos. Rehabilitación de 51.487 Ha de pasturas", worksheet.control_bg51); end
+  def test_control_bh51; assert_equal("Siembra de 1'527.960 Ha de árboles y arbustos. Rehabilitación de 54.576 Ha de pasturas", worksheet.control_bh51); end
+  def test_control_bi51; assert_equal("Siembra de 1'556.520 Ha de árboles y arbustos. Rehabilitación de 55.606 Ha de pasturas", worksheet.control_bi51); end
+  def test_control_bf52; assert_equal("No se implementan mejores prácticas pecuarias", worksheet.control_bf52); end
+  def test_control_bg52; assert_equal("Mejora en la dieta del 10% del hato ganadero. Prácticas de pastoreo racional en 303.000 Ha", worksheet.control_bg52); end
+  def test_control_bh52; assert_equal("Mejora en la dieta del 30% del hato ganadero. Prácticas de pastoreo racional en 324.210 Ha", worksheet.control_bh52); end
+  def test_control_bi52; assert_equal("Mejora en la dieta del 50% del hato ganadero. Prácticas de pastoreo racional en 330.270 Ha", worksheet.control_bi52); end
+  def test_control_bf53; assert_equal("No se implementan mejores prácticas agrícolas", worksheet.control_bf53); end
+  def test_control_bg53; assert_equal("Mejores prácticas agrícolas en el 5% del área agrícola del país", worksheet.control_bg53); end
+  def test_control_bh53; assert_equal("Mejores prácticas agrícolas en el 7% del área agrícola del país", worksheet.control_bh53); end
+  def test_control_bi53; assert_equal("Mejores prácticas agrícolas en el 9% del área agrícola del país", worksheet.control_bi53); end
+  def test_control_bf55; assert_equal("Deforestación anual nacional de 8,9 miles de Ha\r", worksheet.control_bf55); end
+  def test_control_bg55; assert_equal("Deforestación anual nacional de 7,2 miles de Ha\r", worksheet.control_bg55); end
+  def test_control_bh55; assert_equal("Deforestación anual nacional de 5,6 miles de Ha\r", worksheet.control_bh55); end
+  def test_control_bi55; assert_equal("No se presenta deforestación a nivel nacional", worksheet.control_bi55); end
+  def test_control_bf56; assert_equal("Siembras anuales de 40 mil Ha de bosque", worksheet.control_bf56); end
+  def test_control_bg56; assert_equal("Siembras anuales de 62 mil Ha de bosque", worksheet.control_bg56); end
+  def test_control_bh56; assert_equal("Siembras anuales de 69 mil Ha de bosque", worksheet.control_bh56); end
+  def test_control_bi56; assert_equal("Siembras anuales de 88 mil Ha de bosque", worksheet.control_bi56); end
+  def test_control_bf59; assert_equal("Energy demand for commercial lights & appliances increases by 33%. Energy for cooking is stable", worksheet.control_bf59); end
+  def test_control_bg59; assert_equal("Energy demand for commercial lights & appliances increases by 15%; decreases by 5% for cooking", worksheet.control_bg59); end
+  def test_control_bh59; assert_equal("Energy demand for commercial lights & appliances decreases by 5%; decreases by 20% for cooking", worksheet.control_bh59); end
+  def test_control_bi59; assert_equal("Energy demand for commercial lights & appliances decreases by 30%; decreases by 25% for cooking", worksheet.control_bi59); end
+  def test_control_bf60; assert_equal("Energy used for commercial cooking is 60% electricity and 40% gas (no change from 2007)", worksheet.control_bf60); end
+  def test_control_bg60; assert_equal("Energy used for commercial cooking is 100% electric", worksheet.control_bg60); end
+  def test_control_bh60; assert_equal("Energy used for commercial cooking is 100% electric", worksheet.control_bh60); end
+  def test_control_bi60; assert_equal("Energy used for commercial cooking is 100% electric", worksheet.control_bi60); end
+  def test_control_bf62; assert_equal("No geosequestration", worksheet.control_bf62); end
+  def test_control_bg62; assert_equal("Carbon dioxide sequestred at a rate of 1 million tonnes per annum by 2050", worksheet.control_bg62); end
+  def test_control_bh62; assert_equal("Carbon dioxide  sequestred at a rate of ~30 million tonnes per annum by 2050", worksheet.control_bh62); end
+  def test_control_bi62; assert_equal("Carbon dioxide sequestred at a rate of ~110 million tonnes per annum by 2050", worksheet.control_bi62); end
+  def test_control_bf63; assert_equal("Today’s 3.5 GW of pumped storage and 4 GW interconnection with Europe available for balancing electricity supply and demand", worksheet.control_bf63); end
+  def test_control_bg63; assert_equal("4 GW of pumped storage and 10 GW interconnection with Europe available for balancing electricity supply and demand", worksheet.control_bg63); end
+  def test_control_bh63; assert_equal("7 GW of pumped storage (includign 2 more sites), 15 GW of interconnection with Europe and some demand shifting available for balancing electricity supply and demand", worksheet.control_bh63); end
+  def test_control_bi63; assert_equal("20 GW of pumped storage with large lagoons, 30 GW of interconnection with Europe and substantial demand shifting available for balancing electricity supply and demand", worksheet.control_bi63); end
   def test_control_d5; assert_equal("Gestión energética en termoeléctricas", worksheet.control_d5); end
   def test_control_d6; assert_equal("Centrales nucleares", worksheet.control_d6); end
   def test_control_d7; assert_equal("Energía eólica costa adentro", worksheet.control_d7); end
@@ -493,41 +482,40 @@ class TestModel < Minitest::Unit::TestCase
   def test_control_d18; assert_equal("Tierra dedicada para biocombustibles", worksheet.control_d18); end
   def test_control_d19; assert_equal("Carbón", worksheet.control_d19); end
   def test_control_d20; assert_equal("Aprovechamiento de metano en mineria", worksheet.control_d20); end
-  def test_control_d21; assert_equal("Eficiencia energética en operaciones mineras", worksheet.control_d21); end
-  def test_control_d22; assert_equal("Hidrocarburos", worksheet.control_d22); end
-  def test_control_d23; assert_equal("Crecimiento de la producción de hidrocarburos", worksheet.control_d23); end
-  def test_control_d24; assert_equal("Eficiencia energética en producción de hidrocarburos", worksheet.control_d24); end
-  def test_control_d25; assert_equal("Recuperación mejorada de petroleo", worksheet.control_d25); end
-  def test_control_d26; assert_equal("Residuos", worksheet.control_d26); end
-  def test_control_d27; assert_equal("Manejo Integrado Residuos solidos", worksheet.control_d27); end
-  def test_control_d28; assert_equal("Aprovechamiento del metano de aguas residuales", worksheet.control_d28); end
-  def test_control_d29; assert_equal("Distritos energéticos", worksheet.control_d29); end
-  def test_control_d31; assert_equal("Acondicionamiento de espacios en viviendas", worksheet.control_d31); end
-  def test_control_d32; assert_equal("Iluminación, refrigeración, cocción y otros usos.", worksheet.control_d32); end
-  def test_control_d33; assert_equal("Eficiencia energética y equipos eficientes en viviendas", worksheet.control_d33); end
-  def test_control_d34; assert_equal("Uso y habitos de consumo ", worksheet.control_d34); end
-  def test_control_d35; assert_equal("Viviendas rurales", worksheet.control_d35); end
-  def test_control_d36; assert_equal("Acondicionamiento de espacios comercial y de servicios", worksheet.control_d36); end
-  def test_control_d37; assert_equal("Usos térmicos y equipamiento comercial y de servicios", worksheet.control_d37); end
-  def test_control_d38; assert_equal(" Industrias", worksheet.control_d38); end
-  def test_control_d39; assert_equal("Crecimiento de las  industrias  ", worksheet.control_d39); end
-  def test_control_d40; assert_equal("Eficiencia energética  y optimización de procesos en  industrias", worksheet.control_d40); end
-  def test_control_d41; assert_equal("Transporte de pasajeros", worksheet.control_d41); end
-  def test_control_d42; assert_equal("Gestión de la demanda de transporte de pasajeros", worksheet.control_d42); end
-  def test_control_d43; assert_equal("Eficiencia energética y uso de tecnologías limpias en el transporte de pasajeros", worksheet.control_d43); end
-  def test_control_d44; assert_equal("Transporte de carga", worksheet.control_d44); end
-  def test_control_d45; assert_equal("Eficiencia energética y uso de tecnologías limpias en el transporte de carga", worksheet.control_d45); end
-  def test_control_d46; assert_equal("Gestión de la demanda de transporte de carga", worksheet.control_d46); end
-  def test_control_d47; assert_equal("Transporte internacional - Aviación", worksheet.control_d47); end
-  def test_control_d48; assert_equal("Transporte internacional - Navegación", worksheet.control_d48); end
-  def test_control_d50; assert_equal("Agricultura y Ganadería", worksheet.control_d50); end
-  def test_control_d51; assert_equal("Consumo carne y leche per cápíta", worksheet.control_d51); end
-  def test_control_d52; assert_equal("Prácticas sostenibles en suelos ganaderos", worksheet.control_d52); end
-  def test_control_d53; assert_equal("Mejores practicas pecuarias", worksheet.control_d53); end
-  def test_control_d54; assert_equal("Mejores prácticas agrícolas", worksheet.control_d54); end
-  def test_control_d55; assert_equal("Bosques plantados y naturales", worksheet.control_d55); end
-  def test_control_d56; assert_equal("Reducción de la deforestación", worksheet.control_d56); end
-  def test_control_d57; assert_equal("Reforestación y restauración", worksheet.control_d57); end
+  def test_control_d21; assert_equal("Hidrocarburos", worksheet.control_d21); end
+  def test_control_d22; assert_equal("Crecimiento de la producción de hidrocarburos", worksheet.control_d22); end
+  def test_control_d23; assert_equal("Eficiencia energética en producción de hidrocarburos", worksheet.control_d23); end
+  def test_control_d24; assert_equal("Recuperación mejorada de petroleo", worksheet.control_d24); end
+  def test_control_d25; assert_equal("Residuos", worksheet.control_d25); end
+  def test_control_d26; assert_equal("Manejo Integrado Residuos solidos", worksheet.control_d26); end
+  def test_control_d27; assert_equal("Aprovechamiento del metano de aguas residuales", worksheet.control_d27); end
+  def test_control_d28; assert_equal("Distritos energéticos", worksheet.control_d28); end
+  def test_control_d30; assert_equal("Acondicionamiento de espacios en viviendas", worksheet.control_d30); end
+  def test_control_d31; assert_equal("Iluminación, refrigeración, cocción y otros usos.", worksheet.control_d31); end
+  def test_control_d32; assert_equal("Eficiencia energética y equipos eficientes en viviendas", worksheet.control_d32); end
+  def test_control_d33; assert_equal("Uso y habitos de consumo ", worksheet.control_d33); end
+  def test_control_d34; assert_equal("Viviendas rurales", worksheet.control_d34); end
+  def test_control_d35; assert_equal("Acondicionamiento de espacios comercial y de servicios", worksheet.control_d35); end
+  def test_control_d36; assert_equal("Usos térmicos y equipamiento comercial y de servicios", worksheet.control_d36); end
+  def test_control_d37; assert_equal(" Industrias", worksheet.control_d37); end
+  def test_control_d38; assert_equal("Crecimiento de las  industrias  ", worksheet.control_d38); end
+  def test_control_d39; assert_equal("Eficiencia energética  y optimización de procesos en  industrias", worksheet.control_d39); end
+  def test_control_d40; assert_equal("Transporte de pasajeros", worksheet.control_d40); end
+  def test_control_d41; assert_equal("Gestión de la demanda de transporte de pasajeros", worksheet.control_d41); end
+  def test_control_d42; assert_equal("Eficiencia energética y uso de tecnologías limpias en el transporte de pasajeros", worksheet.control_d42); end
+  def test_control_d43; assert_equal("Transporte de carga", worksheet.control_d43); end
+  def test_control_d44; assert_equal("Eficiencia energética y uso de tecnologías limpias en el transporte de carga", worksheet.control_d44); end
+  def test_control_d45; assert_equal("Gestión de la demanda de transporte de carga", worksheet.control_d45); end
+  def test_control_d46; assert_equal("Transporte internacional - Aviación", worksheet.control_d46); end
+  def test_control_d47; assert_equal("Transporte internacional - Navegación", worksheet.control_d47); end
+  def test_control_d49; assert_equal("Agricultura y Ganadería", worksheet.control_d49); end
+  def test_control_d50; assert_equal("Consumo carne y leche per cápíta", worksheet.control_d50); end
+  def test_control_d51; assert_equal("Prácticas sostenibles en suelos ganaderos", worksheet.control_d51); end
+  def test_control_d52; assert_equal("Mejores practicas pecuarias", worksheet.control_d52); end
+  def test_control_d53; assert_equal("Mejores prácticas agrícolas", worksheet.control_d53); end
+  def test_control_d54; assert_equal("Bosques plantados y naturales", worksheet.control_d54); end
+  def test_control_d55; assert_equal("Reducción de la deforestación", worksheet.control_d55); end
+  def test_control_d56; assert_equal("Reforestación y restauración", worksheet.control_d56); end
   def test_control_g5; assert_equal("1.pdf", worksheet.control_g5); end
   def test_control_g6; assert_equal("2.pdf", worksheet.control_g6); end
   def test_control_g7; assert_equal("3.pdf", worksheet.control_g7); end
@@ -541,33 +529,32 @@ class TestModel < Minitest::Unit::TestCase
   def test_control_g16; assert_equal("11.pdf", worksheet.control_g16); end
   def test_control_g18; assert_equal("12.pdf", worksheet.control_g18); end
   def test_control_g20; assert_equal("13.pdf", worksheet.control_g20); end
-  def test_control_g21; assert_equal("14.pdf", worksheet.control_g21); end
-  def test_control_g23; assert_equal("15.pdf", worksheet.control_g23); end
-  def test_control_g24; assert_equal("16.pdf", worksheet.control_g24); end
-  def test_control_g25; assert_equal("17.pdf", worksheet.control_g25); end
-  def test_control_g27; assert_equal("18.pdf", worksheet.control_g27); end
-  def test_control_g28; assert_equal("19.pdf", worksheet.control_g28); end
-  def test_control_g29; assert_equal("20.pdf", worksheet.control_g29); end
-  def test_control_g31; assert_equal("21.pdf", worksheet.control_g31); end
-  def test_control_g33; assert_equal("22.pdf", worksheet.control_g33); end
-  def test_control_g34; assert_equal("23.pdf", worksheet.control_g34); end
-  def test_control_g35; assert_equal("24.pdf", worksheet.control_g35); end
-  def test_control_g36; assert_equal("25.pdf", worksheet.control_g36); end
-  def test_control_g37; assert_equal("26.pdf", worksheet.control_g37); end
-  def test_control_g39; assert_equal("27.pdf", worksheet.control_g39); end
-  def test_control_g40; assert_equal("28.pdf", worksheet.control_g40); end
-  def test_control_g42; assert_equal("29.pdf", worksheet.control_g42); end
-  def test_control_g43; assert_equal("30.pdf", worksheet.control_g43); end
-  def test_control_g45; assert_equal("31.pdf", worksheet.control_g45); end
-  def test_control_g46; assert_equal("32.pdf", worksheet.control_g46); end
-  def test_control_g47; assert_equal("33.pdf", worksheet.control_g47); end
-  def test_control_g48; assert_equal("34.pdf", worksheet.control_g48); end
-  def test_control_g51; assert_equal("35.pdf", worksheet.control_g51); end
-  def test_control_g52; assert_equal("36.pdf", worksheet.control_g52); end
-  def test_control_g53; assert_equal("37.pdf", worksheet.control_g53); end
-  def test_control_g54; assert_equal("38.pdf", worksheet.control_g54); end
-  def test_control_g56; assert_equal("39.pdf", worksheet.control_g56); end
-  def test_control_g57; assert_equal("40.pdf", worksheet.control_g57); end
+  def test_control_g22; assert_equal("15.pdf", worksheet.control_g22); end
+  def test_control_g23; assert_equal("16.pdf", worksheet.control_g23); end
+  def test_control_g24; assert_equal("17.pdf", worksheet.control_g24); end
+  def test_control_g26; assert_equal("18.pdf", worksheet.control_g26); end
+  def test_control_g27; assert_equal("19.pdf", worksheet.control_g27); end
+  def test_control_g28; assert_equal("20.pdf", worksheet.control_g28); end
+  def test_control_g30; assert_equal("21.pdf", worksheet.control_g30); end
+  def test_control_g32; assert_equal("22.pdf", worksheet.control_g32); end
+  def test_control_g33; assert_equal("23.pdf", worksheet.control_g33); end
+  def test_control_g34; assert_equal("24.pdf", worksheet.control_g34); end
+  def test_control_g35; assert_equal("25.pdf", worksheet.control_g35); end
+  def test_control_g36; assert_equal("26.pdf", worksheet.control_g36); end
+  def test_control_g38; assert_equal("27.pdf", worksheet.control_g38); end
+  def test_control_g39; assert_equal("28.pdf", worksheet.control_g39); end
+  def test_control_g41; assert_equal("29.pdf", worksheet.control_g41); end
+  def test_control_g42; assert_equal("30.pdf", worksheet.control_g42); end
+  def test_control_g44; assert_equal("31.pdf", worksheet.control_g44); end
+  def test_control_g45; assert_equal("32.pdf", worksheet.control_g45); end
+  def test_control_g46; assert_equal("33.pdf", worksheet.control_g46); end
+  def test_control_g47; assert_equal("34.pdf", worksheet.control_g47); end
+  def test_control_g50; assert_equal("35.pdf", worksheet.control_g50); end
+  def test_control_g51; assert_equal("36.pdf", worksheet.control_g51); end
+  def test_control_g52; assert_equal("37.pdf", worksheet.control_g52); end
+  def test_control_g53; assert_equal("38.pdf", worksheet.control_g53); end
+  def test_control_g55; assert_equal("39.pdf", worksheet.control_g55); end
+  def test_control_g56; assert_equal("40.pdf", worksheet.control_g56); end
   def test_control_f5; assert_in_epsilon(4.0, worksheet.control_f5, 0.002); end
   def test_control_f6; assert_in_epsilon(4.0, worksheet.control_f6, 0.002); end
   def test_control_f7; assert_in_epsilon(4.0, worksheet.control_f7, 0.002); end
@@ -582,33 +569,32 @@ class TestModel < Minitest::Unit::TestCase
   def test_control_f16; assert_in_epsilon(4.0, worksheet.control_f16, 0.002); end
   def test_control_f18; assert_in_epsilon(4.0, worksheet.control_f18, 0.002); end
   def test_control_f20; assert_in_epsilon(4.0, worksheet.control_f20, 0.002); end
-  def test_control_f21; assert_in_epsilon(4.0, worksheet.control_f21, 0.002); end
-  def test_control_f23; assert_equal("C", worksheet.control_f23); end
+  def test_control_f22; assert_equal("C", worksheet.control_f22); end
+  def test_control_f23; assert_in_epsilon(4.0, worksheet.control_f23, 0.002); end
   def test_control_f24; assert_in_epsilon(4.0, worksheet.control_f24, 0.002); end
-  def test_control_f25; assert_in_epsilon(4.0, worksheet.control_f25, 0.002); end
+  def test_control_f26; assert_in_epsilon(4.0, worksheet.control_f26, 0.002); end
   def test_control_f27; assert_in_epsilon(4.0, worksheet.control_f27, 0.002); end
   def test_control_f28; assert_in_epsilon(4.0, worksheet.control_f28, 0.002); end
-  def test_control_f29; assert_in_epsilon(4.0, worksheet.control_f29, 0.002); end
-  def test_control_f31; assert_in_epsilon(4.0, worksheet.control_f31, 0.002); end
+  def test_control_f30; assert_in_epsilon(4.0, worksheet.control_f30, 0.002); end
+  def test_control_f32; assert_in_epsilon(4.0, worksheet.control_f32, 0.002); end
   def test_control_f33; assert_in_epsilon(4.0, worksheet.control_f33, 0.002); end
   def test_control_f34; assert_in_epsilon(4.0, worksheet.control_f34, 0.002); end
   def test_control_f35; assert_in_epsilon(4.0, worksheet.control_f35, 0.002); end
   def test_control_f36; assert_in_epsilon(4.0, worksheet.control_f36, 0.002); end
-  def test_control_f37; assert_in_epsilon(4.0, worksheet.control_f37, 0.002); end
-  def test_control_f39; assert_equal("C", worksheet.control_f39); end
-  def test_control_f40; assert_in_epsilon(4.0, worksheet.control_f40, 0.002); end
+  def test_control_f38; assert_equal("C", worksheet.control_f38); end
+  def test_control_f39; assert_in_epsilon(4.0, worksheet.control_f39, 0.002); end
+  def test_control_f41; assert_in_epsilon(4.0, worksheet.control_f41, 0.002); end
   def test_control_f42; assert_in_epsilon(4.0, worksheet.control_f42, 0.002); end
-  def test_control_f43; assert_in_epsilon(4.0, worksheet.control_f43, 0.002); end
+  def test_control_f44; assert_in_epsilon(4.0, worksheet.control_f44, 0.002); end
   def test_control_f45; assert_in_epsilon(4.0, worksheet.control_f45, 0.002); end
   def test_control_f46; assert_in_epsilon(4.0, worksheet.control_f46, 0.002); end
   def test_control_f47; assert_in_epsilon(4.0, worksheet.control_f47, 0.002); end
-  def test_control_f48; assert_in_epsilon(4.0, worksheet.control_f48, 0.002); end
-  def test_control_f51; assert_equal("D", worksheet.control_f51); end
+  def test_control_f50; assert_equal("D", worksheet.control_f50); end
+  def test_control_f51; assert_in_epsilon(4.0, worksheet.control_f51, 0.002); end
   def test_control_f52; assert_in_epsilon(4.0, worksheet.control_f52, 0.002); end
   def test_control_f53; assert_in_epsilon(4.0, worksheet.control_f53, 0.002); end
-  def test_control_f54; assert_in_epsilon(4.0, worksheet.control_f54, 0.002); end
-  def test_control_f56; assert_equal("D", worksheet.control_f56); end
-  def test_control_f57; assert_in_epsilon(4.0, worksheet.control_f57, 0.002); end
+  def test_control_f55; assert_equal("D", worksheet.control_f55); end
+  def test_control_f56; assert_in_epsilon(4.0, worksheet.control_f56, 0.002); end
   def test_electricity_d59; assert_equal("Sector", worksheet.electricity_d59); end
   def test_electricity_e59; assert_in_epsilon(2010.0, worksheet.electricity_e59, 0.002); end
   def test_electricity_f59; assert_in_epsilon(2015.0, worksheet.electricity_f59, 0.002); end
@@ -962,7 +948,7 @@ class TestModel < Minitest::Unit::TestCase
   def test_electricity_k52; assert_in_epsilon(125.30021481751731, worksheet.electricity_k52, 0.002); end
   def test_electricity_l52; assert_in_epsilon(134.36751315616226, worksheet.electricity_l52, 0.002); end
   def test_electricity_m52; assert_in_epsilon(144.02909292287174, worksheet.electricity_m52, 0.002); end
-  def test_energy_d18; assert_equal("Transport", worksheet.energy_d18); end
+  def test_energy_d18; assert_equal("Transporte", worksheet.energy_d18); end
   def test_energy_e18; assert_in_epsilon(87.6494572014688, worksheet.energy_e18, 0.002); end
   def test_energy_f18; assert_in_epsilon(104.97962153654414, worksheet.energy_f18, 0.002); end
   def test_energy_g18; assert_in_epsilon(119.35266437664148, worksheet.energy_g18, 0.002); end
@@ -1202,7 +1188,7 @@ class TestModel < Minitest::Unit::TestCase
   def test_energy_k76; assert_in_delta(0.0, (worksheet.energy_k76||0), 0.002); end
   def test_energy_l76; assert_in_delta(0.0, (worksheet.energy_l76||0), 0.002); end
   def test_energy_m76; assert_in_delta(0.0, (worksheet.energy_m76||0), 0.002); end
-  def test_energy_d77; assert_equal("Total used in Col", worksheet.energy_d77); end
+  def test_energy_d77; assert_equal("Total usada en Col", worksheet.energy_d77); end
   def test_energy_e77; assert_in_epsilon(313.3849723518919, worksheet.energy_e77, 0.002); end
   def test_energy_f77; assert_in_epsilon(386.98709267005427, worksheet.energy_f77, 0.002); end
   def test_energy_g77; assert_in_epsilon(423.5969624654556, worksheet.energy_g77, 0.002); end

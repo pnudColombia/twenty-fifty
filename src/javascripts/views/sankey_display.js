@@ -54,13 +54,13 @@ s.stack(1, ["Carbón"], "Reservas de carbón");
 s.stack(1, ["Gas Natural"], "Reservas de gas");
 s.stack(1, ["Petróleo"], "Importaciones de petróleo");
 s.stack(1, ["Bio- conversión"], "Tierra Col Bioenergía");
-s.stack(2, ["Solar Térmica", "Solar PV"], "Solar");
+s.stack(1, ["Solar Térmica", "Solar PV"], "Solar");
 s.stack(2, ["Líquido","Sólido", "Gas"], "Carbón");
 s.stack(3, ["Generación térmica"], "Hydro");
 s.stack(4, ["Red eléctrica"], "Eólica");
 s.stack(5, ["H2 conversion"], "Electricity grid");
 s.stack(6, ["H2"], "H2 conversion");
-s.stack(7, ["Edificaciones residenciales", "Edificaciones comerciales y de servicios", "Industria", "Transporte por carretera", "Transporte por ferrocarril", "Aviación nacional", "Aviación internacional", "Navegación Nacional", "Envíos internacional", "Agricultura", "Geosequestration", "Sobre generación / exportaciones"]);
+s.stack(7, ["Calefacción y refrigeración - Hogares","Edificaciones residenciales", "Edificaciones comerciales y de servicios", "Industria", "Transporte por carretera", "Transporte por ferrocarril", "Aviación nacional", "Aviación internacional", "Navegación Nacional", "Envíos internacional", "Agricultura", "Geosequestration", "Sobre generación / exportaciones"]);
 s.stack(7, ["Perdidas"],"Tierra Col Bioenergía");
 s.setColors({
 "Coal reserves": "#8F6F38",
@@ -107,7 +107,7 @@ s.setColors({
 s.nudge_colours_callback = function() {
 this.recolour(this.boxes["Perdidas"].left_lines, "#ddd");
 };
-pixels_per_TWh = $('#sankey').height() / 4000;
+pixels_per_TWh = $('#sankey').height() / 5000;
 s.y_space = Math.round(100 * pixels_per_TWh);
 s.right_margin = 250;
 s.left_margin = 150;

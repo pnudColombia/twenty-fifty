@@ -19,7 +19,7 @@ window.twentyfifty.views.primary_energy_chart = function() {
       .max_value(1000); //Ajuste del maximo valor
 
     this.primary_energy_chart = timeSeriesStackedAreaChart()
-      .title("Suministro de energía")
+      .title("Oferta de energía")
       .unit('TWh/yr')
       .max_value(1000);//Ajuste del maximo valor
 
@@ -61,7 +61,7 @@ window.twentyfifty.views.primary_energy_chart = function() {
   this.updateResults = function(pathway) {
 
     // Add some footnote references
-    if(pathway.primary_energy_supply[pathway.primary_energy_supply.length-1][0] == "Total used in Col") {
+    if(pathway.primary_energy_supply[pathway.primary_energy_supply.length-1][0] == "Total usada en Col") {
       pathway.primary_energy_supply[pathway.primary_energy_supply.length-1][0] =  pathway.primary_energy_supply[pathway.primary_energy_supply.length-1][0] + "¹";
     }
 
