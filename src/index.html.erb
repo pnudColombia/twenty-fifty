@@ -40,7 +40,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 
       <div id='name'>
         <!-- Change this to link to your country website -->
-        <a href='http://www.colombia2050.com'>Calculadora de Carbono Colombia 2050</a>
+        <a href='http://www.calculadoracolombia2050.com'>Calculadora de Carbono Colombia 2050</a>
       </div>
 
       <div id='examples'>
@@ -56,7 +56,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
        <a class='view' data-view='sankey' href='#'>Flujos</a>
        <a class='view' data-view='emisiones' href='#'>Emisiones</a>
        <a class='view' data-view='map' href='#'>Mapa</a>
-        <a class='view' data-view='story' href='#'>Historia</a>
+        <a class='view' data-view='story' href='#'>Colombia en 2050</a>
        <!-- <a class='newdropdown' data-dropdown='#cost_choices' href='#' id='cost_choice'>Costos</a> -->
        <!--<a class='view' data-view='air_quality' href='#'>Aire</a>-->
        <!-- Se crea una linea igual a la de calidad del aire ya que es la mas sencilla-->
@@ -170,20 +170,14 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 
 
 
-
-
-
-
-
-
       </div>
       <!-- The middle column -->
       <div id='supply'>
         <table>
           <!--Se incluyen segmentos con los subtitulos para la división de los sectores-->
-	 <p><b>Electricidad no renovable</b></p> 
+	 <p><b>Electricidad renovable</b></p> 
           <!--Originalmente va de 0 a 23 -->
-           <% structure.choices[0..1].each do |choice| %>
+           <% structure.choices[2..10].each do |choice| %>
             <tr class='<%= choice.incremental_or_alternative %>' id='r<%= choice.number %>'>
               <td class='name'>
                 <a href='/assets/onepage/<%= choice.doc %>' target='_new' data-choicenumber='<%= choice.number %>'>
@@ -208,9 +202,9 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 
    <table>
           <!--Se incluyen segmentos con los subtitulos para la división de los sectores-->
-	 <p><b>Electricidad renovable </b></p> 
+	 <p><b>Electricidad no renovable </b></p> 
           <!--Originalmente va de 0 a 23 -->
-           <% structure.choices[2..10].each do |choice| %>
+           <% structure.choices[0..1].each do |choice| %>
             <tr class='<%= choice.incremental_or_alternative %>' id='r<%= choice.number %>'>
               <td class='name'>
                 <a href='/assets/onepage/<%= choice.doc %>' target='_new' data-choicenumber='<%= choice.number %>'>
@@ -392,7 +386,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
     <div id='tooltip'></div>
     <div id='footer'>
       <!-- Change this to link to your country's website -->
-      All the assumptions and calculations are available in a spreadsheet. Download <a href='/model.xlsx'>Excel <%= structure.reported_calculator_version %> <%= %></a> (<a href='http://www.colombia2050.com'>Version history</a>). The source code for this site is available under an open source licence from <a href='http://github.com/decc/twenty-fifty'>http://github.com/decc/twenty-fifty</a>
+      Todas las asunciones y calculos estan disponibles en una hoja de calculo. Descargue <a href='/model.xlsx'>Excel </a>. El código de este sitio esta disponible bajo una licencia de código abierto en <a href='http://github.com/pnudColombia/twenty-fifty'>http://github.com/pnudColombia/twenty-fifty</a>
     </div>
     <!-- The following html is only displayed on screen when a user selects a particular view -->
     <div id='snippets'>

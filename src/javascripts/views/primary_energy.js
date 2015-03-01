@@ -15,19 +15,21 @@ window.twentyfifty.views.primary_energy_chart = function() {
 
     this.final_energy_chart = timeSeriesStackedAreaChart()
       .title("Demanda de energía")
-      .unit('TWh/yr')
+      .unit('TWh/año')
+      .min_value(-100)
       .max_value(1000); //Ajuste del maximo valor
 
     this.primary_energy_chart = timeSeriesStackedAreaChart()
       .title("Oferta de energía")
-      .unit('TWh/yr')
+      .unit('TWh/año')
+      .min_value(-100)
       .max_value(1000);//Ajuste del maximo valor
 
     this.emissions_chart = timeSeriesStackedAreaChart()
       .title("Emisiones ")
-      .unit('MtCO2e/yr')
-      .min_value(-20)
-      .max_value(500); //Valor maximo de emisiones
+      .unit('MtCO2e/año')
+      .min_value(-100)
+      .max_value(600); //Valor maximo de emisiones
   };
 
   // This is called when a new view has been selected
@@ -61,7 +63,7 @@ window.twentyfifty.views.primary_energy_chart = function() {
   this.updateResults = function(pathway) {
 
     // Add some footnote references
-    if(pathway.primary_energy_supply[pathway.primary_energy_supply.length-1][0] == "Total usada en Col") {
+    if(pathway.primary_energy_supply[pathway.primary_energy_supply.length-1][0] == "Total") {
       pathway.primary_energy_supply[pathway.primary_energy_supply.length-1][0] =  pathway.primary_energy_supply[pathway.primary_energy_supply.length-1][0] + "¹";
     }
 

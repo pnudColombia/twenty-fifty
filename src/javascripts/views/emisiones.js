@@ -15,20 +15,22 @@ window.twentyfifty.views.emisiones = function() {
 
    this.final_energy_chart = timeSeriesStackedAreaChart()
       .title("Demanda de energía")
-      .unit('TWh/yr')
+      .unit('TWh/año')
+      .min_value(-100)
       .max_value(1000); //Ajuste del maximo valor
+      
 
     this.ghg = timeSeriesStackedAreaChart()
-      .title("Emisiones IPCC")
-      .unit('MtCO2e/yr')
+      .title("Emisiones por categorías de IPCC")
+      .unit('MtCO2e/año')
       .min_value(-100)
       .max_value(500);//Ajuste del maximo valor
 
     this.emissions_chart = timeSeriesStackedAreaChart()
-      .title("Emisiones ")
-      .unit('MtCO2e/yr')
+      .title("Emisiones por sector")
+      .unit('MtCO2e/año')
       .min_value(-100)
-      .max_value(450); //Valor maximo de emisiones
+      .max_value(600); //Valor maximo de emisiones
   };
 
   // This is called when a new view has been selected

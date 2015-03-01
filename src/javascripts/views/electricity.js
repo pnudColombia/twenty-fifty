@@ -12,20 +12,20 @@ window.twentyfifty.views.electricity = function() {
 
     this.demand_chart = timeSeriesStackedAreaChart()
       .title("Demanda de electricidad")
-      .unit('TWh/yr')
-      .min_value(0)	
+      .unit('TWh/año')
+      .min_value(-50)	
       .max_value(200);
 
     this.supply_chart = timeSeriesStackedAreaChart()
-      .title("Suministro eléctrico")
-      .unit('TWh/yr')
-      .min_value(-30)	
+      .title("Oferta de electricidad")
+      .unit('TWh/año')
+      .min_value(-50)	
       .max_value(200);
 
     this.emissions_chart = timeSeriesStackedAreaChart()
       .title("Emisiones de la electricidad")
-      .unit('MtCO2e/yr')
-      .min_value(-500)
+      .unit('MtCO2e/año')
+      .min_value(-50)
       .max_value(500);
   };
 
