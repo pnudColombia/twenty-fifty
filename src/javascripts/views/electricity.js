@@ -37,41 +37,6 @@ window.twentyfifty.views.electricity = function() {
     this.primary_energy_chart = null;
     this.emissions_chart = null;
   };
-
-  // This is called when pathway data is loaded
-  // or the user chooses a different pathway
-  // it updates the charts
-  this.updateResults = function(pathway) {
-
-    // The last row of the final energy demand table is assumed to be the Total
-    // FIXME: Make this more robust
-    total_final_energy = pathway.final_energy_demand[pathway.final_energy_demand.length-1].slice(1);
-    // The last row of the emissions table is assumed to be the Total
-    // FIXME: Make this more robust
-    total_emissions = pathway.ghg[pathway.ghg.length-1].slice(1);
-
-    // Demand chart
-    this.demand_chart.context(total_final_energy);
-
-    d3.select('#demand_chart')
-      .datum(convert_table_to_hash(pathway.electricity.demand))
-      .call(this.demand_chart);
-
-    // Supply chart
-    this.supply_chart.context(total_final_energy);
-
-    d3.select('#supply_chart')
-      .datum(convert_table_to_hash(pathway.electricity.supply))
-      .call(this.supply_chart);
-
-    // Emissions chart
-    this.emissions_chart.context(total_emissions);
-
-    d3.select('#emissions_chart')
-      .datum(convert_table_to_hash(pathway.electricity.ghg))
-      .call(this.emissions_chart);
-  };
-  
   // This is used to convert the table from how it looks in Excel
   // into the format needed to plot a chart
   convert_table_to_hash = function(table) {
@@ -85,6 +50,31 @@ window.twentyfifty.views.electricity = function() {
     });
     return hash;
   }
+
+  // This is called when pathway data is loaded
+  // or the user chooses a different pathway
+  // it updates the charts
+  this.updateResults = function(pathway) {
+    // Get the data in the right format
+    supply= convert_table_to_hash(pathway.electricity.supply);
+    // Demand chart
+      d3.select('#demand_chart')
+      .datum(supply)
+      .call(this.demand_chart);
+
+    // Supply chart
+      d3.select('#supply_chart')
+      .datum(supply)
+      .call(this.supply_chart);
+
+    // Emissions chart
+    
+    d3.select('#emissions_chart')
+      .datum()
+      .call(this.emissions_chart);
+  };
+  
+
 
   return this;
 }.call({});

@@ -24,13 +24,13 @@ window.twentyfifty.views.emisiones = function() {
       .title("Emisiones por categorías de IPCC")
       .unit('MtCO2e/año')
       .min_value(-100)
-      .max_value(500);//Ajuste del maximo valor
+      .max_value(800);//Ajuste del maximo valor
 
     this.emissions_chart = timeSeriesStackedAreaChart()
       .title("Emisiones por sector")
       .unit('MtCO2e/año')
       .min_value(-100)
-      .max_value(600); //Valor maximo de emisiones
+      .max_value(800); //Valor maximo de emisiones
   };
 
   // This is called when a new view has been selected
@@ -64,9 +64,8 @@ window.twentyfifty.views.emisiones = function() {
   this.updateResults = function(pathway) {
     // Get the data in the right format
     demand = convert_table_to_hash(pathway.final_energy_demand);
-    supply = convert_table_to_hash(pathway.ghg.slice(0,-1));
-    ghg_by_sectors = convert_table_to_hash(pathway.ghg_by_sectors.slice(0,-1)); 
-    //ghg_by_sectors = convert_table_to_hash(pathway.ghg_by_sectors.slice(0,-1))"linea anterior"
+    supply = convert_table_to_hash(pathway.ghg);
+    ghg_by_sectors = convert_table_to_hash(pathway.ghg_by_sectors); 
     percent = pathway.ghg_by_sectors_reduction_from_1990;
 
     // Draw the charts
@@ -84,6 +83,9 @@ window.twentyfifty.views.emisiones = function() {
 
     
   };
+
+
+
 
   return this;
 }.call({});

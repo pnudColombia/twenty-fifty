@@ -20,6 +20,7 @@ window.timeSeriesStackedAreaChart = function() {
   max_year = 2050;
   total_label = /^total*/i;
   color_classes = {
+    'Electricidad importada':'importada',
     'Hidroeléctricas': 'hidro2',
     'Agriculture': 'agriculture',
     'Agriculture and land use': 'agriculture',
