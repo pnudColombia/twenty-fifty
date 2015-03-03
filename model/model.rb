@@ -114,6 +114,14 @@ class Model
 
     # use this function to reset all cell values
     attach_function 'reset', [], :void
+    # end of 2050
+    # end of 2045
+    # end of 2040
+    # end of 2035
+    # end of 2030
+    # end of 2025
+    # end of 2020
+    # end of 2015
     # end of LinksList
     # end of Preferences
     attach_function 'set_control_e5', [ExcelValue.by_value], :void
@@ -6424,6 +6432,36 @@ class Model
     attach_function 'electricity_k27', [], ExcelValue.by_value
     attach_function 'electricity_l27', [], ExcelValue.by_value
     attach_function 'electricity_m27', [], ExcelValue.by_value
+    attach_function 'electricity_d100', [], ExcelValue.by_value
+    attach_function 'electricity_e100', [], ExcelValue.by_value
+    attach_function 'electricity_f100', [], ExcelValue.by_value
+    attach_function 'electricity_g100', [], ExcelValue.by_value
+    attach_function 'electricity_h100', [], ExcelValue.by_value
+    attach_function 'electricity_i100', [], ExcelValue.by_value
+    attach_function 'electricity_j100', [], ExcelValue.by_value
+    attach_function 'electricity_k100', [], ExcelValue.by_value
+    attach_function 'electricity_l100', [], ExcelValue.by_value
+    attach_function 'electricity_m100', [], ExcelValue.by_value
+    attach_function 'electricity_d101', [], ExcelValue.by_value
+    attach_function 'electricity_e101', [], ExcelValue.by_value
+    attach_function 'electricity_f101', [], ExcelValue.by_value
+    attach_function 'electricity_g101', [], ExcelValue.by_value
+    attach_function 'electricity_h101', [], ExcelValue.by_value
+    attach_function 'electricity_i101', [], ExcelValue.by_value
+    attach_function 'electricity_j101', [], ExcelValue.by_value
+    attach_function 'electricity_k101', [], ExcelValue.by_value
+    attach_function 'electricity_l101', [], ExcelValue.by_value
+    attach_function 'electricity_m101', [], ExcelValue.by_value
+    attach_function 'electricity_d102', [], ExcelValue.by_value
+    attach_function 'electricity_e102', [], ExcelValue.by_value
+    attach_function 'electricity_f102', [], ExcelValue.by_value
+    attach_function 'electricity_g102', [], ExcelValue.by_value
+    attach_function 'electricity_h102', [], ExcelValue.by_value
+    attach_function 'electricity_i102', [], ExcelValue.by_value
+    attach_function 'electricity_j102', [], ExcelValue.by_value
+    attach_function 'electricity_k102', [], ExcelValue.by_value
+    attach_function 'electricity_l102', [], ExcelValue.by_value
+    attach_function 'electricity_m102', [], ExcelValue.by_value
     attach_function 'electricity_d40', [], ExcelValue.by_value
     attach_function 'electricity_e40', [], ExcelValue.by_value
     attach_function 'electricity_f40', [], ExcelValue.by_value
@@ -6609,14 +6647,6 @@ class Model
     # end of 2007 (Consistent)
     # end of 2007
     # end of 2010
-    # end of 2015
-    # end of 2020
-    # end of 2025
-    # end of 2030
-    # end of 2035
-    # end of 2040
-    # end of 2045
-    # end of 2050
     # Start of named references
     attach_function 'input_choices', [], ExcelValue.by_value
     attach_function 'input_descriptions', [], ExcelValue.by_value
@@ -6627,7 +6657,9 @@ class Model
     attach_function 'input_types', [], ExcelValue.by_value
     attach_function 'output_areas', [], ExcelValue.by_value
     attach_function 'output_electricity_demand', [], ExcelValue.by_value
+    attach_function 'output_electricity_ghg', [], ExcelValue.by_value
     attach_function 'output_electricity_supply', [], ExcelValue.by_value
+    attach_function 'output_electricty_ghg', [], ExcelValue.by_value
     attach_function 'output_finalenergyde', [], ExcelValue.by_value
     attach_function 'output_finalenergydemand', [], ExcelValue.by_value
     attach_function 'output_flujos', [], ExcelValue.by_value
@@ -6645,7 +6677,9 @@ class Model
     attach_function 'input_types', [], ExcelValue.by_value
     attach_function 'output_areas', [], ExcelValue.by_value
     attach_function 'output_electricity_demand', [], ExcelValue.by_value
+    attach_function 'output_electricity_ghg', [], ExcelValue.by_value
     attach_function 'output_electricity_supply', [], ExcelValue.by_value
+    attach_function 'output_electricty_ghg', [], ExcelValue.by_value
     attach_function 'output_finalenergyde', [], ExcelValue.by_value
     attach_function 'output_finalenergydemand', [], ExcelValue.by_value
     attach_function 'output_flujos', [], ExcelValue.by_value

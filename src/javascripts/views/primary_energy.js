@@ -61,7 +61,7 @@ this.updateResults = function(pathway) {
 demand = convert_table_to_hash(pathway.final_energy_demand);
 supply = convert_table_to_hash(pathway.primary_energy_supply);
 ghg_by_sectors = convert_table_to_hash(pathway.ghg_by_sectors.slice(0,-1));
-percent = pathway.ghg_by_sectors_reduction_from_1990;
+percent = pathway.output_percentagereduction1;
 // Draw the charts
 d3.select('#demand_chart')
 .datum(demand)
@@ -73,7 +73,10 @@ d3.select('#emissions_chart')
 .datum(ghg_by_sectors)
 .call(this.emissions_chart);
 };
+  
 
+
+ 
 
 
 return this;

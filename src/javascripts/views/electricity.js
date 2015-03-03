@@ -58,6 +58,7 @@ window.twentyfifty.views.electricity = function() {
     // Get the data in the right format
     supply= convert_table_to_hash(pathway.electricity.supply);
     demand= convert_table_to_hash(pathway.electricity.demand);
+    emissions=convert_table_to_hash(pathway.electricity.ghg)
     // Demand chart
       d3.select('#demand_chart')
       .datum(demand)
@@ -71,7 +72,7 @@ window.twentyfifty.views.electricity = function() {
     // Emissions chart
     
     d3.select('#emissions_chart')
-      .datum()
+      .datum(emissions)
       .call(this.emissions_chart);
   };
   
