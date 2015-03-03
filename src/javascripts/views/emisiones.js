@@ -64,17 +64,17 @@ window.twentyfifty.views.emisiones = function() {
   this.updateResults = function(pathway) {
     // Get the data in the right format
     demand = convert_table_to_hash(pathway.final_energy_demand);
-    supply = convert_table_to_hash(pathway.ghg);
-    ghg_by_sectors = convert_table_to_hash(pathway.ghg_by_sectors); 
-    percent = pathway.ghg_by_sectors_reduction_from_1990;
-
+    ghg_ipcc = convert_table_to_hash(pathway.ghg.slice(0,-1));
+    ghg_by_sectors = convert_table_to_hash(pathway.ghg_by_sectors.slice(0,-1)); 
+    percent1 = pathway.ghg_reduction_1;
+    percent2 = pathway.ghg_reduction_2;
     // Draw the charts
     //d3.select('#demand_chart')
      // .datum(demand)
      // .call(this.final_energy_chart);
 
     d3.select('#ghg')
-      .datum(supply)
+      .datum(ghg_ipcc)
       .call(this.ghg);
 
     d3.select('#emissions_chart')

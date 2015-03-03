@@ -61,11 +61,11 @@ window.twentyfifty.views.map = function() {
   display_width = 1200;
   display_height = 800;
   mapimage_url = '/assets/images/col.png';
-  map_width = 432;
-  map_height = 637;
+  map_width = 566;
+  map_height = 800;
   map_offset_x = 150;
   map_offset_y = 0;
-  km = 1,16;
+  km = 0.5;
   m = km / 1000.0;
   m2 = m * m;
   ha = 10000 * m2;
@@ -76,49 +76,72 @@ window.twentyfifty.views.map = function() {
 
   colours = {
     'II.a.1': '#ff0000',
+    'II.a.2': '#ff0000',
     'II.b.1': '#ff0000',
+    'II.b.2': '#ff0000',
     'XVII.a.1': '#aa0000',
     'XVII.a.2': '#00ff00',
     'XVII.a.3': '#408000',
-    'VI.a.Biocrop': '#00ff00',
-    'VI.a.Forestry': '#00ff00',
-    'II.a.2': '#ffff00',
-    'II.c.TidalStream': '#cccc00',
-    'II.c.TidalRange': '#ffff00',
-    'VI.c': '#0000ff',
-    'V.b': '#0000ff',
-    'VII.a': '#aaaaff',
-    'II.c.Wave': '#666',
-    'I.a': '#CCC',
+    'XIV.a.1': '#aa0000',
+    'XIV.a.2': '#00ff00',
+    'XIV.a.3': '#408000',	
+    'VI.a.biocombustibles': '#4080432',
+    'VI.a.pastoreonacional': '#408856',
+    'VI.a.psensuelosganaderos': '#408350',
+    'I.a.Gas': '#0000ff',
+    'I.a.Liquido': '#ffff00',
+    'I.a.Solido': '#ffff00',
+    'II.c.amplitudmareas': '#cccc00',
+    'II.c.corrientemareas': '#ffff00',
+    'II.c.olas': '#0000ff',
+    'II.d': '#0000ff',
+    'III.a.Biomasa': '#aaaaff',
+    'III.a.Eolica': '#666',
+    'III.a.Residuos': '#CCC',
     'IV.a': '#FF0',
-    'II.d': '#F00',
-    'VII.b': '#008000',
-    'XV.a': '#F00'
+    'VII.b': '#F00',
+    'VII.a': '#F00'
   };
 
   labels = {
-    'II.a.1': 'Eólica terrestre',
-    'II.b.1': 'Hydro',
+    'II.a.1': 'Eólica costa adentro',
+    'II.a.2': 'Eólica costa afuera',
+    'II.b.1': 'Grandes centrales hidroeléctricas',
+    'II.b.2': 'Pequeñas centrales hidroeléctricas',
     'XVII.a.1': 'Solar PV',
     'XVII.a.2': 'Solar térmica',
     'XVII.a.3': 'Solar PV',
-    'VI.a.Biocrop': 'Biocrop',
-    'VI.a.Forestry': 'Forestry',
-    'II.a.2': 'Eólica marina',
-    'II.c.TidalStream': 'Tidal Stream',
-    'II.c.TidalRange': 'Tidal Range',
-    'VI.c': 'Pendiente',
-    'V.b': 'Biocrops Overseas',
-    'VII.a': 'Dispositivos solares en el mar',
-    'II.c.Wave': 'Convertidores de olas'
+    'XVII.a.1': 'Area deforestada',
+    'XVII.a.2': 'ReforestaciÓn comercial',
+    'XVII.a.3': 'ReforestaciÓn protectora',
+    'VI.a.biocombustibles': 'Biocombustibles',
+    'VI.a.pastoreonacional': 'Pastoreo nacional',
+    'VI.a.psensuelosganaderos': 'Suelos Ganaderos',
+    'I.a.Gas': 'Unidades',
+    'I.a.Liquido': 'unidades',
+    'I.a.Solido': 'unidades',
+    'II.c.amplitudmareas': 'Mareas',
+    'II.c.corrientemareas': 'Mareas',
+    'II.c.olas': 'Mareas',
+    'II.d': 'unidades',
+    'III.a.Biomasa': 'unidades',
+    'III.a.Eolica': 'unidades',
+    'III.a.Residuos': 'unidades',
+    'IV.a': 'unidades',
+    'VII.b': 'unidades',
+    'VII.a': 'Importaciones de electricidad'
   };
 
   pointSizes = {
-    'I.a': 2,
-    'IV.a': 1.2,
-    'II.d': 3,
-    'VII.b': 0.01,
-    'XV.a': 1
+    'I.a.Gas': 2,
+    'I.a.Liquido': 1.8,
+    'I.a.Solido': 2.5,
+    'II.d': 2.4,
+    'III.a.Biomasa': 2.2,
+    'III.a.Eolica': 2,
+    'III.a.Residuos': 0.6,
+    'IV.a': 1,
+    'VII.b': 1
   };
 
   // This is called first, before the data is ready
@@ -146,7 +169,9 @@ window.twentyfifty.views.map = function() {
     x = (map_width / 2) + map_offset_x;
     y = map_height + map_offset_y - 100;
     this.land_boxes = {};
-    land_box_names = ['II.a.1', 'II.b.1', 'XVII.a.1', 'XVII.a.2', 'XVII.a.3', 'VI.a.Biocrop', 'VI.a.Forestry'];
+//AGREGAR 'VI.a.psensuelosganaderos' VALORES MUY ALTOS
+    land_box_names = ['II.a.1','II.a.2','II.b.1','II.b.2','XVII.a.1','XVII.a.2','XVII.a.3','VI.a.biocombustibles','VI.amejorespagricolas','VI.a.pastoreonacional','XIV.a.areadeforestada','XIV.a.areadeforestada','XIV.a.reforestacioncomercial',
+'XIV.a.reforestacionprotectora'];
     for (i = 0, len = land_box_names.length; i < len; i++) {
       name = land_box_names[i];
       this.land_boxes[name] = r.upiabeled_square(x, y, labels[name], 0, colours[name]);
@@ -156,7 +181,7 @@ window.twentyfifty.views.map = function() {
     x = (map_width / 2) + map_offset_x + 250;
     y = 30;
     this.sea_boxes = {};
-    sea_box_names = ['II.a.2', 'II.c.TidalStream', 'II.c.TidalRange', 'VI.c'];
+    sea_box_names = ['II.c.amplitudmareas', 'II.c.corrientemareas', 'II.c.colas', 'VI.c'];
     for (i = 0, len = sea_box_names.length; i < len; i++) {
       name = sea_box_names[i];
       this.sea_boxes[name] = r.downiabeled_square(x, y, labels[name], 0, colours[name]);
@@ -170,7 +195,7 @@ window.twentyfifty.views.map = function() {
     x = map_offset_x - 105;
     y = map_height + map_offset_y - 30;
     this.overseasiand_boxes = {};
-    overseasiand_box_names = ['V.b', 'VII.a'];
+    overseasiand_box_names = ['VII.a'];
     for (i = 0, len = overseasiand_box_names.length; i < len; i++) {
       name = overseasiand_box_names[i];
       this.overseasiand_boxes[name] = r.upiabeled_square(x, y, labels[name], 0, colours[name]);
@@ -258,7 +283,7 @@ window.twentyfifty.views.map = function() {
       } else {
         box.label.hide();
       }
-      y = y - side - 5;
+      y = y - side - 30;
     }
 
     // Now draw the sea boxes
@@ -315,7 +340,7 @@ window.twentyfifty.views.map = function() {
     x = 1055;
     values = [];
 
-    point_cluster_names = ['I.a', 'IV.a', 'II.d', 'VII.b', 'XV.a'];
+    point_cluster_names = ['I.a.Gas','I.a.Liquido','I.a.Solido','II.d', 'III.a.Biomasa','III.a.Biomasa','III.a.Eolica','III.a.Residuos','IV.a','VII.b'];
     for (i = 0, len = point_cluster_names.length; i < len; i++) {
       name = point_cluster_names[i];
       values.push({ name: name, value: map[name] });

@@ -57,9 +57,10 @@ window.twentyfifty.views.electricity = function() {
   this.updateResults = function(pathway) {
     // Get the data in the right format
     supply= convert_table_to_hash(pathway.electricity.supply);
+    demand= convert_table_to_hash(pathway.electricity.demand);
     // Demand chart
       d3.select('#demand_chart')
-      .datum(supply)
+      .datum(demand)
       .call(this.demand_chart);
 
     // Supply chart
