@@ -2007,15 +2007,15 @@ class TestModel < Minitest::Unit::TestCase
   def test_flows_n54; assert_in_epsilon(275.74708860607063, worksheet.flows_n54, 0.002); end
   def test_flows_c55; assert_equal("Líquido", worksheet.flows_c55); end
   def test_flows_d55; assert_equal("Transporte por carretera", worksheet.flows_d55); end
-  def test_flows_f55; assert_in_delta(0.0535118152, worksheet.flows_f55, 0.002); end
-  def test_flows_g55; assert_in_delta(0.07408075187849973, worksheet.flows_g55, 0.002); end
-  def test_flows_h55; assert_in_delta(0.07408075187850004, worksheet.flows_h55, 0.002); end
-  def test_flows_i55; assert_in_delta(0.07408075187850005, worksheet.flows_i55, 0.002); end
-  def test_flows_j55; assert_in_delta(0.0740807518785, worksheet.flows_j55, 0.002); end
-  def test_flows_k55; assert_in_delta(0.07408075187850001, worksheet.flows_k55, 0.002); end
-  def test_flows_l55; assert_in_delta(0.07408075187850005, worksheet.flows_l55, 0.002); end
-  def test_flows_m55; assert_in_delta(0.07270644450944737, worksheet.flows_m55, 0.002); end
-  def test_flows_n55; assert_in_delta(0.07106839230411093, worksheet.flows_n55, 0.002); end
+  def test_flows_f55; assert_in_epsilon(39.327072084498475, worksheet.flows_f55, 0.002); end
+  def test_flows_g55; assert_in_epsilon(48.35562025984612, worksheet.flows_g55, 0.002); end
+  def test_flows_h55; assert_in_epsilon(59.31441878863466, worksheet.flows_h55, 0.002); end
+  def test_flows_i55; assert_in_epsilon(72.33870035658809, worksheet.flows_i55, 0.002); end
+  def test_flows_j55; assert_in_epsilon(87.92649623907684, worksheet.flows_j55, 0.002); end
+  def test_flows_k55; assert_in_epsilon(106.4627071287016, worksheet.flows_k55, 0.002); end
+  def test_flows_l55; assert_in_epsilon(127.79387692781017, worksheet.flows_l55, 0.002); end
+  def test_flows_m55; assert_in_epsilon(149.82113104190125, worksheet.flows_m55, 0.002); end
+  def test_flows_n55; assert_in_epsilon(177.25591230713647, worksheet.flows_n55, 0.002); end
   def test_flows_c56; assert_equal("Red eléctrica", worksheet.flows_c56); end
   def test_flows_d56; assert_equal("Transporte por ferrocarril", worksheet.flows_d56); end
   def test_flows_f56; assert_in_delta(1.0e-08, worksheet.flows_f56, 0.002); end
@@ -2184,16 +2184,16 @@ class TestModel < Minitest::Unit::TestCase
   def test_ghg_l21; assert_in_epsilon(352.6411800493077, worksheet.ghg_l21, 0.002); end
   def test_ghg_m21; assert_in_epsilon(386.3543321084123, worksheet.ghg_m21, 0.002); end
   def test_ghg_d22; assert_equal("Emisiones mínimo esfuerzo", worksheet.ghg_d22); end
-  def test_ghg_e22; assert_in_epsilon(225.9942246321746, worksheet.ghg_e22, 0.002); end
-  def test_ghg_f22; assert_in_epsilon(239.16347710439837, worksheet.ghg_f22, 0.002); end
-  def test_ghg_g22; assert_in_epsilon(253.90864140967503, worksheet.ghg_g22, 0.002); end
-  def test_ghg_h22; assert_in_epsilon(269.57982118251726, worksheet.ghg_h22, 0.002); end
-  def test_ghg_i22; assert_in_epsilon(286.8026850104609, worksheet.ghg_i22, 0.002); end
+  def test_ghg_e22; assert_in_epsilon(225.994224632175, worksheet.ghg_e22, 0.002); end
+  def test_ghg_f22; assert_in_epsilon(239.163477104398, worksheet.ghg_f22, 0.002); end
+  def test_ghg_g22; assert_in_epsilon(253.908641409675, worksheet.ghg_g22, 0.002); end
+  def test_ghg_h22; assert_in_epsilon(269.579821182517, worksheet.ghg_h22, 0.002); end
+  def test_ghg_i22; assert_in_epsilon(286.802685010461, worksheet.ghg_i22, 0.002); end
   def test_ghg_j22; assert_in_epsilon(313.05407043028384, worksheet.ghg_j22, 0.002); end
   def test_ghg_k22; assert_in_epsilon(345.0647968205988, worksheet.ghg_k22, 0.002); end
   def test_ghg_l22; assert_in_epsilon(378.2740273389046, worksheet.ghg_l22, 0.002); end
-  def test_ghg_m22; assert_in_epsilon(415.10412032414763, worksheet.ghg_m22, 0.002); end
-  def test_ghg_e23; assert_in_delta(0.06925922150154794, worksheet.ghg_e23, 0.002); end
+  def test_ghg_m22; assert_in_epsilon(415.104120324148, worksheet.ghg_m22, 0.002); end
+  def test_ghg_e23; assert_in_delta(0.06925922150154884, worksheet.ghg_e23, 0.002); end
   def test_emisiones_d24; assert_equal("Mt CO2e", worksheet.emisiones_d24); end
   def test_emisiones_e24; assert_in_epsilon(2010.0, worksheet.emisiones_e24, 0.002); end
   def test_emisiones_f24; assert_in_epsilon(2015.0, worksheet.emisiones_f24, 0.002); end
@@ -2285,15 +2285,15 @@ class TestModel < Minitest::Unit::TestCase
   def test_emisiones_l32; assert_in_delta(0.0, (worksheet.emisiones_l32||0), 0.002); end
   def test_emisiones_m32; assert_in_delta(0.0, (worksheet.emisiones_m32||0), 0.002); end
   def test_emisiones_d33; assert_equal("Total", worksheet.emisiones_d33); end
-  def test_emisiones_e33; assert_in_epsilon(143.05824407867576, worksheet.emisiones_e33, 0.002); end
-  def test_emisiones_f33; assert_in_epsilon(157.911417763778, worksheet.emisiones_f33, 0.002); end
-  def test_emisiones_g33; assert_in_epsilon(174.00596238907536, worksheet.emisiones_g33, 0.002); end
-  def test_emisiones_h33; assert_in_epsilon(190.70376194039687, worksheet.emisiones_h33, 0.002); end
-  def test_emisiones_i33; assert_in_epsilon(208.56923048350333, worksheet.emisiones_i33, 0.002); end
-  def test_emisiones_j33; assert_in_epsilon(235.07423232271736, worksheet.emisiones_j33, 0.002); end
-  def test_emisiones_k33; assert_in_epsilon(266.92449563925805, worksheet.emisiones_k33, 0.002); end
-  def test_emisiones_l33; assert_in_epsilon(299.0786672298259, worksheet.emisiones_l33, 0.002); end
-  def test_emisiones_m33; assert_in_epsilon(334.6478048076672, worksheet.emisiones_m33, 0.002); end
+  def test_emisiones_e33; assert_in_epsilon(213.31743206507787, worksheet.emisiones_e33, 0.002); end
+  def test_emisiones_f33; assert_in_epsilon(225.30390595467475, worksheet.emisiones_f33, 0.002); end
+  def test_emisiones_g33; assert_in_epsilon(238.71555660645464, worksheet.emisiones_g33, 0.002); end
+  def test_emisiones_h33; assert_in_epsilon(252.89885343891603, worksheet.emisiones_h33, 0.002); end
+  def test_emisiones_i33; assert_in_epsilon(268.40431295038377, worksheet.emisiones_i33, 0.002); end
+  def test_emisiones_j33; assert_in_epsilon(292.69125657880636, worksheet.emisiones_j33, 0.002); end
+  def test_emisiones_k33; assert_in_epsilon(322.45408008632944, worksheet.emisiones_k33, 0.002); end
+  def test_emisiones_l33; assert_in_epsilon(352.6411800493077, worksheet.emisiones_l33, 0.002); end
+  def test_emisiones_m33; assert_in_epsilon(386.35433210841234, worksheet.emisiones_m33, 0.002); end
   def test_emisiones_d34; assert_equal("Emisiones mínimo esfuerzo", worksheet.emisiones_d34); end
   def test_emisiones_e34; assert_in_epsilon(225.9942246321746, worksheet.emisiones_e34, 0.002); end
   def test_emisiones_f34; assert_in_epsilon(237.50227351211097, worksheet.emisiones_f34, 0.002); end
@@ -2304,7 +2304,7 @@ class TestModel < Minitest::Unit::TestCase
   def test_emisiones_k34; assert_in_epsilon(336.529243027743, worksheet.emisiones_k34, 0.002); end
   def test_emisiones_l34; assert_in_epsilon(368.5985891189588, worksheet.emisiones_l34, 0.002); end
   def test_emisiones_m34; assert_in_epsilon(404.35317018077245, worksheet.emisiones_m34, 0.002); end
-  def test_emisiones_m35; assert_in_delta(0.17238733491799346, worksheet.emisiones_m35, 0.002); end
+  def test_emisiones_m35; assert_in_delta(0.044512667142719446, worksheet.emisiones_m35, 0.002); end
   def test_intermediate_output_b2; assert_equal("Fuente energética", worksheet.intermediate_output_b2); end
   def test_intermediate_output_h3; assert_equal("2050 Calculator calculations", worksheet.intermediate_output_h3); end
   def test_intermediate_output_d4; assert_equal("TWh / year", worksheet.intermediate_output_d4); end

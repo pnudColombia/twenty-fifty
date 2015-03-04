@@ -12,6 +12,17 @@ svg {
 
 .chart rect.backgroundrect {
   fill: #fff; }
+.chart2 {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  margin-left: 2.4%;
+  width: 45%;
+  margin-bottom: 0px;
+  float: left; }
+
+.chart2 rect.backgroundrect {
+  fill: #fff; }
 
 .brush .extent {
   stroke: #fff;

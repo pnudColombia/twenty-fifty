@@ -5,13 +5,13 @@ window.twentyfifty.views.emisiones = function() {
   this.setup = function() {
     $('.primary_energy_notes').show();
 
-    charts = d3.select("#results").selectAll(".chart")
+    charts = d3.select("#results").selectAll(".chart2")
       .data(['demand_chart', 'ghg', 'emissions_chart']);
 
     charts.enter()
       .append('div')
       .attr('id', Object)
-      .attr('class', 'chart');
+      .attr('class', 'chart2');
 
    this.final_energy_chart = timeSeriesStackedAreaChart()
       .title("Demanda de energía")
