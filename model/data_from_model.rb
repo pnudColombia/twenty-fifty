@@ -116,10 +116,10 @@ data = excel.input_example_pathways.transpose
 data = data.map do |pathway_data|
 {
 name: pathway_data[0],
-code: convert_float_to_letters(pathway_data[1..53]).join,
-description: wrap(pathway_data[54]),
-wiki: pathway_data[55],
-cost_comparator: (c = pathway_data[56]; c.is_a?(Numeric) ? c : nil )
+code: convert_float_to_letters(pathway_data[1..49]).join,
+description: wrap(pathway_data[50]),
+wiki: pathway_data[51],
+cost_comparator: (c = pathway_data[52]; c.is_a?(Numeric) ? c : nil )
 }
 end
 end
