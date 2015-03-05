@@ -57,7 +57,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
        <a class='view' data-view='emisiones' href='#'>Emisiones</a>
        <a class='view' data-view='map' href='#'>Área</a>
         <!--<a class='view' data-view='story' href='#'>Colombia en 2050</a>-->
-       <!--<a class='newdropdown' data-dropdown='#cost_choices' href='#' id='cost_choice'>Costos</a>-->
+       <a class='newdropdown' data-dropdown='#cost_choices' href='#' id='cost_choice'>Costos</a>
        <!--<a class='view' data-view='air_quality' href='#'>Aire</a>-->
        <!-- Se crea una linea igual a la de calidad del aire ya que es la mas sencilla-->
             <a class='view' data-view='share' href='#'>Compartir</a>
@@ -94,7 +94,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
         <table>
           <!-- One row per choice -->
 	 <p><b>Edificaciones</b></p> 
-          <% structure.choices[20..25].each do |choice| %>
+          <% structure.choices[20..24].each do |choice| %>
             <tr class='<%= choice.incremental_or_alternative %>' id='r<%= choice.number %>'>
               <td class='name'>
                 <a href='/assets/onepage/<%= choice.doc %>' target='_new' data-choicenumber='<%= choice.number %>'>
@@ -144,7 +144,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 <table>
           <!-- One row per choice -->
 	 <p><b>Transporte</b></p> 
-          <% structure.choices[28..31].each do |choice| %>
+          <% structure.choices[28..30].each do |choice| %>
             <tr class='<%= choice.incremental_or_alternative %>' id='r<%= choice.number %>'>
               <td class='name'>
                 <a href='/assets/onepage/<%= choice.doc %>' target='_new' data-choicenumber='<%= choice.number %>'>
@@ -282,7 +282,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
           <!--Se incluyen segmentos con los subtitulos para la división de los sectores-->
 	 <p><b>Combustibles fosiles</b></p> 
           <!--Originalmente va de 0 a 23 -->
-           <% structure.choices[13..16].each do |choice| %>
+           <% structure.choices[13..17].each do |choice| %>
             <tr class='<%= choice.incremental_or_alternative %>' id='r<%= choice.number %>'>
               <td class='name'>
                 <a href='/assets/onepage/<%= choice.doc %>' target='_new' data-choicenumber='<%= choice.number %>'>
@@ -308,7 +308,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
           <!--Se incluyen segmentos con los subtitulos para la división de los sectores-->
 	 <p><b>Residuos</b></p> 
           <!--Originalmente va de 0 a 23 -->
-           <% structure.choices[17..18].each do |choice| %>
+           <% structure.choices[18..19].each do |choice| %>
             <tr class='<%= choice.incremental_or_alternative %>' id='r<%= choice.number %>'>
               <td class='name'>
                 <a href='/assets/onepage/<%= choice.doc %>' target='_new' data-choicenumber='<%= choice.number %>'>
@@ -341,7 +341,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
         <!--Se incluyen segmentos con los subtitulos para la división de los sectores-->
 	 <p><b>Agricultura, ganadería y Bosques</b></p>   
         <!-- this should actually go up to choice 42, but that isn't ready for prime time yet -->
-          <% structure.choices[34..40].each do |choice| %>
+          <% structure.choices[31..36].each do |choice| %>
             <tr class='<%= choice.incremental_or_alternative %>' id='r<%= choice.number %>'>
               <td class='name'>
                 <a href='/assets/onepage/<%= choice.doc %>' target='_new' data-choicenumber='<%= choice.number %>'>
