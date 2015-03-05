@@ -54,7 +54,7 @@ class CompileTemplate
   def compile_html
     assets = JSON.parse(IO.readlines(manifest_file).join)['assets']
 
-    input = IO.readlines(erb_file).join
+    input = IO.readlines(erb_file).join.force_encoding(Encoding::UTF_8)
     File.open(html_file, 'w') do |f|
       f.puts ERB.new(input).result(binding)
     end
