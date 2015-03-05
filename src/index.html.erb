@@ -119,7 +119,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
         <table>
           <!-- One row per choice -->
 	 <p><b>Industria</b></p> 
-          <% structure.choices[26..27].each do |choice| %>
+          <% structure.choices[25..26].each do |choice| %>
             <tr class='<%= choice.incremental_or_alternative %>' id='r<%= choice.number %>'>
               <td class='name'>
                 <a href='/assets/onepage/<%= choice.doc %>' target='_new' data-choicenumber='<%= choice.number %>'>
@@ -144,7 +144,7 @@ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga
 <table>
           <!-- One row per choice -->
 	 <p><b>Transporte</b></p> 
-          <% structure.choices[28..30].each do |choice| %>
+          <% structure.choices[27..30].each do |choice| %>
             <tr class='<%= choice.incremental_or_alternative %>' id='r<%= choice.number %>'>
               <td class='name'>
                 <a href='/assets/onepage/<%= choice.doc %>' target='_new' data-choicenumber='<%= choice.number %>'>
