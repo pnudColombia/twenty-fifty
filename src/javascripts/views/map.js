@@ -117,18 +117,18 @@ window.twentyfifty.views.map = function() {
     'VI.a.biocombustibles': 'Biocombustibles',
     'VI.a.pastoreonacional': 'Pastoreo nacional',
     'VI.a.psensuelosganaderos': 'Suelos Ganaderos',
-    'I.a.Gas': 'Unidades',
-    'I.a.Liquido': 'unidades',
-    'I.a.Solido': 'unidades',
+    'I.a.Gas': 'Plantas a gas x 0.25 Gw',
+    'I.a.Liquido': 'Plantas de combustibles líquidos x 0.2 Gw',
+    'I.a.Solido': 'Plantas a carbón x 0.25 Gw',
     'II.c.amplitudmareas': 'Mareas',
     'II.c.corrientemareas': 'Mareas',
     'II.c.olas': 'Mareas',
     'II.d': 'unidades',
-    'III.a.Biomasa': 'unidades',
-    'III.a.Eolica': 'unidades',
-    'III.a.Residuos': 'unidades',
-    'IV.a': 'unidades',
-    'VII.b': 'unidades',
+    'III.a.Biomasa': 'Plantas de biomasa en ZNI',
+    'III.a.Eolica': 'Turbinas de viento en ZNI',
+    'III.a.Residuos': 'Plantas de residuos en ZNI',
+    'IV.a': 'Estaciones nucleares x 3 Gw',
+    'VII.b': 'Generadores estandar x 1 Gw',
     'VII.a': 'Importaciones de electricidad'
   };
 
@@ -188,8 +188,8 @@ window.twentyfifty.views.map = function() {
     }
 
     // Draw the half circle with label to indicate land area overseas
-    r.path("M244,695 q0,-200 -200,-200").attr({ 'stroke': '#ccc' });
-    r.text(44, 510, "Imports").attr({ 'fill': '#ccc', 'font-weight': 'bold', 'text-anchor': 'start' });
+    //r.path("M244,695 q0,-200 -200,-200").attr({ 'stroke': '#ccc' });
+    //r.text(44, 510, "Imports").attr({ 'fill': '#ccc', 'font-weight': 'bold', 'text-anchor': 'start' });
     
     // Now draw the land area overseas boxes, starting map bottom-left
     x = map_offset_x - 105;
