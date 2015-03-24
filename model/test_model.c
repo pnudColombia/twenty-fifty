@@ -376,7 +376,7 @@ int main() {
   assert_equal(EXCEL_STRING("11.pdf"), control_g15(), "'Control'!G15");
   assert_equal(EXCEL_STRING("12.pdf"), control_g16(), "'Control'!G16");
   assert_equal(EXCEL_STRING("13.pdf"), control_g18(), "'Control'!G18");
-  assert_equal(EXCEL_STRING("14,pdf"), control_g20(), "'Control'!G20");
+  assert_equal(EXCEL_STRING("14.pdf"), control_g20(), "'Control'!G20");
   assert_equal(EXCEL_STRING("15.pdf"), control_g21(), "'Control'!G21");
   assert_equal(EXCEL_STRING("16.pdf"), control_g23(), "'Control'!G23");
   assert_equal(EXCEL_STRING("17.pdf"), control_g24(), "'Control'!G24");
@@ -384,9 +384,9 @@ int main() {
   assert_equal(EXCEL_STRING("19.pdf"), control_g27(), "'Control'!G27");
   assert_equal(EXCEL_STRING("20.pdf"), control_g28(), "'Control'!G28");
   assert_equal(EXCEL_STRING("21.pdf"), control_g30(), "'Control'!G30");
-  assert_equal(EXCEL_STRING("22,pdf"), control_g32(), "'Control'!G32");
-  assert_equal(EXCEL_STRING("23,pdf"), control_g33(), "'Control'!G33");
-  assert_equal(EXCEL_STRING("24,pdf"), control_g34(), "'Control'!G34");
+  assert_equal(EXCEL_STRING("22.pdf"), control_g32(), "'Control'!G32");
+  assert_equal(EXCEL_STRING("23.pdf"), control_g33(), "'Control'!G33");
+  assert_equal(EXCEL_STRING("24.pdf"), control_g34(), "'Control'!G34");
   assert_equal(EXCEL_STRING("25.pdf"), control_g35(), "'Control'!G35");
   assert_equal(EXCEL_STRING("26.pdf"), control_g37(), "'Control'!G37");
   assert_equal(EXCEL_STRING("27.pdf"), control_g38(), "'Control'!G38");
