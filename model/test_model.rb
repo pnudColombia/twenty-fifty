@@ -385,7 +385,7 @@ class TestModel < Minitest::Unit::TestCase
   def test_control_g15; assert_equal("11.pdf", worksheet.control_g15); end
   def test_control_g16; assert_equal("12.pdf", worksheet.control_g16); end
   def test_control_g18; assert_equal("13.pdf", worksheet.control_g18); end
-  def test_control_g20; assert_equal("14,pdf", worksheet.control_g20); end
+  def test_control_g20; assert_equal("14.pdf", worksheet.control_g20); end
   def test_control_g21; assert_equal("15.pdf", worksheet.control_g21); end
   def test_control_g23; assert_equal("16.pdf", worksheet.control_g23); end
   def test_control_g24; assert_equal("17.pdf", worksheet.control_g24); end
@@ -393,9 +393,9 @@ class TestModel < Minitest::Unit::TestCase
   def test_control_g27; assert_equal("19.pdf", worksheet.control_g27); end
   def test_control_g28; assert_equal("20.pdf", worksheet.control_g28); end
   def test_control_g30; assert_equal("21.pdf", worksheet.control_g30); end
-  def test_control_g32; assert_equal("22,pdf", worksheet.control_g32); end
-  def test_control_g33; assert_equal("23,pdf", worksheet.control_g33); end
-  def test_control_g34; assert_equal("24,pdf", worksheet.control_g34); end
+  def test_control_g32; assert_equal("22.pdf", worksheet.control_g32); end
+  def test_control_g33; assert_equal("23.pdf", worksheet.control_g33); end
+  def test_control_g34; assert_equal("24.pdf", worksheet.control_g34); end
   def test_control_g35; assert_equal("25.pdf", worksheet.control_g35); end
   def test_control_g37; assert_equal("26.pdf", worksheet.control_g37); end
   def test_control_g38; assert_equal("27.pdf", worksheet.control_g38); end
