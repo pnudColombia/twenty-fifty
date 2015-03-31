@@ -65,7 +65,7 @@ window.twentyfifty.views.map = function() {
   map_height = 800;
   map_offset_x = 150;
   map_offset_y = 0;
-  km = 0.5;
+  km = 0.0625;
   m = km / 1000.0;
   m2 = m * m;
   ha = 10000 * m2;
@@ -170,7 +170,7 @@ window.twentyfifty.views.map = function() {
     y = map_height + map_offset_y - 100;
     this.land_boxes = {};
 //AGREGAR 'VI.a.psensuelosganaderos' VALORES MUY ALTOS
-    land_box_names = ['II.a.1','II.a.2','II.b.1','II.b.2','XVII.a.1','XVII.a.2','XVII.a.3','VI.a.biocombustibles','VI.amejorespagricolas','VI.a.pastoreonacional','XIV.a.areadeforestada','XIV.a.areadeforestada','XIV.a.reforestacioncomercial',
+    land_box_names = ['XVII.a.1','XVII.a.2','XVII.a.3','VI.a.psensuelosganaderos','II.a.1','II.a.2','II.b.1','II.b.2','VI.a.biocombustibles','VI.amejorespagricolas','VI.a.pastoreonacional','XIV.a.areadeforestada','XIV.a.areadeforestada','XIV.a.reforestacioncomercial',
 'XIV.a.reforestacionprotectora'];
     for (i = 0, len = land_box_names.length; i < len; i++) {
       name = land_box_names[i];
@@ -223,7 +223,7 @@ window.twentyfifty.views.map = function() {
       this.r.text(x - 20, y, label).attr({ 'text-anchor': 'end' });
     }
     for (i = 1; 1 <= number ? i <= number : i >= number; 1 <= number ? i++ : i--) {
-      this.r.circle(x + (x_count * x_step), y, size * km).attr({ 'stroke-width': 0, 'fill': colour });
+      this.r.circle(x + (x_count * x_step), y, size * km*8).attr({ 'stroke-width': 0, 'fill': colour });
       this.r.circle(x + (x_count * x_step), y, 1).attr({ 'stroke-width': 0, 'fill': 'black' });
       x_count = x_count + 1;
       if ((x_count * x_step) > width) {
