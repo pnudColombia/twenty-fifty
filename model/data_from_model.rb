@@ -48,7 +48,7 @@ excel.input_choices = choices
 'capacity' => excel.output_electricity_capacity
 },
 #'heating' => excel.output_heating_mix, # output.heating.mix
-#'costs' => excel.output_costpercapita_detail,
+'costs' => excel.output_costpercapita_detail,
 'map' => excel.output_areas, # output.areas
 #'imports' => {
 # 'proportion' => excel.output_imports_proportion, # output.imports.proportion
