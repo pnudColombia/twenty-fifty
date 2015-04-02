@@ -111,18 +111,19 @@ window.twentyfifty.views.map = function() {
     'XVII.a.1': 'Solar PV',
     'XVII.a.2': 'Solar térmica',
     'XVII.a.3': 'Solar PV',
-    'XVII.a.1': 'Area deforestada',
-    'XVII.a.2': 'ReforestaciÓn comercial',
-    'XVII.a.3': 'ReforestaciÓn protectora',
+    'XIV.a.areadeforestada': 'Area deforestada',
+    'XIV.a.reforestacioncomercial': 'ReforestaciÓn comercial',
+    'XIV.a.reforestacionprotectora': 'ReforestaciÓn protectora',
+    'reforestacion': 'Reforestación',	
     'VI.a.biocombustibles': 'Biocombustibles',
     'VI.a.pastoreonacional': 'Pastoreo nacional',
     'VI.a.psensuelosganaderos': 'Suelos Ganaderos',
     'I.a.Gas': 'Plantas a gas x 0.25 Gw',
     'I.a.Liquido': 'Plantas de combustibles líquidos x 0.2 Gw',
     'I.a.Solido': 'Plantas a carbón x 0.25 Gw',
-    'II.c.amplitudmareas': 'Mareas',
-    'II.c.corrientemareas': 'Mareas',
-    'II.c.olas': 'Mareas',
+    'II.c.amplitudmareas': 'Energía mareo motriz',
+    'II.c.corrientemareas': 'Energía mareo motriz',
+    'II.c.olas': 'Energía mareo motriz',
     'II.d': 'unidades',
     'III.a.Biomasa': 'Plantas de biomasa en ZNI',
     'III.a.Eolica': 'Turbinas de viento en ZNI',
@@ -153,7 +154,7 @@ window.twentyfifty.views.map = function() {
     r.image(mapimage_url, map_offset_x, map_offset_y, map_width, map_height);
 
     // Title
-    r.text(20, 10, "Illustration of scale of land and sea use in 2050 (positions are arbitrary)").attr({
+    r.text(20, 10, "Ilustración del uso de tierra y mar en 2050 (las posiciones son arbitrarias)").attr({
       'font-weight': 'bold',
       'text-anchor': 'start'
     });
@@ -169,9 +170,7 @@ window.twentyfifty.views.map = function() {
     x = (map_width / 2) + map_offset_x;
     y = map_height + map_offset_y - 100;
     this.land_boxes = {};
-//AGREGAR 'VI.a.psensuelosganaderos' VALORES MUY ALTOS
-    land_box_names = ['XVII.a.1','XVII.a.2','XVII.a.3','VI.a.psensuelosganaderos','II.a.1','II.a.2','II.b.1','II.b.2','VI.a.biocombustibles','VI.amejorespagricolas','VI.a.pastoreonacional','XIV.a.areadeforestada','XIV.a.areadeforestada','XIV.a.reforestacioncomercial',
-'XIV.a.reforestacionprotectora'];
+    land_box_names = ['reforestacion','XVII.a.1','XVII.a.2','XVII.a.3','VI.a.psensuelosganaderos','II.a.1','II.a.2','II.b.1','II.b.2','VI.a.biocombustibles','VI.amejorespagricolas'];
     for (i = 0, len = land_box_names.length; i < len; i++) {
       name = land_box_names[i];
       this.land_boxes[name] = r.upiabeled_square(x, y, labels[name], 0, colours[name]);
@@ -181,7 +180,7 @@ window.twentyfifty.views.map = function() {
     x = (map_width / 2) + map_offset_x + 250;
     y = 30;
     this.sea_boxes = {};
-    sea_box_names = ['II.c.amplitudmareas', 'II.c.corrientemareas', 'II.c.colas', 'VI.c'];
+    sea_box_names = ['II.c.amplitudmareas', 'II.c.corrientemareas', 'II.c.olas'];
     for (i = 0, len = sea_box_names.length; i < len; i++) {
       name = sea_box_names[i];
       this.sea_boxes[name] = r.downiabeled_square(x, y, labels[name], 0, colours[name]);
@@ -203,7 +202,7 @@ window.twentyfifty.views.map = function() {
 
     // Now deal with the objects that aren't on the map. In this case a stack of circles
     this.points = r.set();
-    r.text(700, 10, "Illustration of the number of thermal power stations in 2050 (scales and positions are arbitrary)").attr({ 'font-weight': 'bold', 'text-anchor': 'start' });
+    r.text(700, 10, "Ilustración del numero de centrales térmicas en 2050 (las escalas y posiciones son arbitrarias)").attr({ 'font-weight': 'bold', 'text-anchor': 'start' });
   }
 
   // This is a helper method for drawing the blocks of circles representating power stations of a particular type
@@ -278,7 +277,7 @@ window.twentyfifty.views.map = function() {
       box.square.attr({ y: y - side, width: side, height: side });
       box.label.attr({ y: y - (side / 2) });
       // Dont bother showing small boxes
-      if (value.value > 10) {
+      if (value.value > 0) {
         box.label.show();
       } else {
         box.label.hide();
@@ -287,8 +286,8 @@ window.twentyfifty.views.map = function() {
     }
 
     // Now draw the sea boxes
-    x = (map_width / 2) + map_offset_x + 250;
-    y = 30;
+    x = (map_width / 2) + map_offset_x + 200;
+    y = 60;
     values = [];
 
     for (name in this.sea_boxes) {
