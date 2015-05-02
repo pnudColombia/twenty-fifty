@@ -6,55 +6,49 @@
 
   // FIXME: Move this to the spreadsheet
   cost_categories = {
-    "Conventional thermal plant": "Electricity",
-    "Combustion + CCS": "Electricity",
-    "Nuclear power": "Electricity",
-    "Onshore wind": "Electricity",
-    "Offshore wind": "Electricity",
-    "Hydroelectric": "Electricity",
-    "Wave and Tidal": "Electricity",
-    "Geothermal": "Electricity",
-    "Distributed solar PV": "Electricity",
-    "Distributed solar thermal": "Buildings",
-    "Micro wind": "Electricity",
-    "Biomatter to fuel conversion": "Bioenergy",
-    "Bioenergy imports": "Bioenergy",
-    "Agriculture and land use": "Bioenergy",
-    "Energy from waste": "Bioenergy",
-    "Waste arising": "Bioenergy",
-    "Marine algae": "Bioenergy",
-    "Electricity imports": "Electricity",
-    "Electricity Exports": "Electricity",
-    "Electricity grid distribution": "Electricity",
-    "Storage, demand shifting, backup": "Electricity",
-    "H2 Production": "Transport",
-    "Domestic heating": "Buildings",
-    "Domestic insulation": "Buildings",
-    "Commercial heating and cooling": "Buildings",
-    "Domestic lighting, appliances, and cooking": "Buildings",
-    "Commercial lighting, appliances, and catering": "Buildings",
-    "Industrial processes": "Industry",
-    "Conventional cars and buses": "Transport",
-    "Hybrid cars and buses": "Transport",
-    "Electric cars and buses": "Transport",
-    "Fuel cell cars and buses": "Transport",
-    "Bikes": "Transport",
-    "Rail": "Transport",
-    "Domestic aviation": "Transport",
-    "Domestic freight": "Transport",
-    "International aviation": "Transport",
-    "International shipping (maritime bunkers)": "Transport",
-    "Geosequestration": "Other",
-    "Petroleum refineries": "Industry",
-    "Coal": "Fossil fuels",
-    "Oil": "Fossil fuels",
-    "Gas": "Fossil fuels",
-    "Fossil fuel transfers": "Fossil fuels",
-    "District heating effective demand": "Buildings",
-    "Power Carbon Capture": "Electricity",
-    "Industry Carbon Capture": "Industry",
-    "Storage of captured CO2": "Other",
-    "Finance cost": "Finance"
+    "Gestión energética en termoeléctricas": "Electricidad ",
+"Energía eólica costa adentro": "Electricidad ",
+"Energía eólica costa afuera": "Electricidad ",
+"Grandes centrales hidroeléctricas": "Electricidad ",
+"Pequeñas centrales hidroeléctricas": "Electricidad ",
+"Energía marítima": "Electricidad ",
+"Energía geotérmica": "Electricidad ",
+"Energías renovables en las ZNI": "Electricidad ",
+"Centrales nucleares": "Electricidad ",
+"Procesos de transformación de la bioenergía": "Bioenergía",
+"Importaciones de bioenergía": "Bioenergía",
+"Agricultura y ganadería": "Agropecuario",
+"Importaciones de electricidad": "Electricidad ",
+"Exportaciones de electricidad": "Electricidad ",
+"Operación eficiente del sistema eléctrico nacional": "Electricidad ",
+"Distribución de electricidad en la red": "Electricidad ",
+"Acondicionamiento de espacios residencial": "Edificaciones",
+"Iluminación, refrigeración, cocción y otros usos": "Edificaciones",
+"Residencial rural": "Edificaciones",
+"Acondicionamiento de espacios comerciales y de servicios": "Edificaciones",
+"Usos térmicos y equipamiento": "Edificaciones",
+"Industria": "Electricidad",
+"Transporte de pasajeros -urbano": "Transporte",
+"Transporte de pasajeros -interurbano": "Transporte",
+"Transporte de carga -urbano": "Transporte",
+"Transporte de carga -interurbano": "Transporte",
+"Transporte internacional - Aviación": "Transporte",
+"Transporte internacional -  Navegación": "Transporte",
+"Refinerías de petróleo - No lever": "Producción de combustibles fósiles",
+"Producción de carbón": "Producción de combustibles fósiles",
+"Producción de hidrocarburos": "Producción de combustibles fósiles",
+"Transferencia de combustibles fósiles - No lever": "Producción de combustibles fósiles",
+"Bosques plantados y naturales -Redución Deforestación": "Bosques",
+"Bosques plantados y naturales -Reforestación comercial": "Bosques",
+"Bosques plantados y naturales -Reforestación protectora": "Bosques",
+"Residuos": "Otros",
+"Autogeneración solar fotovoltaica": "Electricidad ",
+"Autogeneración solar térmica": "Electricidad ",
+"Energía solar a gran escala": "Electricidad ",
+"Coal":"Combustibles fósiles",
+"Gas":"Combustibles fósiles",
+"Oil":"Combustibles fósiles",
+"Finanzas cost":"Finanzas"
   };
 
   window.twentyfifty.costs_in_category = function(desired_category) {
@@ -69,7 +63,7 @@
     }
     return costs;
   };
-
+//
   cost_components = function(pathway) {
     if(pathway.cost_components != undefined) {
       return pathway.cost_components;
@@ -138,7 +132,7 @@
     }
     return _results;
   };
-
+//Calculo de Costos.
   window.twentyfifty.adjust_costs_of_pathway = function(pathway) {
     var cost, finance, fraction_of_width, implied_fraction_of_width, name, total, values, _ref;
     total = {
@@ -198,7 +192,7 @@
     for (name in _ref) {
       if (!__hasProp.call(_ref, name)) continue;
       values = _ref[name];
-      if ((name !== 'Oil') && (name !== 'Gas') && (name !== 'Coal') && (name !== 'Finance cost')) {
+      if ((name !== 'Oil') && (name !== 'Gas') && (name !== 'Coal') && (name !== 'Finanzas cost')) {
         jQuery.jStorage.set(name, 0);
       }
     }

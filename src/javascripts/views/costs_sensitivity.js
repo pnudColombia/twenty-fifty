@@ -1,11 +1,16 @@
 window.twentyfifty.views.costs_sensitivity = function() {
   __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
-    costsSensitivityHTML = "<div class='costssensitivity'>\n  <ul id='comparatorchoice'>\n    <li>\n      <a href=\"#\" onclick=\"$('ul#view_comparatorchoice').toggle(); return false;\">Choose comparison<img alt=\"Dropdown-arrow\" src=\"/assets/images/dropdown-arrow.png\" /></a>\n      <ul class='choices' id='view_comparatorchoice'>\n        <li><a href=\"#\" onclick=\"twentyfifty.switchComparator('10111111111111110111111001111110111101101101110110111');$('ul#view_comparatorchoice').toggle(); return false;\">Doesn't tackle climate change (All level 1)</a></li>\n        <li><a href=\"#\" onclick=\"twentyfifty.switchComparator('10111111111111110111111004444440444404203304440420111');$('ul#view_comparatorchoice').toggle(); return false;\">Maximum demand</a></li>\n        <li><a href=\"#\" onclick=\"twentyfifty.switchComparator('40444444444444440443444001111110111101101101110110111');$('ul#view_comparatorchoice').toggle(); return false;\">Maximum supply</a></li>\n        <li><a href=\"#\" onclick=\"twentyfifty.switchComparator('i0g2dd2pp1121f1i032211p004314110433304202304320420121');$('ul#view_comparatorchoice').toggle(); return false;\">Analogous to Markal 3.26</a></li>\n        <li><a href=\"#\" onclick=\"twentyfifty.switchComparator('e0d3jrg221ci12110222112004423220444404202304440420141');$('ul#view_comparatorchoice').toggle(); return false;\">Higher renewables, more energy efficiency</a></li>\n        <li><a href=\"#\" onclick=\"twentyfifty.switchComparator('r013ce1111111111042233B002322220233302202102330220121');$('ul#view_comparatorchoice').toggle(); return false;\">Higher nuclear, less energy efficiency</a></li>\n        <li><a href=\"#\" onclick=\"twentyfifty.switchComparator('f023df111111111f0322123003223220333203102303430310221');$('ul#view_comparatorchoice').toggle(); return false;\">Higher CCS, more bioenergy</a></li>\n        <li><a href=\"#\" onclick=\"twentyfifty.switchComparator('10h4nn4431w23y110243111004424440343304202304430420441');$('ul#view_comparatorchoice').toggle(); return false;\">Friends of the Earth</a></li>\n        <li><a href=\"#\" onclick=\"twentyfifty.switchComparator('10h2pdppp12332130233122004414430343304102304430410231');$('ul#view_comparatorchoice').toggle(); return false;\">Campaign to Protect Rural England</a></li>\n        <li><a href=\"#\" onclick=\"twentyfifty.switchComparator('20222144411341110343321003422440423404203203340420141');$('ul#view_comparatorchoice').toggle(); return false;\">Mark Brinkley</a></li>\n        <li><a href=\"#\" onclick=\"twentyfifty.switchComparator('h0h2gg1211cj1j110322222003313230234102102203440320121');$('ul#view_comparatorchoice').toggle(); return false;\">National Grid</a></li>\n        <li><a href=\"#\" onclick=\"twentyfifty.switchComparator('g0f2oj11t1rgqj1j0343111003324240244104201304430420231');$('ul#view_comparatorchoice').toggle(); return false;\">Atkins</a></li>\n      </ul>\n    </li>\n  </ul>\n  <h1>The cost of your pathway compared with another, allowing simple variation in cost estimates.</h1>\n  <div id='costssensitivity'></div>\n  " + window.costEssentialNotesHTML + "\n</div>";
+    costsSensitivityHTML = "<div class='costssensitivity'>\n  <ul id='comparatorchoice'>\n    <li>\n      <a href=\"#\" onclick=\"$('ul#view_comparatorchoice').toggle(); return false;\">Choose comparison<img alt=\"Dropdown-arrow\" src=\"/assets/images/dropdown-arrow.png\" /></a>\n      <ul class='choices' id='view_comparatorchoice'>\n        <li><a href=\"#\" onclick=\"twentyfifty.switchComparator('1111111111110101101110110101111011011011001111011');$('ul#view_comparatorchoice').toggle(); return false;\">Nivel minimo</a></li>\n        <li><a href=\"#\" onclick=\"twentyfifty.switchComparator('w1311l1111110102101310110202311034023013001111011');$('ul#view_comparatorchoice').toggle(); return false;\">UPME-eficiencia energetica</a></li>\n        <li><a href=\"#\" onclick=\"twentyfifty.switchComparator('1111111111110102102230110104141013044044001111011');$('ul#view_comparatorchoice').toggle(); return false;\">UPME-mundo electrico</a></li>\n        <li><a href=\"#\" onclick=\"twentyfifty.switchComparator('4444444444440404403440440404444034044044004444044');$('ul#view_comparatorchoice').toggle(); return false;\">Nivel Maximo</a></li>\n        <li><a href=\"#\" onclick=\"twentyfifty.switchComparator('31z11g1z11y10102101210110101111011011011001111011');$('ul#view_comparatorchoice').toggle(); return false;\">UPME-base</a></li>\n      </ul>\n    </li>\n  </ul>\n  <h1>The cost of your pathway compared with another, allowing simple variation in cost estimates.</h1>\n  <div id='costssensitivity'></div>\n  " + window.costEssentialNotesHTML + "\n</div>";
 
     bottom_area_start = 219;
 
-    cost_component_names = ["Conventional thermal plant", "Combustion + CCS", "Nuclear power", "Onshore wind", "Offshore wind", "Hydroelectric", "Wave and Tidal", "Geothermal", "Distributed solar PV", "Distributed solar thermal", "Micro wind", "Biomatter to fuel conversion", "Bioenergy imports", "Agriculture and land use", "Energy from waste", "Waste arising", "Marine algae", "Electricity imports", "Electricity Exports", "Electricity grid distribution", "Storage, demand shifting, backup", "H2 Production", "Domestic heating", "Domestic insulation", "Commercial heating and cooling", "Domestic lighting, appliances, and cooking", "Commercial lighting, appliances, and catering", "Industrial processes", "Conventional cars and buses", "Hybrid cars and buses", "Electric cars and buses", "Fuel cell cars and buses", "Bikes", "Rail", "Domestic aviation", "Domestic freight", "International aviation", "International shipping (maritime bunkers)", "Geosequestration", "Petroleum refineries", "Fossil fuel transfers", "District heating effective demand", "Storage of captured CO2", "Coal", "Oil", "Gas", "Finance cost"];
+    cost_component_names = [ "Gestión energética en termoeléctricas","Energía eólica costa adentro","Energía eólica costa afuera",
+"Grandes centrales hidroeléctricas","Pequeñas centrales hidroeléctricas","Energía marítima","Energía geotérmica","Energías renovables en las ZNI","Centrales nucleares","Procesos de transformación de la bioenergía","Importaciones de bioenergía","Agricultura y ganadería","Importaciones de electricidad","Exportaciones de electricidad","Operación eficiente del sistema eléctrico nacional",
+"Distribución de electricidad en la red","Acondicionamiento de espacios residencial","Iluminación, refrigeración, cocción y otros usos","Residencial rural","Acondicionamiento de espacios comerciales y de servicios","Usos térmicos y equipamiento","Industria",
+"Transporte de pasajeros -urbano","Transporte de pasajeros -interurbano","Transporte de carga -urbano","Transporte de carga -interurbano","Transporte internacional - Aviación","Transporte internacional -  Navegación","Refinerías de petróleo - No lever",
+"Producción de carbón","Producción de hidrocarburos","Transferencia de combustibles fósiles - No lever","Bosques plantados y naturales -Redución Deforestación","Bosques plantados y naturales -Reforestación comercial","Bosques plantados y naturales -Reforestación protectora","Residuos","Autogeneración solar fotovoltaica","Autogeneración solar térmica","Energía solar a gran escala",
+"Coal","Gas","Oil","Finanzas cost"];
 
     cost_wiki_links = {
       "Fuel cell cars and buses": '/pages/63',
@@ -15,7 +20,7 @@ window.twentyfifty.views.costs_sensitivity = function() {
       "Electric cars and buses": '/pages/63',
       "Domestic insulation": '/pages/31',
       "Wave and Tidal": '/pages/38',
-      "Finance cost": '/pages/28',
+      "Finanzas cost": '/pages/28',
       "Industrial processes": '/pages/24',
       "Domestic heating": '/pages/31',
       "Offshore wind": '/pages/6',
@@ -24,7 +29,7 @@ window.twentyfifty.views.costs_sensitivity = function() {
       "Conventional thermal plant": '/pages/42',
       "Distributed solar PV": '/pages/40',
       "Nuclear power": '/pages/7',
-      "Bioenergy imports": '/pages/3',
+      "Bioenergía imports": '/pages/3',
       "Agriculture and land use": '/pages/19',
       "Carbon Storage": '/pages/36',
       "Fossil fuel transfers": '/pages/12',
@@ -32,10 +37,10 @@ window.twentyfifty.views.costs_sensitivity = function() {
       "Combustion + CCS": '/pages/8',
       "Storage of captured CO2": '/pages/36',
       "Biomatter to fuel conversion": '/pages/26',
-      "Electricity grid distribution": '/pages/11',
+      "Electricidad  grid distribution": '/pages/11',
       "Storage, demand shifting, backup": '/pages/10',
       "Onshore wind": '/pages/5',
-      "Electricity Exports": '/pages/32',
+      "Electricidad  Exports": '/pages/32',
       "Energy from waste": '/pages/19',
       "Waste arising": '/pages/27',
       "Distributed solar thermal": '/pages/31',
@@ -55,7 +60,7 @@ window.twentyfifty.views.costs_sensitivity = function() {
       "International shipping (maritime bunkers)": '/pages/71',
       "International aviation": '/pages/70',
       "Bikes": '/pages/63',
-      "Electricity imports": '/pages/32'
+      "Electricidad  imports": '/pages/32'
     };
 
     cost_component_values = {
@@ -74,7 +79,7 @@ window.twentyfifty.views.costs_sensitivity = function() {
         "default": "70p/therm",
         expensive: "100p/therm"
       },
-      "Finance cost": {
+      "Finanzas cost": {
         cheap: "None",
         "default": "7% real",
         expensive: "10% real"
