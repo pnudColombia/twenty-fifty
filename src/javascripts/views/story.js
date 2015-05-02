@@ -34,8 +34,8 @@ window.twentyfifty.views.story = function() {
     this.stories_for_choices(element, "Agricultura y ganaderia en 2050", 42,43,44,45);
     this.stories_for_choices(element, "Bosques plantados y naturales en 2050", 47,48);
     this.electricity_generation_capacity_table(element);
-    element.append("<h4>Gases de efecto invernadero</h4>");
-    element.append("<p>Las emisiones de la aviación internacional y transporte marítimo no son incluidas en el objetivo para el año 2050, pero son incluidas aquí para permitir el calculo de las emisiones para todos los sectores que se deben considerar.</p>");
+  //  element.append("<h4>Gases de efecto invernadero</h4>");
+   // element.append("<p>Las emisiones de la aviación internacional y transporte marítimo no son incluidas en el objetivo para el año 2050, pero son incluidas aquí para permitir el calculo de las emisiones para todos los sectores que se deben considerar.</p>");
 
    // element.append("<h4>Energy security</h4>");
     //this.stories_for_choices(element, null, 42); no hay descripcion para aviacion internacional
@@ -102,7 +102,7 @@ window.twentyfifty.views.story = function() {
     var data, html, name, value, values, _i, _len, _ref;
     html = [];
     html.push("<table class='heating_choice'>");
-    html.push("<tr><th>GW Capacity</th><th class='target'>2010</th><th class='target'>2050</th></tr>");
+    html.push("<tr><th>Capacidad instalada en GW</th><th class='target'>2010</th><th class='target'>2050</th></tr>");
 
     capacity = this.pathway.electricity.capacity;
 

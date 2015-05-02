@@ -2,7 +2,7 @@ window.twentyfifty.views.costs_in_context = function() {
   
   __hasProp = {}.hasOwnProperty;
 
-  costsInContextHTML = "<div class='costsincontext'>\n  <div id='cost_override_warning'>NB Some costs not on default values</div>\n  <h1>\n    The cost to society of your pathway. This is not your energy bill.<br>\n    For comparison, UK average GDP 2010-2050 is forecast to be roughly &pound;35000 per person.\n  </h1>\n  <div id='costsincontext'></div>\n  " + window.costEssentialNotesHTML + "\n</div>";
+  costsInContextHTML = "<div class='costsincontext'>\n  <div id='cost_override_warning'>NB Some costs not on default values</div>\n  <h1>\n    Costo social de tu escenario ( no corresponde a tu factura de electricidad) Para comparación, el PIB promedio (2050) es estima alrededor de $40.6 millones de pesos al año por persona. \n  </h1>\n  <div id='costsincontext'></div>\n  " + window.costEssentialNotesHTML + "\n</div>";
 
   this.pathways = {};
 
@@ -18,7 +18,7 @@ window.twentyfifty.views.costs_in_context = function() {
     this.h = e.height();
     this.w = e.width();
     this.r = new Raphael('costsincontext', this.w, this.h);
-    this.x = d3.scale.linear().domain([0, 2800000]).range([250, this.w - 30]).nice();
+    this.x = d3.scale.linear().domain([0, 14000]).range([250, this.w - 30]).nice();
     this.y = d3.scale.ordinal().domain(all_pathways).rangeRoundBands([25, this.h - 20], 0.25);
 
     for (_i = 0, _len = comparator_pathways.length; _i < _len; _i++) {
@@ -131,7 +131,7 @@ window.twentyfifty.views.costs_in_context = function() {
       tick = _ref[_l];
       this.r.text(this.x(tick), this.h - 20, format(tick)).attr({ 'text-anchor': 'middle', fill: '#008000' });
     }
-    this.drawIndicator(3700, "Approximate energy system cost today");
+    this.drawIndicator(3700, "Costo aproximado del Sistema energético hoy.");
     _results = [];
 
     that = this;
@@ -189,7 +189,7 @@ window.twentyfifty.views.costs_in_context = function() {
       });
     } else if (_id === (twentyfifty.getComparator() || twentyfifty.default_comparator_code)) {
       this.comparator = pathway;
-      this.r.text(this.x(total_cost), 10, "The extra cost to society above that of the '" + (twentyfifty.pathwayName(_id, "comparison")) + "' pathway (mean £/person/year 2010-2050)").attr({
+      this.r.text(this.x(total_cost), 10, "El costo extra de la sociedad de no afrontar el cambio climático'" + (twentyfifty.pathwayName(_id, "comparison")) + "'(Promedio $COP/Habitante/año 2050)").attr({
         'text-anchor': 'start',
         'font-weight': 'bold',
         'fill': '#f00'
@@ -279,11 +279,11 @@ window.twentyfifty.views.costs_in_context = function() {
     if (pathway.total_cost_range_adjusted === 0 && this.comparator.total_cost_range_adjusted === 0) {
       delta = Math.round(pathway.total_cost_low_adjusted - this.comparator.total_cost_low_adjusted);
       if (delta < 0) {
-        message = "" + (-delta) + " less";
+        message = "" + (-delta) + " menos";
       } else if (delta === 0) {
-        message = "the same";
+        message = "igual";
       } else {
-        message = "" + delta + " more";
+        message = "" + delta + " mas";
       }
     } else {
       i = twentyfifty.calculateIncrementalCost(pathway, this.comparator);

@@ -2,164 +2,167 @@ window.twentyfifty.views.costs_compared_within_sector = function() {
   __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
          __hasProp = {}.hasOwnProperty;
 
-  costsComparedWithinSectorHTML = "<div class='costscomparedwithinsector'>\n  <div id='cost_override_warning'>NB Some costs not on default values</div>\n  <ul class='dropdown' id='sectorchoice'>\n    <li>\n      <a href=\"#\" onclick=\"$('ul#view_sectorchoice').toggle(); return false;\">Choose sector<img alt=\"Dropdown-arrow\" src=\"/assets/images/dropdown-arrow.png\" /></a>\n      <ul class='choices' id='view_sectorchoice'>\n        <li><a href=\"#\" onclick=\"twentyfifty.switchSector(0); return false;\">Fossil fuels</a></li>\n        <li><a href=\"#\" onclick=\"twentyfifty.switchSector(1); return false;\">Bioenergy</a></li>\n        <li><a href=\"#\" onclick=\"twentyfifty.switchSector(2); return false;\">Electricity</a></li>\n        <li><a href=\"#\" onclick=\"twentyfifty.switchSector(3); return false;\">Buildings</a></li>\n        <li><a href=\"#\" onclick=\"twentyfifty.switchSector(4); return false;\">Transport</a></li>\n        <li><a href=\"#\" onclick=\"twentyfifty.switchSector(5); return false;\">Industry</a></li>\n        <li><a href=\"#\" onclick=\"twentyfifty.switchSector(6); return false;\">Finance</a></li>\n        <li><a href=\"#\" onclick=\"twentyfifty.switchSector(7); return false;\">Other</a></li>\n      </ul>\n    </li>\n  </ul>\n  <h1>\n    The cost of\n    <span id='sectorname'>a sector</span>\n    within your and other pathways.\n    This is not an energy bill.\n  </h1>\n   <div id='costscomparedwithinsector'></div>\n  " + window.costEssentialNotesHTML + "\n</div>";
+  costsComparedWithinSectorHTML = "<div class='costscomparedwithinsector'>\n  <div id='cost_override_warning'>NB Some costs not on default values</div>\n  <ul class='dropdown' id='sectorchoice'>\n    <li>\n      <a href=\"#\" onclick=\"$('ul#view_sectorchoice').toggle(); return false;\">Choose sector<img alt=\"Dropdown-arrow\" src=\"/assets/images/dropdown-arrow.png\" /></a>\n      <ul class='choices' id='view_sectorchoice'>\n        <li><a href=\"#\" onclick=\"twentyfifty.switchSector(0); return false;\">Combustibles fósiles</a></li>\n        <li><a href=\"#\" onclick=\"twentyfifty.switchSector(1); return false;\">Bioenergía</a></li>\n        <li><a href=\"#\" onclick=\"twentyfifty.switchSector(2); return false;\">Electricidad </a></li>\n        <li><a href=\"#\" onclick=\"twentyfifty.switchSector(3); return false;\">Edificaciones</a></li>\n        <li><a href=\"#\" onclick=\"twentyfifty.switchSector(4); return false;\">Transporte</a></li>\n        <li><a href=\"#\" onclick=\"twentyfifty.switchSector(5); return false;\">Industria</a></li>\n        <li><a href=\"#\" onclick=\"twentyfifty.switchSector(6); return false;\">Finanzas</a></li>\n        <li><a href=\"#\" onclick=\"twentyfifty.switchSector(7); return false;\">Otros</a></li>\n      </ul>\n    </li>\n  </ul>\n  <h1>\n    The cost of\n    <span id='sectorname'>a sector</span>\n    within your and other pathways.\n    This is not an energy bill.\n  </h1>\n   <div id='costscomparedwithinsector'></div>\n  " + window.costEssentialNotesHTML + "\n</div>";
 
-  categories = ["Fossil fuels", "Bioenergy", "Electricity", "Buildings", "Transport", "Industry", "Finance", "Other"];
+  categories = ["Combustibles fósiles", "Bioenergía", "Electricidad ", "Edificaciones", "Transporte", "Industria", "Finanzas", "Otros"];
 
   cost_component_colors = {
-    "Conventional thermal plant": {
+    "Gestión energética en termoeléctricas": {
       low: "#a55194",
       range: "url(/assets/images/hatches/hatch-a55194.png)"
     },
-    "Combustion + CCS": {
+    "Energía eólica costa adentro": {
       low: "#8c564b",
       range: "url(/assets/images/hatches/hatch-8c564b.png)"
     },
-    "Storage of captured CO2": {
+    "Energía eólica costa afuera": {
       low: "#8c564b",
       range: "url(/assets/images/hatches/hatch-8c564b.png)"
     },
-    "Nuclear power": {
+    "Grandes centrales hidroeléctricas": {
       low: "#2ca02c",
       range: "url(/assets/images/hatches/hatch-2ca02c.png)"
     },
-    "Onshore wind": {
+    "Pequeñas centrales hidroeléctricas": {
       low: "#1f77b4",
       range: "url(/assets/images/hatches/hatch-1f77b4.png)"
     },
-    "Offshore wind": {
+
+    "Energía marítima": {
       low: "#ff7f0e",
       range: "url(/assets/images/hatches/hatch-ff7f0e.png)"
     },
-    "Hydroelectric": {
+    "Energía geotérmica": {
       low: "#d62728",
       range: "url(/assets/images/hatches/hatch-d62728.png)"
     },
-    "Wave and Tidal": {
+    "Energías renovables en las ZNI": {
       low: "#7f7f7f",
       range: "url(/assets/images/hatches/hatch-7f7f7f.png)"
     },
-    "Geothermal": {
+   "Centrales nucleares": {
       low: "#EA8BCC",
       range: "url(/assets/images/hatches/hatch-EA8BCC.png)"
     },
-    "Distributed solar PV": {
+    "Procesos de transformación de la bioenergía": {
       low: "#a55194",
       range: "url(/assets/images/hatches/hatch-a55194.png)"
     },
-    "Distributed solar thermal": {
+    "Importaciones de bioenergía": {
       low: "#8c564b",
       range: "url(/assets/images/hatches/hatch-8c564b.png)"
     },
-    "Micro wind": {
+    "Agricultura y ganadería": {
       low: "#2ca02c",
       range: "url(/assets/images/hatches/hatch-2ca02c.png)"
     },
-    "Biomatter to fuel conversion": {
+    "Importaciones de electricidad": {
       low: "#1f77b4",
       range: "url(/assets/images/hatches/hatch-1f77b4.png)"
     },
-    "Bioenergy imports": {
+    "Exportaciones de electricidad": {
       low: "#ff7f0e",
       range: "url(/assets/images/hatches/hatch-ff7f0e.png)"
     },
-    "Agriculture and land use": {
+    "Operación eficiente del sistema eléctrico nacional": {
       low: "#d62728",
       range: "url(/assets/images/hatches/hatch-d62728.png)"
     },
-    "Energy from waste": {
+
+    "Distribución de electricidad en la red": {
       low: "#7f7f7f",
       range: "url(/assets/images/hatches/hatch-7f7f7f.png)"
     },
-    "Waste arising": {
+    "Acondicionamiento de espacios residencial": {
       low: "#EA8BCC",
       range: "url(/assets/images/hatches/hatch-EA8BCC.png)"
     },
-    "Marine algae": {
+    "Iluminación, refrigeración, cocción y otros usos": {
       low: "#a55194",
       range: "url(/assets/images/hatches/hatch-a55194.png)"
     },
-    "Electricity imports": {
+    "Residencial rural": {
       low: "#8c564b",
       range: "url(/assets/images/hatches/hatch-8c564b.png)"
     },
-    "Electricity Exports": {
+    "Acondicionamiento de espacios comerciales y de servicios": {
       low: "#2ca02c",
       range: "url(/assets/images/hatches/hatch-2ca02c.png)"
     },
-    "Electricity grid distribution": {
+    "Usos térmicos y equipamiento": {
       low: "#1f77b4",
       range: "url(/assets/images/hatches/hatch-1f77b4.png)"
     },
-    "Storage, demand shifting, backup": {
+    "Industria": {
       low: "#ff7f0e",
       range: "url(/assets/images/hatches/hatch-ff7f0e.png)"
     },
-    "H2 Production": {
+    "Transporte de pasajeros -urbano": {
       low: "#d62728",
       range: "url(/assets/images/hatches/hatch-d62728.png)"
     },
-    "Domestic heating": {
+   "Transporte de pasajeros -interurbano": {
       low: "#7f7f7f",
       range: "url(/assets/images/hatches/hatch-7f7f7f.png)"
     },
-    "Domestic insulation": {
+    "Transporte de carga -urbano": {
       low: "#EA8BCC",
       range: "url(/assets/images/hatches/hatch-EA8BCC.png)"
     },
-    "Commercial heating and cooling": {
+    "Transporte de carga -interurbano": {
       low: "#a55194",
       range: "url(/assets/images/hatches/hatch-a55194.png)"
     },
-    "Domestic lighting, appliances, and cooking": {
+    "Transporte internacional - Aviación": {
       low: "#8c564b",
       range: "url(/assets/images/hatches/hatch-8c564b.png)"
     },
-    "Commercial lighting, appliances, and catering": {
+    "Transporte internacional -  Navegación": {
       low: "#2ca02c",
       range: "url(/assets/images/hatches/hatch-2ca02c.png)"
     },
-    "Industrial processes": {
+   "Refinerías de petróleo - No lever": {
       low: "#1f77b4",
       range: "url(/assets/images/hatches/hatch-1f77b4.png)"
     },
-    "Conventional cars and buses": {
+   "Producción de carbón": {
       low: "#ff7f0e",
       range: "url(/assets/images/hatches/hatch-ff7f0e.png)"
     },
-    "Hybrid cars and buses": {
+   "Producción de hidrocarburos": {
       low: "#d62728",
       range: "url(/assets/images/hatches/hatch-d62728.png)"
     },
-    "Electric cars and buses": {
+    "Transferencia de combustibles fósiles - No lever": {
       low: "#7f7f7f",
       range: "url(/assets/images/hatches/hatch-7f7f7f.png)"
     },
-    "Fuel cell cars and buses": {
+   "Bosques plantados y naturales -Redución Deforestación": {
       low: "#EA8BCC",
       range: "url(/assets/images/hatches/hatch-EA8BCC.png)"
     },
-    "Bikes": {
+   "Bosques plantados y naturales -Reforestación comercial": {
       low: "#a55194",
       range: "url(/assets/images/hatches/hatch-a55194.png)"
     },
-    "Rail": {
+    "Bosques plantados y naturales -Reforestación protectora": {
       low: "#8c564b",
       range: "url(/assets/images/hatches/hatch-8c564b.png)"
     },
-    "Domestic aviation": {
+
+    "Residuos": {
       low: "#2ca02c",
       range: "url(/assets/images/hatches/hatch-2ca02c.png)"
     },
-    "Domestic freight": {
+    "Autogeneración solar fotovoltaica": {
       low: "#1f77b4",
       range: "url(/assets/images/hatches/hatch-1f77b4.png)"
     },
-    "International aviation": {
+    "Autogeneración solar térmica": {
       low: "#ff7f0e",
       range: "url(/assets/images/hatches/hatch-ff7f0e.png)"
     },
-    "International shipping (maritime bunkers)": {
+    "Energía solar a gran escala": {
       low: "#d62728",
       range: "url(/assets/images/hatches/hatch-d62728.png)"
     },
@@ -195,11 +198,11 @@ window.twentyfifty.views.costs_compared_within_sector = function() {
       low: "#EA8BCC",
       range: "url(/assets/images/hatches/hatch-EA8BCC.png)"
     },
-    "Industry Carbon Capture": {
+    "Industria Carbon Capture": {
       low: "#a55194",
       range: "url(/assets/images/hatches/hatch-a55194.png)"
     },
-    "Finance cost": {
+    "Finanzas cost": {
       low: "#8c564b",
       range: "url(/assets/images/hatches/hatch-8c564b.png)"
     }
@@ -222,7 +225,7 @@ window.twentyfifty.views.costs_compared_within_sector = function() {
     this.h = e.height();
     this.w = e.width();
     this.r = new Raphael('costscomparedwithinsector', this.w, this.h);
-    this.x = d3.scale.linear().domain([0, 3000]).range([250, this.w - 30]).nice();
+    this.x = d3.scale.linear().domain([0, 9000]).range([250, this.w - 30]).nice();
     this.y = d3.scale.ordinal().domain(all_pathways).rangeRoundBands([25, this.h - 20], 0.25);
     _ref = twentyfifty.comparator_pathways;
     for (_i = 0, _len = _ref.length; _i < _len; _i++) {
