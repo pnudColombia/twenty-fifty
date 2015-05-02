@@ -294,11 +294,11 @@
     $("a.selectedView").removeClass("selectedView");
     $("a.view[data-view='" + view + "']").addClass("selectedView");
     if (view === "costs_in_context") {
-      $("#cost_choice").addClass("selectedView").text("Costos: Contexto");
+      $("#cost_choice").addClass("selectedView").text("Costos: contexto");
     } else if (view === "costs_compared_overview") {
-      $("#cost_choice").addClass("selectedView").text("Costos: Comparados");
+      $("#cost_choice").addClass("selectedView").text("Costos: comparados");
     } else if (view === "costs_sensitivity") {
-      $("#cost_choice").addClass("selectedView").text("Costos: Sensibilidad");
+      $("#cost_choice").addClass("selectedView").text("Costos: sensibilidad");
     } else {
       $("#cost_choice").text("Costos");
     }

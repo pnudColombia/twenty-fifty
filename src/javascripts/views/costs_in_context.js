@@ -2,7 +2,7 @@ window.twentyfifty.views.costs_in_context = function() {
   
   __hasProp = {}.hasOwnProperty;
 
-  costsInContextHTML = "<div class='costsincontext'>\n  <div id='cost_override_warning'>NB Some costs not on default values</div>\n  <h1>\n    Costo social de tu escenario ( no corresponde a tu factura de electricidad) Para comparación, el PIB promedio (2050) es estima alrededor de $40.6 millones de pesos al año por persona. \n  </h1>\n  <div id='costsincontext'></div>\n  " + window.costEssentialNotesHTML + "\n</div>";
+  costsInContextHTML = "<div class='costsincontext'>\n  <div id='cost_override_warning'>NB Some costs not on default values</div>\n  <h1>\n    Costo social de tu escenario ( no corresponde a tu factura de electricidad)<br>\n    Para comparación, el PIB promedio (2050) es estima alrededor de $40.6 millones de pesos al año por persona. \n  </h1>\n  <div id='costsincontext'></div>\n  " + window.costEssentialNotesHTML + "\n</div>";
 
   this.pathways = {};
 
@@ -18,7 +18,7 @@ window.twentyfifty.views.costs_in_context = function() {
     this.h = e.height();
     this.w = e.width();
     this.r = new Raphael('costsincontext', this.w, this.h);
-    this.x = d3.scale.linear().domain([0, 14000]).range([250, this.w - 30]).nice();
+    this.x = d3.scale.linear().domain([0, 13000]).range([250, this.w - 30]).nice();
     this.y = d3.scale.ordinal().domain(all_pathways).rangeRoundBands([25, this.h - 20], 0.25);
 
     for (_i = 0, _len = comparator_pathways.length; _i < _len; _i++) {
@@ -189,7 +189,7 @@ window.twentyfifty.views.costs_in_context = function() {
       });
     } else if (_id === (twentyfifty.getComparator() || twentyfifty.default_comparator_code)) {
       this.comparator = pathway;
-      this.r.text(this.x(total_cost), 10, "El costo extra de la sociedad de no afrontar el cambio climático'" + (twentyfifty.pathwayName(_id, "comparison")) + "'(Promedio $COP/Habitante/año 2050)").attr({
+      this.r.text(this.x(total_cost), 10, "El costo extra de la sociedad de no afrontar el cambio climático '" + (twentyfifty.pathwayName(_id, "comparison")) + "' (Promedio $COP/Habitante/año 2050)").attr({
         'text-anchor': 'start',
         'font-weight': 'bold',
         'fill': '#f00'
@@ -279,11 +279,11 @@ window.twentyfifty.views.costs_in_context = function() {
     if (pathway.total_cost_range_adjusted === 0 && this.comparator.total_cost_range_adjusted === 0) {
       delta = Math.round(pathway.total_cost_low_adjusted - this.comparator.total_cost_low_adjusted);
       if (delta < 0) {
-        message = "" + (-delta) + " menos";
+        message = "" + (-delta) + " less";
       } else if (delta === 0) {
-        message = "igual";
+        message = "the same";
       } else {
-        message = "" + delta + " mas";
+        message = "" + delta + " more";
       }
     } else {
       i = twentyfifty.calculateIncrementalCost(pathway, this.comparator);
