@@ -1,7 +1,7 @@
 window.twentyfifty.views.costs_compared_overview = function() {
 __hasProp = {}.hasOwnProperty;
 costsComparedOverviewHTML = "<div class='costscomparedoverview'>\n <div id='cost_override_warning'>NB Some costs not on default values</div>\n <h1>\n The cost of your pathway, compared with other pathways.\n This is not your energy bill.\n </h1>\n <div id='costscomparedoverview'></div>\n " + window.costEssentialNotesHTML + "\n</div>";
-categories = ["Combustibles fósiles", "Bioenergía", "Electricidad ", "Edificaciones", "Transporte", "Industria", "Finanzas", "Otros"];
+categories = ["Combustibles fósiles", "Bioenergía", "Electricidad ", "Edificaciones ", "Transporte", "Industria", "Finanzas", "Otro"];
 category_colors = {
 "Combustibles fósiles": {
 low: "#8c564b",
@@ -15,7 +15,7 @@ range: "url(/assets/images/hatches/hatch-2ca02c.png)"
 low: "#1f77b4",
 range: "url(/assets/images/hatches/hatch-1f77b4.png)"
 },
-"Edificaciones": {
+"Edificaciones ": {
 low: "#ff7f0e",
 range: "url(/assets/images/hatches/hatch-ff7f0e.png)"
 },
@@ -31,7 +31,7 @@ range: "url(/assets/images/hatches/hatch-7f7f7f.png)"
 low: "#EA8BCC",
 range: "url(/assets/images/hatches/hatch-EA8BCC.png)"
 },
-"Otros": {
+"Otro": {
 low: "#a55194",
 range: "url(/assets/images/hatches/hatch-a55194.png)"
 }
@@ -167,7 +167,7 @@ this.boxes_by_category[category].labels.toFront();
 this.hover(this.boxes_by_category[category].boxes, category);
 this.hover(this.boxes_by_category[category].labels, category);
 if (category === "Combustibles fósiles") {
-lb = this.r.text(this.x(0) + 175, h * 0.75 / 2, "Combustibles fósiles para su uso en edificios, transporte y la generación de electricidad").attr({
+lb = this.r.text(this.x(0) + 175, h * 0.75 / 2, "Combustibles fósiles para uso en edificaciones, transporte y generacion de electricidad.").attr({
 'text-anchor': 'middle',
 'font-weight': 'bold'
 });
