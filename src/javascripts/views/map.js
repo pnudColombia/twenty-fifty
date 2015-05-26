@@ -85,6 +85,7 @@ window.twentyfifty.views.map = function() {
     'XIV.a.1': '#aa0000',
     'XIV.a.2': '#00ff00',
     'XIV.a.3': '#408000',	
+    'XIV.a.bosquesdisponibles':'#408856',
     'VI.a.biocombustibles': '#4080432',
     'VI.a.pastoreonacional': '#408856',
     'VI.a.psensuelosganaderos': '#408350',
@@ -104,6 +105,7 @@ window.twentyfifty.views.map = function() {
   };
 
   labels = {
+    'XIV.a.bosquesdisponibles':'Bosques disponibles',
     'II.a.1': 'Eólica costa adentro',
     'II.a.2': 'Eólica costa afuera',
     'II.b.1': 'Grandes centrales hidroeléctricas',
@@ -121,10 +123,10 @@ window.twentyfifty.views.map = function() {
     'I.a.Gas': 'Plantas a gas x 0.25 Gw',
     'I.a.Liquido': 'Plantas de combustibles líquidos x 0.2 Gw',
     'I.a.Solido': 'Plantas a carbón x 0.25 Gw',
-    'II.c.amplitudmareas': 'Energía mareo motriz',
-    'II.c.corrientemareas': 'Energía mareo motriz',
+    'II.c.amplitudmareas': 'Energía mareo-motriz',
+    'II.c.corrientemareas': 'Energía mareo-motriz',
     'II.c.olas': 'Energía mareo motriz',
-    'II.d': 'unidades',
+    'II.d': 'Estaciones geotérmicas de 10000 kw',
     'III.a.Biomasa': 'Plantas de biomasa en ZNI',
     'III.a.Eolica': 'Turbinas de viento en ZNI',
     'III.a.Residuos': 'Plantas de residuos en ZNI',
@@ -170,7 +172,9 @@ window.twentyfifty.views.map = function() {
     x = (map_width / 2) + map_offset_x;
     y = map_height + map_offset_y - 100;
     this.land_boxes = {};
-    land_box_names = ['reforestacion','XVII.a.1','XVII.a.2','XVII.a.3','VI.a.psensuelosganaderos','II.a.1','II.a.2','II.b.1','II.b.2','VI.a.biocombustibles','VI.amejorespagricolas'];
+    land_box_names =
+//'XIV.a.bosquesdisponibles',agregar una vez este decidido.
+ ['reforestacion','XVII.a.1','XVII.a.2','XVII.a.3','VI.a.psensuelosganaderos','II.a.1','II.a.2','II.b.1','II.b.2','VI.a.biocombustibles','VI.amejorespagricolas'];
     for (i = 0, len = land_box_names.length; i < len; i++) {
       name = land_box_names[i];
       this.land_boxes[name] = r.upiabeled_square(x, y, labels[name], 0, colours[name]);
@@ -286,7 +290,7 @@ window.twentyfifty.views.map = function() {
     }
 
     // Now draw the sea boxes
-    x = (map_width / 2) + map_offset_x + 200;
+    x = (map_width / 2) + map_offset_x + 100;
     y = 60;
     values = [];
 
@@ -338,8 +342,8 @@ window.twentyfifty.views.map = function() {
     y = 35;
     x = 1055;
     values = [];
-
-    point_cluster_names = ['I.a.Gas','I.a.Liquido','I.a.Solido','II.d', 'III.a.Biomasa','III.a.Biomasa','III.a.Eolica','III.a.Residuos','IV.a','VII.b'];
+//'III.a.Eolica' removido hasta solucionar tema ZNI
+    point_cluster_names = ['I.a.Gas','I.a.Liquido','I.a.Solido','II.d', 'III.a.Biomasa','III.a.Biomasa','III.a.Residuos','IV.a','VII.b'];
     for (i = 0, len = point_cluster_names.length; i < len; i++) {
       name = point_cluster_names[i];
       values.push({ name: name, value: map[name] });

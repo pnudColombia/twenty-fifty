@@ -48,7 +48,7 @@ e = $('#costscomparedoverview');
 this.h = e.height();
 this.w = e.width();
 this.r = new Raphael('costscomparedoverview', this.w, this.h);
-this.x = d3.scale.linear().domain([0, 10000]).range([250, this.w - 30]).nice();
+this.x = d3.scale.linear().domain([0, 20000]).range([250, this.w - 30]).nice();
 this.y = d3.scale.ordinal().domain(all_pathways).rangeRoundBands([25, this.h - 20], 0.25);
 this.r.text(250, 30, "Move your mouse over a coloured bar to see what it refers to. Click on a bar to see more detail").attr({
 'text-anchor': 'start'
@@ -138,7 +138,7 @@ c.labels.push(b[category].low_label, b[category].range_label);
 }
 this.boxes[code] = b;
 }
-this.r.text(this.x(0), this.h - 5, "The absolute cost to society of the whole energy system (mean undiscounted real pounds per person per year 2010-2050)").attr({
+this.r.text(this.x(0), this.h - 5, "El costo absoluto a la sociedad de todo el sistema energético (promedio no descontado de libras reales por persona desde el año 2010 hasta el 2050). ").attr({
 'text-anchor': 'start',
 'font-weight': 'bold',
 'fill': '#008000'

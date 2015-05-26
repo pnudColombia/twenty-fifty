@@ -14,20 +14,23 @@ window.twentyfifty.views.story = function() {
 
     element = $('#demand_story');
     element.empty();
+    this.stories_for_choices(element, "Edificaciones en 2050", 25,27,28,29,30);
+    this.stories_for_choices(element, "Industria en 2050", 32, 33);
+    this.stories_for_choices(element, "Transporte en 2050", 35, 36,38,39); //Agregar importaciones
+    this.stories_for_choices(element, "Hidrocarburos en 2050", 35, 36,38,39);
+
+    element = $('#supply_story');
+    element.empty();
+    
+
     this.stories_for_choices(element, "Energia no renovable en 2050", 0, 1);
     //this.heating_choice_table(element, this.pathway.heating, "Residential");
     this.stories_for_choices(element, "Energia renovable en 2050",2, 3, 4, 5, 6, 7, 8, 9, 10);
     this.stories_for_choices(element, "Energia en zonas no interconectadas en 2050",11);
     //this.heating_choice_table(element, this.pathway.heating, "Commercial");
-    this.stories_for_choices(element, "Biocombustibles en 2050", 13, 15, 16);
-    this.stories_for_choices(element, "Combustibles fósiles en 2050", 18, 19,20);
+    this.stories_for_choices(element, "Biocombustibles en 2050", 13);
+    this.stories_for_choices(element, "Combustibles fósiles en 2050" ,15, 16, 18, 19,20);
     this.stories_for_choices(element, "Residuos en 2050", 22,23);
-
-    element = $('#supply_story');
-    element.empty();
-    this.stories_for_choices(element, "Edificaciones en 2050", 25,27,28,29,30);
-    this.stories_for_choices(element, "Industria en 2050", 32, 33);
-    this.stories_for_choices(element, "Transporte en 2050", 35, 36,38,39); //Agregar importaciones
  
     element = $('#ghg_story');
     element.empty();
