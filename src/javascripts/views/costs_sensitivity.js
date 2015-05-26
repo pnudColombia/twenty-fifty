@@ -1,7 +1,7 @@
 window.twentyfifty.views.costs_sensitivity = function() {
   __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; };
 
-    costsSensitivityHTML = "<div class='costssensitivity'>\n  <ul id='comparatorchoice'>\n    <li>\n      <a href=\"#\" onclick=\"$('ul#view_comparatorchoice').toggle(); return false;\">Choose comparison<img alt=\"Dropdown-arrow\" src=\"/assets/images/dropdown-arrow.png\" /></a>\n      <ul class='choices' id='view_comparatorchoice'>\n        <li><a href=\"#\" onclick=\"twentyfifty.switchComparator('1111111111110101101110110101111011011011001111011');$('ul#view_comparatorchoice').toggle(); return false;\">Nivel minimo</a></li>\n        <li><a href=\"#\" onclick=\"twentyfifty.switchComparator('w1311l1111110102101310110202311034023013001111011');$('ul#view_comparatorchoice').toggle(); return false;\">UPME-eficiencia energetica</a></li>\n        <li><a href=\"#\" onclick=\"twentyfifty.switchComparator('1111111111110102102230110104141013044044001111011');$('ul#view_comparatorchoice').toggle(); return false;\">UPME-mundo electrico</a></li>\n        <li><a href=\"#\" onclick=\"twentyfifty.switchComparator('4444444444440404403440440404444034044044004444044');$('ul#view_comparatorchoice').toggle(); return false;\">Nivel Maximo</a></li>\n        <li><a href=\"#\" onclick=\"twentyfifty.switchComparator('31z11g1z11y10102101210110101111011011011001111011');$('ul#view_comparatorchoice').toggle(); return false;\">UPME-base</a></li>\n      </ul>\n    </li>\n  </ul>\n  <h1>The cost of your pathway compared with another, allowing simple variation in cost estimates.</h1>\n  <div id='costssensitivity'></div>\n  " + window.costEssentialNotesHTML + "\n</div>";
+    costsSensitivityHTML = "<div class='costssensitivity'>\n  <ul id='comparatorchoice'>\n    <li>\n      <a href=\"#\" onclick=\"$('ul#view_comparatorchoice').toggle(); return false;\">Choose comparison<img alt=\"Dropdown-arrow\" src=\"/assets/images/dropdown-arrow.png\" /></a>\n      <ul class='choices' id='view_comparatorchoice'>\n        <li><a href=\"#\" onclick=\"twentyfifty.switchComparator('1111111111110101101110110101111011011011001111011');$('ul#view_comparatorchoice').toggle(); return false;\">Nivel minimo</a></li>\n        <li><a href=\"#\" onclick=\"twentyfifty.switchComparator('w1311l1111110102101310110202311034023013001111011');$('ul#view_comparatorchoice').toggle(); return false;\">UPME-eficiencia energetica</a></li>\n        <li><a href=\"#\" onclick=\"twentyfifty.switchComparator('1111111111110102102230110104141013044044001111011');$('ul#view_comparatorchoice').toggle(); return false;\">UPME-mundo electrico</a></li>\n        <li><a href=\"#\" onclick=\"twentyfifty.switchComparator('4444444444440404403440440404444034044044004444044');$('ul#view_comparatorchoice').toggle(); return false;\">Nivel Maximo</a></li>\n        <li><a href=\"#\" onclick=\"twentyfifty.switchComparator('31z11g1z11y10102101210110101111011011011001111011');$('ul#view_comparatorchoice').toggle(); return false;\">UPME-base</a></li>\n      </ul>\n    </li>\n  </ul>\n  <h1>El costo de tu escenario comparado con otro,  permitiendo una variación simple  en las estimaciones de costos.</h1>\n  <div id='costssensitivity'></div>\n  " + window.costEssentialNotesHTML + "\n</div>";
     bottom_area_start = 219;
 
     cost_component_names = ["Gestión energética en termoeléctricas","Energía eólica costa adentro","Energía eólica costa afuera",
@@ -155,7 +155,7 @@ window.twentyfifty.views.costs_sensitivity = function() {
         href: twentyfifty.pathwayWikiPages(this.comparator._id)
       });
       this.key_label.attr({
-        text: "The cost in '" + (twentyfifty.pathwayName(this.comparator._id, this.comparator._id)) + "'"
+        text: "El costo en  '" + (twentyfifty.pathwayName(this.comparator._id, this.comparator._id)) + "'"
       });
       if (this.pathway != null) {
         this.updateIncrement();
@@ -406,11 +406,11 @@ window.twentyfifty.views.costs_sensitivity = function() {
         'fill': '#FCFF9B',
         'stroke': 'none'
       });
-      r.text(30, y("p") + 9, "Your pathway").attr({
+      r.text(30, y("p") + 9, "Tu escenario\n").attr({
         'text-anchor': 'start',
         'font-weight': 'bold'
       });
-      r.text(30, y("p") + 27, "You can use the chart below to see how\nsensitive it is to different cost assumptions").attr({
+      r.text(30, y("p") + 32, "Usted puede usar el diagrama en la parte\n inferior para mirar la sensibilidad frente\n a los supuestos de costos.").attr({
         'text-anchor': 'start'
       });
       this.top_pathway_chart = {
@@ -497,7 +497,9 @@ window.twentyfifty.views.costs_sensitivity = function() {
         ly = py + (y.rangeBand() / 2);
         boxy = py;
         component = {};
-        url = "http://2050-calculator-tool-wiki.decc.gov.uk" + (cost_wiki_links[name] || "/");
+	//formato de url es en las primer comillas url del sitio, la segunda parte corresponde a la direccion de cada sector
+	//previamente definido al principio de este javascript.
+        url = "" + (cost_wiki_links[name] || "/");
         component.name = r.text(245, ly, name).attr({
           'text-anchor': 'end',
           href: url
@@ -531,7 +533,7 @@ window.twentyfifty.views.costs_sensitivity = function() {
           'arrow-start': "classic-narrow-long"
         });
         labels = cost_component_value(name);
-        component.details = r.text(x(5500), ly, "See assumptions").attr({
+        component.details = r.text(x(5500), ly, "").attr({
           'text-anchor': 'middle',
           href: url
         });
@@ -575,7 +577,7 @@ window.twentyfifty.views.costs_sensitivity = function() {
           stroke: '#fff'
         });
       }
-      r.text(30, 205, "The biggest costs in your pathway").attr({
+      r.text(30, 205, "El costo mayor de su escenario.").attr({
         'text-anchor': 'start',
         'font-weight': 'bold'
       });
@@ -587,8 +589,8 @@ window.twentyfifty.views.costs_sensitivity = function() {
         'fill': p_low_fill_color,
         'stroke': 'none'
       });
-      r.text(285, 208, "The cost in your pathway").attr({
-        'text-anchor': 'start',
+      r.text(285, 208, "El costo en su escenario").attr({
+        'text-anchor': 'start',	
         'font-weight': 'normal'
       });
       r.rect(250, 215, 30, bar_height).attr({
@@ -604,20 +606,20 @@ window.twentyfifty.views.costs_sensitivity = function() {
         'arrow-end': "classic-wide-long",
         'arrow-start': 'classic-wide-short'
       });
-      r.text(285, 228, "The range of cost estimates").attr({
+      r.text(285, 228, "El rango de las estimaciones de costos\n\n\n").attr({
         'text-anchor': 'start',
         'font-weight': 'normal'
       });
-      r.text(x(7500), 220, "Try different cost scenarios").attr({
+      r.text(x(7500), 220, "Pruebe diferentes escenarios de costos\n \n").attr({
         'text-anchor': 'middle',
         'font-weight': 'bold'
       });
-      r.text(x(6500), 233, "Cheap");
+      r.text(x(6500), 233, "Bajo\n");
       r.path(["M", x(7000), 233, "L", x(8000) - 2, 233]).attr({
         stroke: '#000',
         'arrow-end': "classic-wide-long"
       });
-      r.text(x(8500), 233, "Expensive");
+      r.text(x(8500), 233, "Expensive\n");
       r.text(w - 30, 233, "(reset)").attr({
         'text-anchor': 'end',
         cursor: 'pointer'

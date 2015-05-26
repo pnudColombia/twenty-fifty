@@ -18,7 +18,7 @@ window.twentyfifty.views.costs_in_context = function() {
     this.h = e.height();
     this.w = e.width();
     this.r = new Raphael('costsincontext', this.w, this.h);
-    this.x = d3.scale.linear().domain([0, 13000]).range([250, this.w - 30]).nice();
+    this.x = d3.scale.linear().domain([0, 30000]).range([250, this.w - 30]).nice();
     this.y = d3.scale.ordinal().domain(all_pathways).rangeRoundBands([25, this.h - 20], 0.25);
 
     for (_i = 0, _len = comparator_pathways.length; _i < _len; _i++) {
@@ -34,12 +34,12 @@ window.twentyfifty.views.costs_in_context = function() {
       'stroke': 'none'
     });
 
-    this.r.text(30, this.y("chosen") + 9, "Your pathway").attr({
+    this.r.text(30, this.y("chosen") + 9, "Tu escenario").attr({
       'text-anchor': 'start',
       'font-weight': 'bold'
     });
 
-    this.r.text(30, this.y("chosen") + 27, "You can click on the chart to make a more\ndetailed comparison with the pathways below").attr({
+    this.r.text(30, this.y("chosen") + 27, "Puedes hacer click en grafico para tener un\n comparativo detallado de los escenarios construidos").attr({
       'text-anchor': 'start'
     });
 
@@ -115,7 +115,7 @@ window.twentyfifty.views.costs_in_context = function() {
     'stroke': 'none'
     });
     overlays.insertAfter(this.incremental_overlay);
-    this.r.text(this.x(0), this.h - 5, "The absolute cost to society of the whole energy system (mean undiscounted real pounds per person per year 2010-2050)").attr({
+    this.r.text(this.x(0), this.h - 5, "El costo absoluto a la sociedad de todo el sistema energético (promedio no descontado de libras reales por persona desde el año 2010 hasta el 2050). ").attr({
       'text-anchor': 'start',
       'font-weight': 'bold',
       'fill': '#008000'
@@ -279,11 +279,11 @@ window.twentyfifty.views.costs_in_context = function() {
     if (pathway.total_cost_range_adjusted === 0 && this.comparator.total_cost_range_adjusted === 0) {
       delta = Math.round(pathway.total_cost_low_adjusted - this.comparator.total_cost_low_adjusted);
       if (delta < 0) {
-        message = "" + (-delta) + " less";
+        message = "" + (-delta) + " menos";
       } else if (delta === 0) {
-        message = "the same";
+        message = "igual";
       } else {
-        message = "" + delta + " more";
+        message = "" + delta + " más ";
       }
     } else {
       i = twentyfifty.calculateIncrementalCost(pathway, this.comparator);
