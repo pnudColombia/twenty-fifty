@@ -50,7 +50,7 @@ this.w = e.width();
 this.r = new Raphael('costscomparedoverview', this.w, this.h);
 this.x = d3.scale.linear().domain([0, 20000]).range([250, this.w - 30]).nice();
 this.y = d3.scale.ordinal().domain(all_pathways).rangeRoundBands([25, this.h - 20], 0.25);
-this.r.text(250, 30, "Move your mouse over a coloured bar to see what it refers to. Click on a bar to see more detail").attr({
+this.r.text(250, 30, "Puedes mover el mouse sobre una barra de color para ver a que se refiere. Click en la barra para ver más detalles.").attr({
 'text-anchor': 'start'
 });
 _ref = twentyfifty.comparator_pathways;
@@ -69,7 +69,7 @@ this.r.text(30, this.y("chosen") + 9, "Your pathway").attr({
 'text-anchor': 'start',
 'font-weight': 'bold'
 });
-this.r.text(30, this.y("chosen") + 27, "You can click on the chart to make a more\ndetailed comparison of specific costs").attr({
+this.r.text(30, this.y("chosen") + 27, "Usted puede hacer click en la gráfica para\n tener una comparación más detallada.").attr({
 'text-anchor': 'start'
 });
 _ref1 = twentyfifty.comparator_pathways;

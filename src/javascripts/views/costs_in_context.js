@@ -2,7 +2,7 @@ window.twentyfifty.views.costs_in_context = function() {
   
   __hasProp = {}.hasOwnProperty;
 
-  costsInContextHTML = "<div class='costsincontext'>\n  <div id='cost_override_warning'>NB Some costs not on default values</div>\n  <h1>\n    Costo social de tu escenario ( no corresponde a tu factura de electricidad)<br>\n    Para comparación, el PIB promedio (2050) es estima alrededor de $40.6 millones de pesos al año por persona. \n  </h1>\n  <div id='costsincontext'></div>\n  " + window.costEssentialNotesHTML + "\n</div>";
+  costsInContextHTML = "<div class='costsincontext'>\n  <div id='cost_override_warning'>Algunos costos no estan en valores por defecto. </div>\n  <h1>\n    Costo social de tu escenario ( no corresponde a tu factura de electricidad)<br>\n    Para comparación, el PIB promedio (2050) es estima alrededor de $23,8 millones de pesos al año por persona. \n  </h1>\n  <div id='costsincontext'></div>\n  " + window.costEssentialNotesHTML + "\n</div>";
 
   this.pathways = {};
 
@@ -18,7 +18,7 @@ window.twentyfifty.views.costs_in_context = function() {
     this.h = e.height();
     this.w = e.width();
     this.r = new Raphael('costsincontext', this.w, this.h);
-    this.x = d3.scale.linear().domain([0, 30000]).range([250, this.w - 30]).nice();
+    this.x = d3.scale.linear().domain([0, 35000]).range([250, this.w - 30]).nice();
     this.y = d3.scale.ordinal().domain(all_pathways).rangeRoundBands([25, this.h - 20], 0.25);
 
     for (_i = 0, _len = comparator_pathways.length; _i < _len; _i++) {
