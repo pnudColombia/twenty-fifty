@@ -397,7 +397,7 @@ window.twentyfifty.views.costs_sensitivity = function() {
       r = new Raphael('costssensitivity', w, h);
       this.x = x = d3.scale.linear().domain([0, 10000]).range([250, w - 30]).nice();
       this.top_y = y = d3.scale.ordinal().domain(['p', 'i', 'c']).rangeRoundBands([30, 180], 0.15);
-      r.text(x(5000), 17, "The mean cost to society of the whole energy system in undiscounted real pounds per person 2010-2050").attr({
+      r.text(x(5000), 17, "El costo medio de la sociedad por todo el sistema energético en pesos descontados por persona").attr({
         'text-anchor': 'center',
         'font-weight': 'bold'
       });
