@@ -115,7 +115,7 @@ window.twentyfifty.views.costs_in_context = function() {
     'stroke': 'none'
     });
     overlays.insertAfter(this.incremental_overlay);
-    this.r.text(this.x(0), this.h - 5, "El costo absoluto a la sociedad de todo el sistema energético (promedio no descontado de libras reales por persona desde el año 2010 hasta el 2050). ").attr({
+    this.r.text(this.x(0), this.h - 5, "El costo medio de la sociedad por todo el sistema energético en pesos descontados por persona ").attr({
       'text-anchor': 'start',
       'font-weight': 'bold',
       'fill': '#008000'
