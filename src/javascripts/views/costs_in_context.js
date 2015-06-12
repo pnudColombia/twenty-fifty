@@ -18,7 +18,7 @@ window.twentyfifty.views.costs_in_context = function() {
     this.h = e.height();
     this.w = e.width();
     this.r = new Raphael('costsincontext', this.w, this.h);
-    this.x = d3.scale.linear().domain([0, 35000]).range([250, this.w - 30]).nice();
+    this.x = d3.scale.linear().domain([0, 40000]).range([250, this.w - 30]).nice();
     this.y = d3.scale.ordinal().domain(all_pathways).rangeRoundBands([25, this.h - 20], 0.25);
 
     for (_i = 0, _len = comparator_pathways.length; _i < _len; _i++) {
