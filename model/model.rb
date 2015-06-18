@@ -6154,14 +6154,14 @@ class Model
     # end of 2007 (Consistent)
     # end of 2007
     # end of 2010
-    # end of 2050
-    # end of 2045
-    # end of 2040
-    # end of 2035
-    # end of 2030
-    # end of 2025
-    # end of 2020
     # end of 2015
+    # end of 2020
+    # end of 2025
+    # end of 2030
+    # end of 2035
+    # end of 2040
+    # end of 2045
+    # end of 2050
     # Start of named references
     attach_function 'input_choices', [], ExcelValue.by_value
     attach_function 'input_descriptions', [], ExcelValue.by_value
