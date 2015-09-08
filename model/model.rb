@@ -1438,7 +1438,26 @@ class Model
     attach_function 'emisiones_k34', [], ExcelValue.by_value
     attach_function 'emisiones_l34', [], ExcelValue.by_value
     attach_function 'emisiones_m34', [], ExcelValue.by_value
+    attach_function 'emisiones_d35', [], ExcelValue.by_value
+    attach_function 'emisiones_e35', [], ExcelValue.by_value
+    attach_function 'emisiones_f35', [], ExcelValue.by_value
+    attach_function 'emisiones_g35', [], ExcelValue.by_value
+    attach_function 'emisiones_h35', [], ExcelValue.by_value
+    attach_function 'emisiones_i35', [], ExcelValue.by_value
+    attach_function 'emisiones_j35', [], ExcelValue.by_value
+    attach_function 'emisiones_k35', [], ExcelValue.by_value
+    attach_function 'emisiones_l35', [], ExcelValue.by_value
     attach_function 'emisiones_m35', [], ExcelValue.by_value
+    attach_function 'emisiones_d36', [], ExcelValue.by_value
+    attach_function 'emisiones_e36', [], ExcelValue.by_value
+    attach_function 'emisiones_f36', [], ExcelValue.by_value
+    attach_function 'emisiones_g36', [], ExcelValue.by_value
+    attach_function 'emisiones_h36', [], ExcelValue.by_value
+    attach_function 'emisiones_i36', [], ExcelValue.by_value
+    attach_function 'emisiones_j36', [], ExcelValue.by_value
+    attach_function 'emisiones_k36', [], ExcelValue.by_value
+    attach_function 'emisiones_l36', [], ExcelValue.by_value
+    attach_function 'emisiones_m36', [], ExcelValue.by_value
     # end of Emisiones
     attach_function 'costs_per_capita_f181', [], ExcelValue.by_value
     attach_function 'costs_per_capita_g181', [], ExcelValue.by_value
@@ -5727,7 +5746,17 @@ class Model
     attach_function 'ghg_k22', [], ExcelValue.by_value
     attach_function 'ghg_l22', [], ExcelValue.by_value
     attach_function 'ghg_m22', [], ExcelValue.by_value
+    attach_function 'ghg_d23', [], ExcelValue.by_value
     attach_function 'ghg_e23', [], ExcelValue.by_value
+    attach_function 'ghg_f23', [], ExcelValue.by_value
+    attach_function 'ghg_g23', [], ExcelValue.by_value
+    attach_function 'ghg_h23', [], ExcelValue.by_value
+    attach_function 'ghg_i23', [], ExcelValue.by_value
+    attach_function 'ghg_j23', [], ExcelValue.by_value
+    attach_function 'ghg_k23', [], ExcelValue.by_value
+    attach_function 'ghg_l23', [], ExcelValue.by_value
+    attach_function 'ghg_m23', [], ExcelValue.by_value
+    attach_function 'ghg_e24', [], ExcelValue.by_value
     # end of GHG
     attach_function 'electricity_d60', [], ExcelValue.by_value
     attach_function 'electricity_e60', [], ExcelValue.by_value
@@ -6181,6 +6210,7 @@ class Model
     attach_function 'output_flujos', [], ExcelValue.by_value
     attach_function 'output_ghg_by_ipcc_sector', [], ExcelValue.by_value
     attach_function 'output_ghg_colsector', [], ExcelValue.by_value
+    attach_function 'output_ghg_goal20percent', [], ExcelValue.by_value
     attach_function 'output_percentagereduction1', [], ExcelValue.by_value
     attach_function 'output_percentagereduction2', [], ExcelValue.by_value
     attach_function 'output_primaryenergysupply', [], ExcelValue.by_value
@@ -6202,6 +6232,7 @@ class Model
     attach_function 'output_flujos', [], ExcelValue.by_value
     attach_function 'output_ghg_by_ipcc_sector', [], ExcelValue.by_value
     attach_function 'output_ghg_colsector', [], ExcelValue.by_value
+    attach_function 'output_ghg_goal20percent', [], ExcelValue.by_value
     attach_function 'output_percentagereduction1', [], ExcelValue.by_value
     attach_function 'output_percentagereduction2', [], ExcelValue.by_value
     attach_function 'output_primaryenergysupply', [], ExcelValue.by_value

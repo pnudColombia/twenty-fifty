@@ -11,19 +11,19 @@ charts.enter()
 .attr('class', 'chart');
 this.final_energy_chart = timeSeriesStackedAreaChart()
 .title("Demanda de energía")
-.unit('TWh/año')
+.unit('PJ/año')
 .min_value(-100)
-.max_value(1000); //Ajuste del maximo valor
+.max_value(3000); //Ajuste del maximo valor
 this.primary_energy_chart = timeSeriesStackedAreaChart()
 .title("Oferta de energía")
-.unit('TWh/año')
+.unit('PJ/año')
 .min_value(-100)
-.max_value(1350);//Ajuste del maximo valor
+.max_value(3000);//Ajuste del maximo valor
 this.emissions_chart = timeSeriesStackedAreaChart()
 .title("Emisiones ")
 .unit('MtCO2e/año')
 .min_value(-100)
-.max_value(600); //Valor maximo de emisiones
+.max_value(500); //Valor maximo de emisiones
 };
 // This is called when a new view has been selected
 // it removes the charts and tidies up.
@@ -60,7 +60,7 @@ this.updateResults = function(pathway) {
 // Get the data in the right format
 demand = convert_table_to_hash(pathway.final_energy_demand);
 supply = convert_table_to_hash(pathway.primary_energy_supply);
-ghg_by_sectors = convert_table_to_hash(pathway.ghg_by_sectors.slice(0,-1));
+ghg_by_sectors = convert_table_to_hash(pathway.ghg_by_sectors.slice(0,-3));
 percent = pathway.output_percentagereduction1;
 // Draw the charts
 d3.select('#demand_chart')
@@ -72,8 +72,8 @@ d3.select('#supply_chart')
 d3.select('#emissions_chart')
 .datum(ghg_by_sectors)
 .call(this.emissions_chart);
-};
-/* This is to add the target text to the chart
+//};
+/* This is to add the target text to the chart*/
 t = d3.select('#emissions_chart g.drawing').selectAll('text.target')
 .data([percent*100]);
 t.enter().append('text')
@@ -82,13 +82,13 @@ t.attr('transform', 'translate(' + this.emissions_chart.x_center() + ',-18)');
 t.transition().tween('text', function(d) {
 current = parseInt(this.textContent) || +d;
 i = d3.interpolateRound(current, +d);
-return function(t) {
+/*return function(t) {
 return this.textContent = "" + (i(t)) + "% reduction 1990-2050; Target is 80%";
-};
+};*/
 });
 x = this.emissions_chart.xScale;
 y = this.emissions_chart.yScale;
-targets = pathway.ghg[pathway.ghg.length -1].slice(1);
+targets = pathway.ghg_by_sectors[pathway.ghg_by_sectors.length-1].slice(1);
 t = d3.select('#emissions_chart g.drawing').selectAll('circle.target')
 .data(targets);
 t.enter().append('circle')
@@ -98,25 +98,19 @@ t.attr('cx', function(d,i) { return x(2010 + (i*5)) });
 t.attr('cy', function(d,i) { return y(d) });
 t = d3.select('#emissions_chart g.drawing').selectAll("g.targetlabel")
 .data([targets[1]]);
-new_label = t.enter().append('g')
+New_label = t.enter().append('g')
 .attr('class', 'targetlabel');
 new_label.append('text')
-.text("Targets²");
+.text("Meta de 20% en 2030");
 t.select('text')
 .attr('x', function(d,i) { return x(2022) })
-.attr('y', function(d,i) { return y(800) });
+.attr('y', function(d,i) { return y(400) });
 new_label.append('line');
 t.select('line')
 .attr('x1', function(d,i) { return x(2015)+4 })
 .attr('y1', function(d,i) { return y(d)-4 })
 .attr('x2', function(d,i) { return x(2022) })
-.attr('y2', function(d,i) { return y(800) });
-};*/
-  
-
-
- 
-
-
+.attr('y2', function(d,i) { return y(400) });
+};
 return this;
 }.call({});
