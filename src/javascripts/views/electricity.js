@@ -12,21 +12,21 @@ window.twentyfifty.views.electricity = function() {
 
     this.demand_chart = timeSeriesStackedAreaChart()
       .title("Demanda de electricidad")
-      .unit('TWh/año')
-      .min_value(-50)	
-      .max_value(200);
+      .unit('PJ/año')
+      .min_value(-100)	
+      .max_value(500);
 
     this.supply_chart = timeSeriesStackedAreaChart()
       .title("Oferta de electricidad")
-      .unit('TWh/año')
-      .min_value(-50)	
-      .max_value(200);
+      .unit('PJ/año')
+      .min_value(-100)	
+      .max_value(500);
 
     this.emissions_chart = timeSeriesStackedAreaChart()
       .title("Emisiones de la electricidad")
-      .unit('MtCO2e/año')
+      .unit('MtCO2eq/año')
       .min_value(-50)
-      .max_value(500);
+      .max_value(100);
   };
 
   // This is called when a new view has been selected
